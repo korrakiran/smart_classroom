@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Classroom | Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #4F46E5;
+      --primary-hover: #4338ca;
+      --primary-glow: rgba(79, 70, 229, 0.15);
+      --bg: #F9FAFB;
+      --surface: #FFFFFF;
+      --border: #E5E7EB;
+      --text: #111827;
+      --dim: #6B7280;
+      --red: #EF4444; 
+      --emerald: #10B981; 
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body { 
+      font-family: 'Plus Jakarta Sans', sans-serif; 
+      background: var(--bg); 
+      color: var(--text);
+      display: flex;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .container {
+      background: var(--surface);
+      width: 100%;
+      max-width: 420px;
+      padding: 2.5rem;
+      border-radius: 16px;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border);
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .75rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--primary), #818cf8);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .logo-text {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -.3px;
+    }
+
+    .header-text {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .header-text h1 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.025em;
+    }
+
+    .header-text p {
+      color: var(--dim);
+      font-size: 0.9rem;
+    }
+
+    .step-indicator {
+      display: none;
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    .input-wrapper {
+      position: relative;
+    }
+
+    input[type="email"],
+    input[type="password"],
+    input[type="text"] {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: var(--text);
+      transition: all 0.2s ease;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px var(--primary-glow);
+      background: var(--surface);
+    }
+
+    input:disabled, input[readonly] {
+      background: #f3f4f6;
+      color: var(--dim);
+      cursor: not-allowed;
+      border-color: var(--border);
+    }
+
+    .btn {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn:hover {
+      background: var(--primary-hover);
+      transform: translateY(-1px);
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--dim);
+      box-shadow: none;
+      margin-top: 1rem;
+      font-size: 0.85rem;
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .error-msg {
+      display: none;
+      color: var(--red);
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      padding: 0.75rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .success-msg {
+      display: none;
+      color: var(--emerald);
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      padding: 0.75rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Password creation specifics */
+    .password-strength {
+      height: 4px;
+      background: var(--border);
+      border-radius: 2px;
+      margin-top: 0.5rem;
+      overflow: hidden;
+      display: none;
+    }
+    
+    .password-strength-fill {
+      height: 100%;
+      width: 0%;
+      transition: all 0.3s ease;
+    }
+
+    .pwd-weak { background: var(--red); width: 33%; }
+    .pwd-medium { background: #f59e0b; width: 66%; }
+    .pwd-strong { background: var(--emerald); width: 100%; }
+
+    .password-reqs {
+      display: none;
+      margin-top: 0.75rem;
+      font-size: 0.75rem;
+      color: var(--dim);
+    }
+
+    .req-item {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .req-item.met { color: var(--emerald); }
+    
+    .req-icon {
+      width: 12px; height: 12px;
+      display: inline-block;
+      border-radius: 50%;
+      border: 1px solid var(--dim);
+    }
+    
+    .req-item.met .req-icon {
+      background: var(--emerald);
+      border-color: var(--emerald);
+      position: relative;
+    }
+
+    /* View management */
+    #step2-create, #step3-login { display: none; }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="logo-area">
+      <div class="logo-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+          <path d="M22 10v6M2 10v6M12 4L2 9l10 5 10-5-10-5z"/>
+          <path d="M6 12.5v5l6 3 6-3v-5"/>
+        </svg>
+      </div>
+      <div class="logo-text">Smart Classroom</div>
+    </div>
+
+    <!-- STEP 1: EMAIL VERIFICATION -->
+    <div id="step1-verify">
+      <div class="header-text">
+        <h1>Welcome Back</h1>
+        <p>Please enter your registered email</p>
+      </div>
+
+      <form id="verify-form" onsubmit="event.preventDefault(); verifyEmail();">
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="you@school.edu" required autocomplete="email">
+        </div>
+        
+        <div id="verify-error" class="error-msg"></div>
+
+        <button type="submit" class="btn" id="verify-btn">
+          Continue
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </form>
+    </div>
+
+    <!-- STEP 2: CREATE PASSWORD (First Time) -->
+    <div id="step2-create">
+      <div class="step-indicator" style="display:block;">Step 2 of 2</div>
+      <div class="header-text">
+        <h1>Create Password</h1>
+        <p>Welcome back! Please secure your account.</p>
+      </div>
+
+      <form id="create-form" onsubmit="event.preventDefault(); createPassword();">
+        <div class="form-group">
+          <label for="create-email">Your Email</label>
+          <input type="email" id="create-email" disabled readonly>
+        </div>
+
+        <div class="form-group">
+          <label for="new-password">New Password</label>
+          <input type="password" id="new-password" required oninput="checkStrength()">
+          <div class="password-strength" id="pwd-strength-bar" style="display:block;">
+            <div class="password-strength-fill" id="pwd-fill"></div>
+          </div>
+          <div class="password-reqs" id="pwd-reqs" style="display:block;">
+            <div class="req-item" id="req-len"><span class="req-icon"></span> At least 8 characters</div>
+            <div class="req-item" id="req-up"><span class="req-icon"></span> Uppercase letter</div>
+            <div class="req-item" id="req-num"><span class="req-icon"></span> Number</div>
+            <div class="req-item" id="req-spc"><span class="req-icon"></span> Special character</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" required>
+        </div>
+
+        <div id="create-error" class="error-msg"></div>
+
+        <button type="submit" class="btn" id="create-btn">Set Password & Login</button>
+        <button type="button" class="btn btn-secondary" onclick="goBack()">Back</button>
+      </form>
+    </div>
+
+    <!-- STEP 3: LOGIN (Subsequent) -->
+    <div id="step3-login">
+      <div class="header-text">
+        <h1>Enter Password</h1>
+        <p>Welcome back to your dashboard</p>
+      </div>
+
+      <form id="login-form" onsubmit="event.preventDefault(); submitLogin();">
+        <div class="form-group">
+          <label for="login-email">Your Email</label>
+          <input type="email" id="login-email" disabled readonly>
+        </div>
+
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" required autocomplete="current-password">
+        </div>
+
+        <div id="login-error" class="error-msg"></div>
+        <div id="login-success" class="success-msg">Success! Redirecting...</div>
+
+        <button type="submit" class="btn" id="login-btn">
+          Login
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg>
+        </button>
+        <button type="button" class="btn btn-secondary" onclick="goBack()">Back</button>
+      </form>
+    </div>
+
+  </div>
+
+  <script>
+    let currentEmail = "";
+
+    function showError(id, msg) {
+      const el = document.getElementById(id);
+      el.textContent = msg;
+      el.style.display = 'block';
+    }
+
+    function hideErrors() {
+      document.querySelectorAll('.error-msg').forEach(el => el.style.display = 'none');
+    }
+
+    function switchView(viewId) {
+      hideErrors();
+      document.getElementById('step1-verify').style.display = 'none';
+      document.getElementById('step2-create').style.display = 'none';
+      document.getElementById('step3-login').style.display = 'none';
+      document.getElementById(viewId).style.display = 'block';
+    }
+
+    function goBack() {
+      switchView('step1-verify');
+      document.getElementById('email').value = currentEmail;
+    }
+
+    async function verifyEmail() {
+      const email = document.getElementById('email').value.trim();
+      if (!email) return;
+
+      const btn = document.getElementById('verify-btn');
+      btn.disabled = true;
+      btn.textContent = 'Checking...';
+
+      try {
+        const res = await fetch('/auth/verify', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email })
+        });
+        
+        const data = await res.json();
+        btn.disabled = false;
+        btn.innerHTML = 'Continue <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+
+        if (res.ok) {
+          currentEmail = email;
+          if (data.needsPassword) {
+            document.getElementById('create-email').value = email;
+            switchView('step2-create');
+          } else {
+            document.getElementById('login-email').value = email;
+            switchView('step3-login');
+            // Small delay so browser renders view before focusing
+            setTimeout(() => document.getElementById('login-password').focus(), 50);
+          }
+        } else {
+          showError('verify-error', data.error || "Email not registered. No signup available.");
+        }
+      } catch (e) {
+        btn.disabled = false;
+        btn.innerHTML = 'Continue <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+        showError('verify-error', "Server error. Please try again later.");
+      }
+    }
+
+    function checkStrength() {
+      const pwd = document.getElementById('new-password').value;
+      const fill = document.getElementById('pwd-fill');
+      
+      const hasLen = pwd.length >= 8;
+      const hasUp = /[A-Z]/.test(pwd);
+      const hasNum = /[0-9]/.test(pwd);
+      const hasSpc = /[^A-Za-z0-9]/.test(pwd);
+
+      document.getElementById('req-len').className = `req-item ${hasLen ? 'met' : ''}`;
+      document.getElementById('req-up').className = `req-item ${hasUp ? 'met' : ''}`;
+      document.getElementById('req-num').className = `req-item ${hasNum ? 'met' : ''}`;
+      document.getElementById('req-spc').className = `req-item ${hasSpc ? 'met' : ''}`;
+
+      let score = [hasLen, hasUp, hasNum, hasSpc].filter(Boolean).length;
+      
+      fill.className = 'password-strength-fill';
+      if (score === 0) fill.style.width = '0%';
+      else if (score <= 2) { fill.classList.add('pwd-weak'); fill.style.width = '33%'; }
+      else if (score === 3) { fill.classList.add('pwd-medium'); fill.style.width = '66%'; }
+      else { fill.classList.add('pwd-strong'); fill.style.width = '100%'; }
+      
+      return score === 4;
+    }
+
+    async function createPassword() {
+      const pwd = document.getElementById('new-password').value;
+      const confirm = document.getElementById('confirm-password').value;
+
+      if (!checkStrength()) {
+        showError('create-error', "Password must contain uppercase, number, special character and be 8+ chars.");
+        return;
+      }
+
+      if (pwd !== confirm) {
+        showError('create-error', "Passwords do not match.");
+        return;
+      }
+
+      const btn = document.getElementById('create-btn');
+      btn.disabled = true;
+      btn.textContent = 'Saving...';
+
+      try {
+        const res = await fetch('/auth/setup_password', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: currentEmail, password: pwd })
+        });
+        
+        const data = await res.json();
+        
+        if (res.ok) {
+          window.location.href = '/';
+        } else {
+          btn.disabled = false;
+          btn.textContent = 'Set Password & Login';
+          showError('create-error', data.error || "Failed to create password.");
+        }
+      } catch (e) {
+        btn.disabled = false;
+        btn.textContent = 'Set Password & Login';
+        showError('create-error', "Server error. Please try again.");
+      }
+    }
+
+    async function submitLogin() {
+      const pwd = document.getElementById('login-password').value;
+      
+      if (!pwd) return;
+
+      const btn = document.getElementById('login-btn');
+      btn.disabled = true;
+      btn.textContent = 'Logging in...';
+      hideErrors();
+
+      try {
+        const res = await fetch('/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: currentEmail, password: pwd })
+        });
+        
+        const data = await res.json();
+        
+        if (res.ok) {
+          document.getElementById('login-success').style.display = 'block';
+          setTimeout(() => window.location.href = '/', 600);
+        } else {
+          btn.disabled = false;
+          btn.innerHTML = 'Login <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg>';
+          document.getElementById('login-password').value = '';
+          document.getElementById('login-password').focus();
+          
+          let errMsg = data.error || "Incorrect password.";
+          if (data.attemptsLeft !== undefined) {
+             errMsg = `Incorrect password. Attempts remaining: ${data.attemptsLeft}`;
+          }
+          if (data.lockedUntil) {
+             errMsg = "Too many failed attempts. Please try again in 5 minutes.";
+          }
+          showError('login-error', errMsg);
+        }
+      } catch (e) {
+        btn.disabled = false;
+        btn.innerHTML = 'Login <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg>';
+        showError('login-error', "Server error. Please try again.");
+      }
+    }
+  </script>
+</body>
+</html>

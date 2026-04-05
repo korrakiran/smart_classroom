@@ -1,0 +1,769 @@
+student_id,school_id,class,subject,topic,prerequisite_topic,prerequisite_score,days_since_prerequisite,num_attempts,avg_time_per_attempt,time_on_task,score,score_variance,hint_usage_count,video_rewatch_count,help_seeking_behavior,session_count,attempt_pattern,difficulty_score,struggle_reason,recommended_action
+S_B_001,B,5,Maths,Arithmetic,none,100.0,0,3,9.6,28.8,69.1,7.97,3,5,0,4,stuck,0.309,conceptual_misunderstanding,assign_worked_examples
+S_B_002,B,5,Maths,Arithmetic,none,100.0,0,2,21.9,43.8,93.8,109.96,8,0,0,5,improving,0.062,none,maintain_current_pace
+S_B_003,B,5,Maths,Arithmetic,none,100.0,0,1,33.1,33.1,79.4,0.0,2,5,0,2,insufficient_data,0.206,none,maintain_current_pace
+S_B_004,B,5,Maths,Arithmetic,none,100.0,0,6,12.9,77.4,80.9,31.04,5,5,0,4,stuck,0.191,none,maintain_current_pace
+S_B_005,B,5,Maths,Arithmetic,none,100.0,0,2,40.4,80.8,100.0,0.0,3,5,0,1,stuck,0.0,none,maintain_current_pace
+S_B_006,B,5,Maths,Arithmetic,none,100.0,0,2,5.0,10.0,81.0,4.24,6,2,0,2,declining,0.19,none,maintain_current_pace
+S_B_007,B,5,Maths,Arithmetic,none,100.0,0,2,50.5,101.0,77.1,8.95,3,1,0,6,declining,0.229,none,maintain_current_pace
+S_B_008,B,5,Maths,Arithmetic,none,100.0,0,2,60.0,120.0,86.7,0.01,6,0,0,6,stuck,0.133,none,maintain_current_pace
+S_B_009,B,5,Maths,Algebra,Arithmetic,48.5,48,4,21.8,87.2,44.8,83.52,0,3,0,1,declining,0.552,prerequisite_gap,revisit_prerequisite_topic
+S_B_010,B,5,Maths,Algebra,Arithmetic,47.0,33,8,50.8,406.4,39.5,70.36,0,3,1,1,stuck,0.605,prerequisite_gap,revisit_prerequisite_topic
+S_B_011,B,5,Maths,Algebra,Arithmetic,39.7,11,4,39.9,159.6,43.0,53.64,7,0,0,5,improving,0.57,prerequisite_gap,revisit_prerequisite_topic
+S_B_012,B,5,Maths,Algebra,Arithmetic,48.6,58,4,26.6,106.4,47.3,12.23,8,3,0,2,stuck,0.527,prerequisite_gap,revisit_prerequisite_topic
+S_B_013,B,5,Maths,Algebra,Arithmetic,34.9,50,1,43.9,43.9,44.0,0.0,8,3,0,4,insufficient_data,0.56,prerequisite_gap,revisit_prerequisite_topic
+S_B_014,B,5,Maths,Algebra,Arithmetic,59.1,38,6,49.4,296.4,37.0,27.96,2,3,0,2,declining,0.63,conceptual_misunderstanding,assign_worked_examples
+S_B_015,B,5,Maths,Algebra,Arithmetic,81.3,29,6,57.0,342.0,54.9,86.03,2,5,1,5,improving,0.451,unstable_understanding,spaced_repetition_practice
+S_B_016,B,5,Maths,Algebra,Arithmetic,44.2,47,7,24.7,172.9,67.5,44.1,6,0,0,1,stuck,0.325,prerequisite_gap,revisit_prerequisite_topic
+S_B_017,B,5,Maths,Geometry,Algebra,93.5,86,6,61.7,370.2,58.8,39.19,3,3,0,6,stuck,0.412,unstable_understanding,spaced_repetition_practice
+S_B_018,B,5,Maths,Geometry,Algebra,68.0,70,6,8.3,49.8,56.4,27.17,4,1,0,6,stuck,0.436,unstable_understanding,spaced_repetition_practice
+S_B_019,B,5,Maths,Geometry,Algebra,61.2,8,1,31.4,31.4,75.5,0.0,8,0,0,3,insufficient_data,0.245,none,maintain_current_pace
+S_B_020,B,5,Maths,Geometry,Algebra,69.1,32,8,25.7,205.6,66.1,30.96,2,4,0,2,stuck,0.339,conceptual_misunderstanding,assign_worked_examples
+S_B_021,B,5,Maths,Geometry,Algebra,52.5,9,8,5.0,40.0,50.1,32.86,6,0,1,4,stuck,0.499,prerequisite_gap,revisit_prerequisite_topic
+S_B_022,B,5,Maths,Geometry,Algebra,88.5,48,7,41.5,290.5,46.5,110.8,2,1,1,3,stuck,0.535,unstable_understanding,spaced_repetition_practice
+S_B_023,B,5,Maths,Geometry,Algebra,54.9,77,1,35.2,35.2,38.5,0.0,2,5,0,3,insufficient_data,0.615,prerequisite_gap,revisit_prerequisite_topic
+S_B_024,B,5,Maths,Geometry,Algebra,46.2,44,5,52.4,262.0,61.0,79.61,8,5,0,5,stuck,0.39,prerequisite_gap,revisit_prerequisite_topic
+S_B_025,B,5,Maths,Trigonometry,Geometry,36.4,18,8,9.4,75.2,33.1,77.39,3,2,1,3,stuck,0.669,prerequisite_gap,revisit_prerequisite_topic
+S_B_026,B,5,Maths,Trigonometry,Geometry,44.9,31,4,22.6,90.4,60.1,30.75,6,5,0,6,stuck,0.399,prerequisite_gap,revisit_prerequisite_topic
+S_B_027,B,5,Maths,Trigonometry,Geometry,71.4,18,5,66.9,334.5,72.7,58.01,8,1,0,1,stuck,0.273,none,maintain_current_pace
+S_B_028,B,5,Maths,Trigonometry,Geometry,56.2,82,4,5.0,20.0,63.2,58.34,3,3,0,4,declining,0.368,unstable_understanding,spaced_repetition_practice
+S_B_029,B,5,Maths,Trigonometry,Geometry,45.1,35,8,21.3,170.4,47.8,63.19,7,3,1,5,improving,0.522,prerequisite_gap,revisit_prerequisite_topic
+S_B_030,B,5,Maths,Trigonometry,Geometry,49.5,73,7,24.9,174.3,53.7,79.16,2,0,0,1,stuck,0.463,prerequisite_gap,revisit_prerequisite_topic
+S_B_031,B,5,Maths,Trigonometry,Geometry,68.6,14,5,37.4,187.0,67.4,40.41,0,0,0,1,stuck,0.326,conceptual_misunderstanding,assign_worked_examples
+S_B_032,B,5,Maths,Trigonometry,Geometry,48.8,36,5,64.8,324.0,42.0,43.05,3,1,0,5,stuck,0.58,prerequisite_gap,revisit_prerequisite_topic
+S_B_033,B,5,Maths,Statistics,Trigonometry,56.8,50,4,51.1,204.4,53.5,93.2,7,0,0,4,declining,0.465,conceptual_misunderstanding,assign_worked_examples
+S_B_034,B,5,Maths,Statistics,Trigonometry,30.0,29,4,20.4,81.6,43.8,0.85,4,3,1,5,stuck,0.562,prerequisite_gap,revisit_prerequisite_topic
+S_B_035,B,5,Maths,Statistics,Trigonometry,73.5,30,2,13.0,26.0,74.2,1.47,6,4,0,4,stuck,0.258,none,maintain_current_pace
+S_B_036,B,5,Maths,Statistics,Trigonometry,65.5,3,5,45.4,227.0,82.6,55.89,7,4,0,2,stuck,0.174,none,maintain_current_pace
+S_B_037,B,5,Maths,Statistics,Trigonometry,61.2,48,3,25.2,75.6,39.2,12.65,5,2,1,2,stuck,0.608,conceptual_misunderstanding,assign_worked_examples
+S_B_038,B,5,Maths,Statistics,Trigonometry,50.1,38,4,5.0,20.0,73.7,67.86,1,3,0,6,declining,0.263,none,maintain_current_pace
+S_B_039,B,5,Maths,Statistics,Trigonometry,67.5,45,6,11.4,68.4,49.3,63.78,4,3,0,2,stuck,0.507,guessing,enforce_reflection_before_submit
+S_B_040,B,5,Maths,Statistics,Trigonometry,79.0,75,4,74.4,297.6,34.1,83.31,1,4,1,1,improving,0.659,forgetting,schedule_revision_session
+S_B_041,B,5,Maths,Probability,Statistics,61.9,33,8,65.5,524.0,64.0,46.52,2,2,0,5,stuck,0.36,unstable_understanding,spaced_repetition_practice
+S_B_042,B,5,Maths,Probability,Statistics,43.9,61,7,49.5,346.5,42.4,31.72,7,4,1,6,stuck,0.576,prerequisite_gap,revisit_prerequisite_topic
+S_B_043,B,5,Maths,Probability,Statistics,70.4,23,3,19.3,57.9,61.7,19.25,0,4,0,5,stuck,0.383,conceptual_misunderstanding,assign_worked_examples
+S_B_044,B,5,Maths,Probability,Statistics,74.7,8,7,40.2,281.4,69.6,41.05,1,5,0,2,stuck,0.304,conceptual_misunderstanding,assign_worked_examples
+S_B_045,B,5,Maths,Probability,Statistics,73.2,21,1,57.2,57.2,71.2,0.0,7,5,0,4,insufficient_data,0.288,none,maintain_current_pace
+S_B_046,B,5,Maths,Probability,Statistics,62.1,71,7,56.5,395.5,48.3,26.65,2,4,1,2,stuck,0.517,forgetting,schedule_revision_session
+S_B_047,B,5,Maths,Probability,Statistics,100.0,5,4,107.5,430.0,100.0,3.93,4,2,0,1,stuck,0.0,none,maintain_current_pace
+S_B_048,B,5,Maths,Probability,Statistics,57.3,3,4,50.3,201.2,36.8,14.69,4,3,0,1,stuck,0.632,conceptual_misunderstanding,assign_worked_examples
+S_B_049,B,5,Science,Physics,none,100.0,0,4,5.0,20.0,89.4,40.29,2,3,0,1,stuck,0.106,none,maintain_current_pace
+S_B_050,B,5,Science,Physics,none,100.0,0,4,47.2,188.8,100.0,5.36,6,5,0,4,stuck,0.0,none,maintain_current_pace
+S_B_051,B,5,Science,Physics,none,100.0,0,2,44.2,88.4,68.5,5.63,7,0,0,3,declining,0.315,conceptual_misunderstanding,assign_worked_examples
+S_B_052,B,5,Science,Physics,none,100.0,0,6,32.8,196.8,91.8,9.64,3,5,0,5,stuck,0.082,none,maintain_current_pace
+S_B_053,B,5,Science,Physics,none,100.0,0,6,40.5,243.0,95.1,22.34,1,3,0,4,stuck,0.049,none,maintain_current_pace
+S_B_054,B,5,Science,Physics,none,100.0,0,7,44.5,311.5,80.3,75.13,6,2,0,6,stuck,0.197,none,maintain_current_pace
+S_B_055,B,5,Science,Physics,none,100.0,0,8,30.9,247.2,58.8,18.29,2,1,0,4,stuck,0.412,conceptual_misunderstanding,assign_worked_examples
+S_B_056,B,5,Science,Physics,none,100.0,0,4,5.0,20.0,93.9,8.15,0,0,0,2,stuck,0.061,none,maintain_current_pace
+S_B_057,B,5,Science,Chemistry,Physics,70.9,62,2,19.8,39.6,70.4,32.42,1,0,0,6,declining,0.296,none,maintain_current_pace
+S_B_058,B,5,Science,Chemistry,Physics,85.2,59,6,5.0,30.0,43.9,118.4,5,5,1,5,declining,0.561,guessing,enforce_reflection_before_submit
+S_B_059,B,5,Science,Chemistry,Physics,77.2,76,5,66.4,332.0,76.5,85.22,8,2,0,4,improving,0.235,none,maintain_current_pace
+S_B_060,B,5,Science,Chemistry,Physics,100.0,7,5,21.9,109.5,83.7,28.24,3,3,0,2,stuck,0.163,none,maintain_current_pace
+S_B_061,B,5,Science,Chemistry,Physics,86.9,65,6,17.7,106.2,59.9,43.02,5,0,0,4,stuck,0.401,conceptual_misunderstanding,assign_worked_examples
+S_B_062,B,5,Science,Chemistry,Physics,53.6,52,7,51.0,357.0,68.5,48.82,6,3,0,2,stuck,0.315,prerequisite_gap,revisit_prerequisite_topic
+S_B_063,B,5,Science,Chemistry,Physics,55.8,37,4,23.5,94.0,49.9,9.46,1,0,1,1,stuck,0.501,conceptual_misunderstanding,assign_worked_examples
+S_B_064,B,5,Science,Chemistry,Physics,73.2,12,3,56.4,169.2,66.2,2.5,5,5,0,6,stuck,0.338,conceptual_misunderstanding,assign_worked_examples
+S_B_065,B,5,Science,Biology,Chemistry,86.3,86,2,15.9,31.8,100.0,0.3,1,0,0,5,stuck,0.0,none,maintain_current_pace
+S_B_066,B,5,Science,Biology,Chemistry,66.4,1,4,48.1,192.4,30.5,32.4,8,0,1,3,stuck,0.695,conceptual_misunderstanding,assign_worked_examples
+S_B_067,B,5,Science,Biology,Chemistry,74.9,34,3,56.3,168.9,51.8,68.06,4,0,0,3,improving,0.482,unstable_understanding,spaced_repetition_practice
+S_B_068,B,5,Science,Biology,Chemistry,47.9,58,6,5.0,30.0,63.6,78.92,5,1,0,2,stuck,0.364,prerequisite_gap,revisit_prerequisite_topic
+S_B_069,B,5,Science,Biology,Chemistry,28.5,60,3,33.0,99.0,36.7,23.95,2,1,1,3,stuck,0.633,prerequisite_gap,revisit_prerequisite_topic
+S_B_070,B,5,Science,Biology,Chemistry,100.0,43,6,5.0,30.0,68.6,32.48,3,3,0,6,stuck,0.314,unstable_understanding,spaced_repetition_practice
+S_B_071,B,5,Science,Biology,Chemistry,72.3,25,6,38.1,228.6,68.2,22.62,5,3,0,2,stuck,0.318,conceptual_misunderstanding,assign_worked_examples
+S_B_072,B,5,Science,Biology,Chemistry,46.8,42,7,5.0,35.0,19.0,90.8,5,1,0,2,stuck,0.81,prerequisite_gap,revisit_prerequisite_topic
+S_B_073,B,5,Science,Environmental Science,Biology,82.3,31,8,87.6,700.8,61.5,29.27,7,4,0,2,stuck,0.385,conceptual_misunderstanding,assign_worked_examples
+S_B_074,B,5,Science,Environmental Science,Biology,65.9,85,5,56.8,284.0,30.3,40.08,0,3,1,5,stuck,0.697,unstable_understanding,spaced_repetition_practice
+S_B_075,B,5,Science,Environmental Science,Biology,40.6,59,1,25.9,25.9,46.7,0.0,1,3,1,4,insufficient_data,0.533,prerequisite_gap,revisit_prerequisite_topic
+S_B_076,B,5,Science,Environmental Science,Biology,98.0,78,4,11.1,44.4,100.0,9.33,3,5,0,5,stuck,0.0,none,maintain_current_pace
+S_B_077,B,5,Science,Environmental Science,Biology,39.8,33,7,32.0,224.0,65.3,121.02,8,3,0,1,stuck,0.347,prerequisite_gap,revisit_prerequisite_topic
+S_B_078,B,5,Science,Environmental Science,Biology,48.4,65,5,39.4,197.0,29.6,29.34,6,4,1,2,improving,0.704,prerequisite_gap,revisit_prerequisite_topic
+S_B_079,B,5,Science,Environmental Science,Biology,27.2,70,4,61.4,245.6,41.4,12.34,4,1,1,6,stuck,0.586,prerequisite_gap,revisit_prerequisite_topic
+S_B_080,B,5,Science,Environmental Science,Biology,61.5,55,4,49.8,199.2,57.0,62.56,1,0,0,2,improving,0.43,forgetting,schedule_revision_session
+S_B_081,B,5,Science,Space Science,Environmental Science,61.6,16,1,43.8,43.8,57.3,0.0,4,1,0,1,insufficient_data,0.427,low_engagement,increase_interactive_activities
+S_B_082,B,5,Science,Space Science,Environmental Science,31.9,58,6,65.8,394.8,60.2,34.5,1,2,0,2,stuck,0.398,prerequisite_gap,revisit_prerequisite_topic
+S_B_083,B,5,Science,Space Science,Environmental Science,53.1,33,1,45.5,45.5,71.9,0.0,1,0,0,2,insufficient_data,0.281,none,maintain_current_pace
+S_B_084,B,5,Science,Space Science,Environmental Science,68.5,89,4,46.7,186.8,28.9,16.66,6,0,1,4,stuck,0.711,conceptual_misunderstanding,assign_worked_examples
+S_B_085,B,5,Science,Space Science,Environmental Science,36.6,28,3,48.1,144.3,65.0,219.77,3,5,0,4,improving,0.35,prerequisite_gap,revisit_prerequisite_topic
+S_B_086,B,5,Science,Space Science,Environmental Science,85.1,72,8,7.8,62.4,85.8,68.28,6,5,0,1,stuck,0.142,none,maintain_current_pace
+S_B_087,B,5,Science,Space Science,Environmental Science,97.2,11,3,25.5,76.5,89.6,9.82,2,3,0,4,improving,0.104,none,maintain_current_pace
+S_B_088,B,5,Science,Space Science,Environmental Science,40.5,44,2,24.5,49.0,44.5,6.3,4,4,1,3,improving,0.555,prerequisite_gap,revisit_prerequisite_topic
+S_B_089,B,5,Social Science,History,none,100.0,0,1,16.2,16.2,83.2,0.0,4,5,0,2,insufficient_data,0.168,none,maintain_current_pace
+S_B_090,B,5,Social Science,History,none,100.0,0,5,73.2,366.0,27.7,125.29,4,3,0,3,stuck,0.723,unstable_understanding,spaced_repetition_practice
+S_B_091,B,5,Social Science,History,none,100.0,0,6,57.2,343.2,82.6,42.56,5,2,0,1,stuck,0.174,none,maintain_current_pace
+S_B_092,B,5,Social Science,History,none,100.0,0,3,79.3,237.9,62.4,9.86,4,4,0,5,improving,0.376,conceptual_misunderstanding,assign_worked_examples
+S_B_093,B,5,Social Science,History,none,100.0,0,2,46.9,93.8,62.5,6.53,4,4,0,6,improving,0.375,conceptual_misunderstanding,assign_worked_examples
+S_B_094,B,5,Social Science,History,none,100.0,0,5,55.5,277.5,89.0,20.31,2,0,0,1,declining,0.11,none,maintain_current_pace
+S_B_095,B,5,Social Science,History,none,100.0,0,1,70.6,70.6,93.4,0.0,7,2,0,4,insufficient_data,0.066,none,maintain_current_pace
+S_B_096,B,5,Social Science,History,none,100.0,0,2,32.0,64.0,100.0,15.41,1,2,0,2,improving,0.0,none,maintain_current_pace
+S_B_097,B,5,Social Science,Geography,History,78.0,90,2,86.4,172.8,66.0,3.16,2,5,0,6,improving,0.34,forgetting,schedule_revision_session
+S_B_098,B,5,Social Science,Geography,History,89.7,66,4,37.6,150.4,74.2,40.67,3,3,0,5,stuck,0.258,none,maintain_current_pace
+S_B_099,B,5,Social Science,Geography,History,63.4,79,7,61.4,429.8,66.4,69.44,1,5,0,4,stuck,0.336,unstable_understanding,spaced_repetition_practice
+S_B_100,B,5,Social Science,Geography,History,61.2,1,2,69.1,138.2,50.6,2.24,2,5,1,6,stuck,0.494,low_engagement,increase_interactive_activities
+S_B_101,B,5,Social Science,Geography,History,71.4,32,3,30.6,91.8,53.7,8.94,3,2,1,5,improving,0.463,conceptual_misunderstanding,assign_worked_examples
+S_B_102,B,5,Social Science,Geography,History,69.9,1,4,25.4,101.6,35.8,2.81,1,2,0,4,stuck,0.642,conceptual_misunderstanding,assign_worked_examples
+S_B_103,B,5,Social Science,Geography,History,46.2,36,8,55.9,447.2,35.0,56.08,0,2,0,4,stuck,0.65,prerequisite_gap,revisit_prerequisite_topic
+S_B_104,B,5,Social Science,Geography,History,63.0,21,1,44.3,44.3,31.8,0.0,3,3,0,3,insufficient_data,0.682,low_engagement,increase_interactive_activities
+S_B_105,B,5,Social Science,Civics,Geography,40.1,19,5,30.2,151.0,62.6,70.25,7,1,0,6,declining,0.374,prerequisite_gap,revisit_prerequisite_topic
+S_B_106,B,5,Social Science,Civics,Geography,83.1,36,8,54.3,434.4,68.0,52.44,2,0,0,3,stuck,0.32,unstable_understanding,spaced_repetition_practice
+S_B_107,B,5,Social Science,Civics,Geography,58.1,89,2,5.1,10.2,54.0,14.29,0,0,1,1,declining,0.46,guessing,enforce_reflection_before_submit
+S_B_108,B,5,Social Science,Civics,Geography,33.6,31,5,34.8,174.0,54.7,112.28,7,4,0,1,stuck,0.453,prerequisite_gap,revisit_prerequisite_topic
+S_B_109,B,5,Social Science,Civics,Geography,43.4,42,7,33.8,236.6,48.5,65.31,5,0,0,5,stuck,0.515,prerequisite_gap,revisit_prerequisite_topic
+S_B_110,B,5,Social Science,Civics,Geography,48.9,26,4,12.7,50.8,78.3,62.37,6,4,0,1,stuck,0.217,none,maintain_current_pace
+S_B_111,B,5,Social Science,Civics,Geography,58.9,18,4,24.2,96.8,53.6,22.16,8,3,1,2,stuck,0.464,conceptual_misunderstanding,assign_worked_examples
+S_B_112,B,5,Social Science,Civics,Geography,53.6,28,4,30.3,121.2,57.5,12.41,7,1,0,1,stuck,0.425,prerequisite_gap,revisit_prerequisite_topic
+S_B_113,B,5,Social Science,Economics,Civics,54.9,16,2,50.5,101.0,64.3,1.37,3,0,0,4,stuck,0.357,prerequisite_gap,revisit_prerequisite_topic
+S_B_114,B,5,Social Science,Economics,Civics,56.2,89,5,5.0,25.0,50.3,43.7,5,0,0,5,stuck,0.497,guessing,enforce_reflection_before_submit
+S_B_115,B,5,Social Science,Economics,Civics,80.1,30,5,73.6,368.0,69.1,40.89,0,5,0,3,declining,0.309,unstable_understanding,spaced_repetition_practice
+S_B_116,B,5,Social Science,Economics,Civics,11.5,25,3,43.0,129.0,21.5,2.04,4,3,0,4,stuck,0.785,prerequisite_gap,revisit_prerequisite_topic
+S_B_117,B,5,Social Science,Economics,Civics,51.4,29,3,74.4,223.2,58.0,12.07,6,1,0,6,stuck,0.42,prerequisite_gap,revisit_prerequisite_topic
+S_B_118,B,5,Social Science,Economics,Civics,31.6,9,3,31.9,95.7,42.7,42.74,1,0,1,2,stuck,0.573,prerequisite_gap,revisit_prerequisite_topic
+S_B_119,B,5,Social Science,Economics,Civics,27.1,10,3,12.0,36.0,48.1,1.59,8,4,1,5,stuck,0.519,prerequisite_gap,revisit_prerequisite_topic
+S_B_120,B,5,Social Science,Economics,Civics,34.3,43,8,82.1,656.8,86.9,45.06,3,5,0,1,stuck,0.131,none,maintain_current_pace
+S_B_121,B,5,Social Science,Political Science,Economics,67.0,69,8,54.7,437.6,89.3,82.82,2,0,0,5,stuck,0.107,none,maintain_current_pace
+S_B_122,B,5,Social Science,Political Science,Economics,75.4,24,4,40.6,162.4,55.9,48.79,8,4,0,1,declining,0.441,conceptual_misunderstanding,assign_worked_examples
+S_B_123,B,5,Social Science,Political Science,Economics,50.1,34,5,61.3,306.5,48.6,15.32,3,5,1,5,stuck,0.514,prerequisite_gap,revisit_prerequisite_topic
+S_B_124,B,5,Social Science,Political Science,Economics,73.6,55,2,56.6,113.2,64.5,26.61,5,0,0,1,improving,0.355,forgetting,schedule_revision_session
+S_B_125,B,5,Social Science,Political Science,Economics,74.4,2,1,41.1,41.1,43.2,0.0,1,2,0,6,insufficient_data,0.568,low_engagement,increase_interactive_activities
+S_B_126,B,5,Social Science,Political Science,Economics,40.1,82,2,49.1,98.2,51.9,5.15,8,5,0,6,declining,0.481,prerequisite_gap,revisit_prerequisite_topic
+S_B_127,B,5,Social Science,Political Science,Economics,61.8,20,6,5.0,30.0,50.4,41.45,2,4,1,5,stuck,0.496,guessing,enforce_reflection_before_submit
+S_B_128,B,5,Social Science,Political Science,Economics,81.0,62,5,5.0,25.0,71.4,23.31,7,0,0,5,stuck,0.286,none,maintain_current_pace
+S_B_129,B,6,Maths,Arithmetic,none,100.0,0,7,13.9,97.3,75.6,27.7,8,2,0,5,stuck,0.244,none,maintain_current_pace
+S_B_130,B,6,Maths,Arithmetic,none,100.0,0,3,8.4,25.2,90.8,5.07,5,2,0,6,stuck,0.092,none,maintain_current_pace
+S_B_131,B,6,Maths,Arithmetic,none,100.0,0,1,52.8,52.8,61.4,0.0,6,5,0,1,insufficient_data,0.386,conceptual_misunderstanding,assign_worked_examples
+S_B_132,B,6,Maths,Arithmetic,none,100.0,0,1,29.2,29.2,76.5,0.0,8,3,0,5,insufficient_data,0.235,none,maintain_current_pace
+S_B_133,B,6,Maths,Arithmetic,none,100.0,0,6,59.8,358.8,80.6,76.18,4,0,0,1,stuck,0.194,none,maintain_current_pace
+S_B_134,B,6,Maths,Arithmetic,none,100.0,0,7,43.4,303.8,79.7,118.42,2,4,0,4,declining,0.203,none,maintain_current_pace
+S_B_135,B,6,Maths,Arithmetic,none,100.0,0,8,48.8,390.4,72.3,34.71,6,4,0,6,stuck,0.277,none,maintain_current_pace
+S_B_136,B,6,Maths,Arithmetic,none,100.0,0,5,30.4,152.0,62.0,89.93,2,2,0,6,improving,0.38,unstable_understanding,spaced_repetition_practice
+S_B_137,B,6,Maths,Algebra,Arithmetic,66.8,68,7,39.8,278.6,74.3,110.43,5,2,0,1,stuck,0.257,none,maintain_current_pace
+S_B_138,B,6,Maths,Algebra,Arithmetic,72.7,24,7,44.6,312.2,41.7,44.83,4,3,1,3,stuck,0.583,unstable_understanding,spaced_repetition_practice
+S_B_139,B,6,Maths,Algebra,Arithmetic,44.3,66,1,40.6,40.6,25.3,0.0,8,4,0,3,insufficient_data,0.747,prerequisite_gap,revisit_prerequisite_topic
+S_B_140,B,6,Maths,Algebra,Arithmetic,78.9,43,3,5.0,15.0,74.5,10.87,0,2,0,2,stuck,0.255,none,maintain_current_pace
+S_B_141,B,6,Maths,Algebra,Arithmetic,68.4,27,4,45.9,183.6,87.3,63.17,1,3,0,6,improving,0.127,none,maintain_current_pace
+S_B_142,B,6,Maths,Algebra,Arithmetic,63.7,14,2,48.6,97.2,76.9,87.2,1,4,0,1,declining,0.231,none,maintain_current_pace
+S_B_143,B,6,Maths,Algebra,Arithmetic,57.3,78,4,35.6,142.4,63.1,53.86,3,0,0,4,improving,0.369,unstable_understanding,spaced_repetition_practice
+S_B_144,B,6,Maths,Algebra,Arithmetic,79.7,11,8,5.0,40.0,69.5,36.55,2,1,0,1,stuck,0.305,conceptual_misunderstanding,assign_worked_examples
+S_B_145,B,6,Maths,Geometry,Algebra,60.3,4,2,21.9,43.8,71.6,24.13,8,0,0,2,improving,0.284,none,maintain_current_pace
+S_B_146,B,6,Maths,Geometry,Algebra,55.9,82,8,14.1,112.8,54.7,28.95,5,1,1,1,stuck,0.453,conceptual_misunderstanding,assign_worked_examples
+S_B_147,B,6,Maths,Geometry,Algebra,78.8,40,2,53.2,106.4,40.0,0.44,1,4,0,2,stuck,0.6,low_engagement,increase_interactive_activities
+S_B_148,B,6,Maths,Geometry,Algebra,45.6,4,3,52.2,156.6,50.7,67.61,3,4,1,2,improving,0.493,prerequisite_gap,revisit_prerequisite_topic
+S_B_149,B,6,Maths,Geometry,Algebra,79.7,43,6,47.2,283.2,63.1,44.24,0,2,0,6,stuck,0.369,unstable_understanding,spaced_repetition_practice
+S_B_150,B,6,Maths,Geometry,Algebra,59.7,3,6,39.5,237.0,92.9,98.0,6,0,0,1,improving,0.071,none,maintain_current_pace
+S_B_151,B,6,Maths,Geometry,Algebra,96.4,8,4,17.4,69.6,68.3,51.96,7,0,0,3,stuck,0.317,unstable_understanding,spaced_repetition_practice
+S_B_152,B,6,Maths,Geometry,Algebra,44.3,28,2,75.8,151.6,41.9,14.0,0,3,1,2,improving,0.581,prerequisite_gap,revisit_prerequisite_topic
+S_B_153,B,6,Maths,Trigonometry,Geometry,54.0,81,8,39.7,317.6,37.6,76.91,8,0,1,4,stuck,0.624,prerequisite_gap,revisit_prerequisite_topic
+S_B_154,B,6,Maths,Trigonometry,Geometry,72.2,25,6,26.5,159.0,81.0,24.92,5,4,0,6,stuck,0.19,none,maintain_current_pace
+S_B_155,B,6,Maths,Trigonometry,Geometry,68.0,48,8,43.2,345.6,61.4,65.66,7,2,0,5,stuck,0.386,unstable_understanding,spaced_repetition_practice
+S_B_156,B,6,Maths,Trigonometry,Geometry,43.1,22,7,36.5,255.5,25.2,46.27,7,0,1,3,stuck,0.748,prerequisite_gap,revisit_prerequisite_topic
+S_B_157,B,6,Maths,Trigonometry,Geometry,83.9,19,6,5.0,30.0,60.9,34.05,3,1,0,2,stuck,0.391,conceptual_misunderstanding,assign_worked_examples
+S_B_158,B,6,Maths,Trigonometry,Geometry,88.7,29,5,65.1,325.5,78.7,48.64,0,4,0,4,improving,0.213,none,maintain_current_pace
+S_B_159,B,6,Maths,Trigonometry,Geometry,76.5,59,7,64.6,452.2,70.8,89.72,3,2,0,6,stuck,0.292,none,maintain_current_pace
+S_B_160,B,6,Maths,Trigonometry,Geometry,41.5,84,4,5.0,20.0,62.4,86.93,4,0,0,3,improving,0.376,prerequisite_gap,revisit_prerequisite_topic
+S_B_161,B,6,Maths,Statistics,Trigonometry,65.7,53,2,88.6,177.2,57.4,4.74,0,4,0,2,improving,0.426,forgetting,schedule_revision_session
+S_B_162,B,6,Maths,Statistics,Trigonometry,36.6,70,3,58.6,175.8,34.3,21.33,6,2,1,1,declining,0.657,prerequisite_gap,revisit_prerequisite_topic
+S_B_163,B,6,Maths,Statistics,Trigonometry,73.2,72,8,26.9,215.2,67.7,66.53,3,2,0,4,stuck,0.323,unstable_understanding,spaced_repetition_practice
+S_B_164,B,6,Maths,Statistics,Trigonometry,57.8,70,3,37.6,112.8,83.5,29.72,0,1,0,4,stuck,0.165,none,maintain_current_pace
+S_B_165,B,6,Maths,Statistics,Trigonometry,58.3,29,1,83.8,83.8,58.3,0.0,6,0,0,1,insufficient_data,0.417,conceptual_misunderstanding,assign_worked_examples
+S_B_166,B,6,Maths,Statistics,Trigonometry,69.2,15,7,25.1,175.7,62.9,106.65,4,0,0,3,stuck,0.371,unstable_understanding,spaced_repetition_practice
+S_B_167,B,6,Maths,Statistics,Trigonometry,70.9,81,2,48.8,97.6,53.7,73.95,8,1,1,4,improving,0.463,conceptual_misunderstanding,assign_worked_examples
+S_B_168,B,6,Maths,Statistics,Trigonometry,46.1,7,6,7.7,46.2,52.6,25.17,7,1,1,4,stuck,0.474,prerequisite_gap,revisit_prerequisite_topic
+S_B_169,B,6,Maths,Probability,Statistics,86.3,86,3,16.1,48.3,64.6,28.59,7,3,0,1,improving,0.354,forgetting,schedule_revision_session
+S_B_170,B,6,Maths,Probability,Statistics,41.2,21,2,37.3,74.6,36.0,46.58,8,2,0,2,improving,0.64,prerequisite_gap,revisit_prerequisite_topic
+S_B_171,B,6,Maths,Probability,Statistics,68.3,12,3,61.1,183.3,75.1,2.5,5,3,0,1,stuck,0.249,none,maintain_current_pace
+S_B_172,B,6,Maths,Probability,Statistics,21.7,60,1,46.7,46.7,50.9,0.0,2,5,0,5,insufficient_data,0.491,prerequisite_gap,revisit_prerequisite_topic
+S_B_173,B,6,Maths,Probability,Statistics,71.1,29,7,55.9,391.3,65.5,33.06,3,3,0,1,stuck,0.345,conceptual_misunderstanding,assign_worked_examples
+S_B_174,B,6,Maths,Probability,Statistics,79.5,40,5,15.2,76.0,48.6,53.54,4,4,0,1,stuck,0.514,conceptual_misunderstanding,assign_worked_examples
+S_B_175,B,6,Maths,Probability,Statistics,48.6,7,4,43.6,174.4,30.1,80.97,7,5,1,6,declining,0.699,prerequisite_gap,revisit_prerequisite_topic
+S_B_176,B,6,Maths,Probability,Statistics,53.2,66,3,43.5,130.5,51.2,86.02,8,1,0,2,improving,0.488,prerequisite_gap,revisit_prerequisite_topic
+S_B_177,B,6,Science,Physics,none,100.0,0,5,5.0,25.0,39.8,38.88,7,1,1,2,stuck,0.602,guessing,enforce_reflection_before_submit
+S_B_178,B,6,Science,Physics,none,100.0,0,4,69.7,278.8,59.6,19.16,3,4,0,4,stuck,0.404,conceptual_misunderstanding,assign_worked_examples
+S_B_179,B,6,Science,Physics,none,100.0,0,1,5.0,5.0,81.1,0.0,6,5,0,1,insufficient_data,0.189,none,maintain_current_pace
+S_B_180,B,6,Science,Physics,none,100.0,0,8,25.2,201.6,74.7,76.57,6,4,0,2,stuck,0.253,none,maintain_current_pace
+S_B_181,B,6,Science,Physics,none,100.0,0,2,39.1,78.2,75.0,7.1,2,0,0,4,improving,0.25,none,maintain_current_pace
+S_B_182,B,6,Science,Physics,none,100.0,0,6,57.9,347.4,93.5,18.78,2,0,0,5,stuck,0.065,none,maintain_current_pace
+S_B_183,B,6,Science,Physics,none,100.0,0,3,42.9,128.7,72.9,55.39,0,4,0,5,stuck,0.271,none,maintain_current_pace
+S_B_184,B,6,Science,Physics,none,100.0,0,5,38.2,191.0,100.0,41.43,5,0,0,5,improving,0.0,none,maintain_current_pace
+S_B_185,B,6,Science,Chemistry,Physics,90.8,89,4,18.6,74.4,59.0,51.14,4,5,0,2,declining,0.41,forgetting,schedule_revision_session
+S_B_186,B,6,Science,Chemistry,Physics,54.7,79,2,67.6,135.2,47.7,4.78,7,0,1,4,declining,0.523,prerequisite_gap,revisit_prerequisite_topic
+S_B_187,B,6,Science,Chemistry,Physics,68.7,12,6,51.2,307.2,57.7,27.3,7,2,0,4,stuck,0.423,conceptual_misunderstanding,assign_worked_examples
+S_B_188,B,6,Science,Chemistry,Physics,70.8,9,8,5.0,40.0,45.5,57.79,5,4,1,4,stuck,0.545,guessing,enforce_reflection_before_submit
+S_B_189,B,6,Science,Chemistry,Physics,90.1,5,6,34.6,207.6,74.1,27.31,5,3,0,4,stuck,0.259,none,maintain_current_pace
+S_B_190,B,6,Science,Chemistry,Physics,59.7,59,1,12.8,12.8,65.4,0.0,4,4,0,2,insufficient_data,0.346,forgetting,schedule_revision_session
+S_B_191,B,6,Science,Chemistry,Physics,64.9,48,5,12.5,62.5,60.4,75.87,4,1,0,6,stuck,0.396,unstable_understanding,spaced_repetition_practice
+S_B_192,B,6,Science,Chemistry,Physics,62.9,88,5,96.5,482.5,66.5,166.43,1,2,0,4,stuck,0.335,unstable_understanding,spaced_repetition_practice
+S_B_193,B,6,Science,Biology,Chemistry,65.8,88,6,43.7,262.2,71.0,188.68,2,3,0,5,declining,0.29,none,maintain_current_pace
+S_B_194,B,6,Science,Biology,Chemistry,92.4,29,4,16.1,64.4,92.9,59.61,1,4,0,6,declining,0.071,none,maintain_current_pace
+S_B_195,B,6,Science,Biology,Chemistry,48.7,83,8,50.1,400.8,14.5,38.87,3,2,1,1,stuck,0.855,prerequisite_gap,revisit_prerequisite_topic
+S_B_196,B,6,Science,Biology,Chemistry,50.6,87,2,46.0,92.0,49.5,26.14,0,1,1,6,improving,0.505,prerequisite_gap,revisit_prerequisite_topic
+S_B_197,B,6,Science,Biology,Chemistry,55.4,5,2,50.9,101.8,60.9,1.16,7,0,0,3,stuck,0.391,conceptual_misunderstanding,assign_worked_examples
+S_B_198,B,6,Science,Biology,Chemistry,76.9,42,4,66.6,266.4,82.4,89.54,8,0,0,2,stuck,0.176,none,maintain_current_pace
+S_B_199,B,6,Science,Biology,Chemistry,67.9,41,1,9.0,9.0,83.1,0.0,2,5,0,6,insufficient_data,0.169,none,maintain_current_pace
+S_B_200,B,6,Science,Biology,Chemistry,66.8,12,1,15.7,15.7,63.3,0.0,6,4,0,5,insufficient_data,0.367,conceptual_misunderstanding,assign_worked_examples
+S_B_201,B,6,Science,Environmental Science,Biology,70.7,76,8,30.9,247.2,44.9,63.71,6,1,1,3,stuck,0.551,conceptual_misunderstanding,assign_worked_examples
+S_B_202,B,6,Science,Environmental Science,Biology,51.1,72,7,5.0,35.0,71.9,46.44,5,4,0,3,stuck,0.281,none,maintain_current_pace
+S_B_203,B,6,Science,Environmental Science,Biology,54.5,86,5,13.0,65.0,51.5,45.58,2,4,0,5,improving,0.485,prerequisite_gap,revisit_prerequisite_topic
+S_B_204,B,6,Science,Environmental Science,Biology,37.9,16,2,45.1,90.2,31.2,8.71,0,0,0,3,improving,0.688,prerequisite_gap,revisit_prerequisite_topic
+S_B_205,B,6,Science,Environmental Science,Biology,53.0,83,4,48.0,192.0,64.0,48.45,5,2,0,1,stuck,0.36,prerequisite_gap,revisit_prerequisite_topic
+S_B_206,B,6,Science,Environmental Science,Biology,61.5,27,1,22.2,22.2,74.2,0.0,6,4,0,6,insufficient_data,0.258,none,maintain_current_pace
+S_B_207,B,6,Science,Environmental Science,Biology,58.5,24,2,30.7,61.4,69.2,23.14,6,4,0,5,improving,0.308,unstable_understanding,spaced_repetition_practice
+S_B_208,B,6,Science,Environmental Science,Biology,82.9,64,4,34.1,136.4,42.2,56.92,0,1,0,5,declining,0.578,unstable_understanding,spaced_repetition_practice
+S_B_209,B,6,Science,Space Science,Environmental Science,79.9,22,6,20.6,123.6,100.0,18.02,2,1,0,1,stuck,0.0,none,maintain_current_pace
+S_B_210,B,6,Science,Space Science,Environmental Science,79.2,83,1,59.3,59.3,53.9,0.0,0,3,1,1,insufficient_data,0.461,forgetting,schedule_revision_session
+S_B_211,B,6,Science,Space Science,Environmental Science,43.5,63,3,31.8,95.4,54.4,47.06,7,3,1,1,stuck,0.456,prerequisite_gap,revisit_prerequisite_topic
+S_B_212,B,6,Science,Space Science,Environmental Science,56.3,24,6,21.6,129.6,42.9,18.65,0,2,0,1,stuck,0.571,conceptual_misunderstanding,assign_worked_examples
+S_B_213,B,6,Science,Space Science,Environmental Science,86.7,66,8,7.9,63.2,87.5,78.15,7,5,0,2,stuck,0.125,none,maintain_current_pace
+S_B_214,B,6,Science,Space Science,Environmental Science,72.1,28,3,76.7,230.1,97.6,9.12,3,5,0,4,improving,0.024,none,maintain_current_pace
+S_B_215,B,6,Science,Space Science,Environmental Science,95.0,55,6,5.0,30.0,66.3,20.52,3,4,0,5,stuck,0.337,forgetting,schedule_revision_session
+S_B_216,B,6,Science,Space Science,Environmental Science,84.7,27,6,14.9,89.4,67.2,35.3,6,2,0,2,stuck,0.328,conceptual_misunderstanding,assign_worked_examples
+S_B_217,B,6,Social Science,History,none,100.0,0,1,17.5,17.5,75.0,0.0,7,4,0,6,insufficient_data,0.25,none,maintain_current_pace
+S_B_218,B,6,Social Science,History,none,100.0,0,2,80.6,161.2,86.9,0.12,7,0,0,2,stuck,0.131,none,maintain_current_pace
+S_B_219,B,6,Social Science,History,none,100.0,0,3,5.0,15.0,71.7,43.47,7,4,0,4,improving,0.283,none,maintain_current_pace
+S_B_220,B,6,Social Science,History,none,100.0,0,2,43.7,87.4,100.0,3.96,8,4,0,2,declining,0.0,none,maintain_current_pace
+S_B_221,B,6,Social Science,History,none,100.0,0,3,62.1,186.3,100.0,2.95,0,4,0,2,stuck,0.0,none,maintain_current_pace
+S_B_222,B,6,Social Science,History,none,100.0,0,3,10.8,32.4,84.4,21.56,7,4,0,5,declining,0.156,none,maintain_current_pace
+S_B_223,B,6,Social Science,History,none,100.0,0,8,25.0,200.0,88.4,48.29,0,1,0,1,stuck,0.116,none,maintain_current_pace
+S_B_224,B,6,Social Science,History,none,100.0,0,5,53.2,266.0,78.5,23.98,5,1,0,2,stuck,0.215,none,maintain_current_pace
+S_B_225,B,6,Social Science,Geography,History,80.0,74,2,49.1,98.2,70.2,8.47,5,5,0,1,improving,0.298,none,maintain_current_pace
+S_B_226,B,6,Social Science,Geography,History,72.0,36,4,44.1,176.4,90.8,28.15,7,0,0,5,stuck,0.092,none,maintain_current_pace
+S_B_227,B,6,Social Science,Geography,History,61.6,15,3,6.6,19.8,71.6,29.02,7,3,0,4,improving,0.284,none,maintain_current_pace
+S_B_228,B,6,Social Science,Geography,History,92.2,85,3,67.2,201.6,82.5,15.91,2,1,0,1,improving,0.175,none,maintain_current_pace
+S_B_229,B,6,Social Science,Geography,History,73.9,16,1,5.0,5.0,73.6,0.0,7,1,0,2,insufficient_data,0.264,none,maintain_current_pace
+S_B_230,B,6,Social Science,Geography,History,27.1,80,4,66.7,266.8,44.4,28.21,7,5,1,3,stuck,0.556,prerequisite_gap,revisit_prerequisite_topic
+S_B_231,B,6,Social Science,Geography,History,63.4,37,3,23.5,70.5,69.8,51.35,8,1,0,3,declining,0.302,unstable_understanding,spaced_repetition_practice
+S_B_232,B,6,Social Science,Geography,History,77.0,42,3,9.7,29.1,74.6,6.77,3,5,0,3,stuck,0.254,none,maintain_current_pace
+S_B_233,B,6,Social Science,Civics,Geography,78.7,49,2,34.2,68.4,77.4,234.23,5,1,0,6,improving,0.226,none,maintain_current_pace
+S_B_234,B,6,Social Science,Civics,Geography,62.3,75,8,54.3,434.4,36.0,31.09,2,1,1,3,stuck,0.64,unstable_understanding,spaced_repetition_practice
+S_B_235,B,6,Social Science,Civics,Geography,97.2,20,1,16.2,16.2,89.4,0.0,0,3,0,1,insufficient_data,0.106,none,maintain_current_pace
+S_B_236,B,6,Social Science,Civics,Geography,55.1,30,8,46.3,370.4,53.7,23.41,4,4,1,1,stuck,0.463,conceptual_misunderstanding,assign_worked_examples
+S_B_237,B,6,Social Science,Civics,Geography,67.0,44,6,31.5,189.0,91.7,24.92,3,0,0,1,stuck,0.083,none,maintain_current_pace
+S_B_238,B,6,Social Science,Civics,Geography,79.0,52,8,37.5,300.0,44.9,37.75,4,3,1,2,stuck,0.551,forgetting,schedule_revision_session
+S_B_239,B,6,Social Science,Civics,Geography,45.6,33,8,42.4,339.2,43.3,14.74,3,0,1,6,stuck,0.567,prerequisite_gap,revisit_prerequisite_topic
+S_B_240,B,6,Social Science,Civics,Geography,68.0,13,8,5.0,40.0,41.9,48.19,2,4,0,6,stuck,0.581,guessing,enforce_reflection_before_submit
+S_B_241,B,6,Social Science,Economics,Civics,44.8,14,6,27.1,162.6,33.6,11.76,1,0,1,3,stuck,0.664,prerequisite_gap,revisit_prerequisite_topic
+S_B_242,B,6,Social Science,Economics,Civics,47.8,36,8,58.6,468.8,42.9,39.19,6,5,1,3,declining,0.571,prerequisite_gap,revisit_prerequisite_topic
+S_B_243,B,6,Social Science,Economics,Civics,59.0,64,1,44.0,44.0,75.9,0.0,3,4,0,4,insufficient_data,0.241,none,maintain_current_pace
+S_B_244,B,6,Social Science,Economics,Civics,100.0,21,8,77.1,616.8,66.5,24.48,0,0,0,1,stuck,0.335,conceptual_misunderstanding,assign_worked_examples
+S_B_245,B,6,Social Science,Economics,Civics,80.1,55,2,31.8,63.6,64.1,81.11,1,0,0,4,declining,0.359,unstable_understanding,spaced_repetition_practice
+S_B_246,B,6,Social Science,Economics,Civics,45.9,76,8,28.5,228.0,43.6,73.7,4,4,0,2,stuck,0.564,prerequisite_gap,revisit_prerequisite_topic
+S_B_247,B,6,Social Science,Economics,Civics,48.0,41,3,5.0,15.0,71.3,57.65,4,5,0,5,stuck,0.287,none,maintain_current_pace
+S_B_248,B,6,Social Science,Economics,Civics,80.0,51,8,5.0,40.0,55.1,59.82,6,0,0,2,stuck,0.449,conceptual_misunderstanding,assign_worked_examples
+S_B_249,B,6,Social Science,Political Science,Economics,79.9,28,8,33.2,265.6,73.6,59.47,4,4,0,5,stuck,0.264,none,maintain_current_pace
+S_B_250,B,6,Social Science,Political Science,Economics,100.0,58,1,5.0,5.0,100.0,0.0,4,1,0,4,insufficient_data,0.0,none,maintain_current_pace
+S_B_251,B,6,Social Science,Political Science,Economics,88.0,18,1,5.0,5.0,74.5,0.0,7,4,0,2,insufficient_data,0.255,none,maintain_current_pace
+S_B_252,B,6,Social Science,Political Science,Economics,76.6,21,1,50.8,50.8,52.1,0.0,4,0,1,5,insufficient_data,0.479,low_engagement,increase_interactive_activities
+S_B_253,B,6,Social Science,Political Science,Economics,92.3,31,6,19.5,117.0,65.7,55.15,1,0,0,4,stuck,0.343,unstable_understanding,spaced_repetition_practice
+S_B_254,B,6,Social Science,Political Science,Economics,65.2,3,5,61.8,309.0,53.0,116.25,2,1,1,4,stuck,0.47,unstable_understanding,spaced_repetition_practice
+S_B_255,B,6,Social Science,Political Science,Economics,52.5,46,4,10.7,42.8,46.9,23.64,0,2,1,4,stuck,0.531,prerequisite_gap,revisit_prerequisite_topic
+S_B_256,B,6,Social Science,Political Science,Economics,41.9,12,3,39.5,118.5,56.1,45.47,1,5,0,6,improving,0.439,prerequisite_gap,revisit_prerequisite_topic
+S_B_257,B,7,Maths,Arithmetic,none,100.0,0,2,62.4,124.8,72.8,54.59,4,1,0,5,improving,0.272,none,maintain_current_pace
+S_B_258,B,7,Maths,Arithmetic,none,100.0,0,7,7.4,51.8,73.5,115.7,5,1,0,6,stuck,0.265,none,maintain_current_pace
+S_B_259,B,7,Maths,Arithmetic,none,100.0,0,2,20.2,40.4,78.6,36.17,5,3,0,1,declining,0.214,none,maintain_current_pace
+S_B_260,B,7,Maths,Arithmetic,none,100.0,0,8,9.6,76.8,97.4,17.48,7,4,0,6,stuck,0.026,none,maintain_current_pace
+S_B_261,B,7,Maths,Arithmetic,none,100.0,0,7,43.3,303.1,88.9,66.92,3,5,0,3,stuck,0.111,none,maintain_current_pace
+S_B_262,B,7,Maths,Arithmetic,none,100.0,0,7,62.1,434.7,82.6,12.97,3,5,0,4,stuck,0.174,none,maintain_current_pace
+S_B_263,B,7,Maths,Arithmetic,none,100.0,0,5,32.2,161.0,72.5,18.5,8,3,0,5,stuck,0.275,none,maintain_current_pace
+S_B_264,B,7,Maths,Arithmetic,none,100.0,0,4,5.0,20.0,59.7,149.32,8,3,0,5,stuck,0.403,conceptual_misunderstanding,assign_worked_examples
+S_B_265,B,7,Maths,Algebra,Arithmetic,45.2,80,2,23.0,46.0,54.8,1.27,3,2,1,5,stuck,0.452,prerequisite_gap,revisit_prerequisite_topic
+S_B_266,B,7,Maths,Algebra,Arithmetic,61.9,82,3,85.8,257.4,58.8,7.4,0,2,0,2,stuck,0.412,forgetting,schedule_revision_session
+S_B_267,B,7,Maths,Algebra,Arithmetic,90.0,32,1,54.2,54.2,68.0,0.0,0,1,0,3,insufficient_data,0.32,conceptual_misunderstanding,assign_worked_examples
+S_B_268,B,7,Maths,Algebra,Arithmetic,60.7,36,5,15.5,77.5,58.7,14.04,6,3,0,1,stuck,0.413,conceptual_misunderstanding,assign_worked_examples
+S_B_269,B,7,Maths,Algebra,Arithmetic,48.4,61,8,81.1,648.8,30.6,51.1,0,3,1,5,stuck,0.694,prerequisite_gap,revisit_prerequisite_topic
+S_B_270,B,7,Maths,Algebra,Arithmetic,70.7,57,5,50.8,254.0,39.0,11.35,6,5,0,3,stuck,0.61,conceptual_misunderstanding,assign_worked_examples
+S_B_271,B,7,Maths,Algebra,Arithmetic,38.1,69,4,25.2,100.8,39.7,10.02,4,5,1,1,stuck,0.603,prerequisite_gap,revisit_prerequisite_topic
+S_B_272,B,7,Maths,Algebra,Arithmetic,81.8,42,6,5.0,30.0,48.0,8.24,7,2,0,4,stuck,0.52,guessing,enforce_reflection_before_submit
+S_B_273,B,7,Maths,Geometry,Algebra,66.2,15,2,30.2,60.4,45.9,1.13,8,4,1,2,stuck,0.541,conceptual_misunderstanding,assign_worked_examples
+S_B_274,B,7,Maths,Geometry,Algebra,49.2,54,6,35.6,213.6,93.0,2.52,0,0,0,1,stuck,0.07,none,maintain_current_pace
+S_B_275,B,7,Maths,Geometry,Algebra,40.3,39,3,14.8,44.4,35.1,81.99,6,3,1,3,declining,0.649,prerequisite_gap,revisit_prerequisite_topic
+S_B_276,B,7,Maths,Geometry,Algebra,68.5,72,7,5.0,35.0,48.7,31.01,5,3,1,3,stuck,0.513,guessing,enforce_reflection_before_submit
+S_B_277,B,7,Maths,Geometry,Algebra,57.7,58,5,33.6,168.0,61.1,100.57,3,2,0,3,improving,0.389,unstable_understanding,spaced_repetition_practice
+S_B_278,B,7,Maths,Geometry,Algebra,73.1,17,3,5.0,15.0,66.9,19.96,5,4,0,5,improving,0.331,conceptual_misunderstanding,assign_worked_examples
+S_B_279,B,7,Maths,Geometry,Algebra,38.5,2,7,81.7,571.9,51.3,71.87,7,2,1,3,stuck,0.487,prerequisite_gap,revisit_prerequisite_topic
+S_B_280,B,7,Maths,Geometry,Algebra,48.4,14,2,18.8,37.6,62.1,6.3,8,2,0,5,declining,0.379,prerequisite_gap,revisit_prerequisite_topic
+S_B_281,B,7,Maths,Trigonometry,Geometry,72.2,67,7,37.8,264.6,64.6,52.42,3,0,0,2,declining,0.354,forgetting,schedule_revision_session
+S_B_282,B,7,Maths,Trigonometry,Geometry,62.8,74,6,5.0,30.0,68.6,150.87,2,5,0,4,stuck,0.314,unstable_understanding,spaced_repetition_practice
+S_B_283,B,7,Maths,Trigonometry,Geometry,87.9,22,1,53.6,53.6,76.6,0.0,7,2,0,2,insufficient_data,0.234,none,maintain_current_pace
+S_B_284,B,7,Maths,Trigonometry,Geometry,36.8,50,1,51.4,51.4,31.7,0.0,2,2,1,5,insufficient_data,0.683,prerequisite_gap,revisit_prerequisite_topic
+S_B_285,B,7,Maths,Trigonometry,Geometry,66.3,86,4,46.6,186.4,30.7,45.32,6,2,0,3,stuck,0.693,conceptual_misunderstanding,assign_worked_examples
+S_B_286,B,7,Maths,Trigonometry,Geometry,60.3,37,8,27.6,220.8,65.3,72.66,7,5,0,5,stuck,0.347,unstable_understanding,spaced_repetition_practice
+S_B_287,B,7,Maths,Trigonometry,Geometry,56.7,58,8,5.0,40.0,68.5,44.63,8,3,0,6,stuck,0.315,unstable_understanding,spaced_repetition_practice
+S_B_288,B,7,Maths,Trigonometry,Geometry,93.8,22,2,53.7,107.4,68.2,21.1,1,4,0,4,declining,0.318,conceptual_misunderstanding,assign_worked_examples
+S_B_289,B,7,Maths,Statistics,Trigonometry,94.8,33,6,24.0,144.0,75.0,150.67,4,4,0,2,stuck,0.25,none,maintain_current_pace
+S_B_290,B,7,Maths,Statistics,Trigonometry,52.5,43,4,37.8,151.2,52.3,97.65,8,0,1,4,declining,0.477,prerequisite_gap,revisit_prerequisite_topic
+S_B_291,B,7,Maths,Statistics,Trigonometry,42.1,66,2,45.8,91.6,55.7,20.38,5,2,0,3,improving,0.443,prerequisite_gap,revisit_prerequisite_topic
+S_B_292,B,7,Maths,Statistics,Trigonometry,74.2,55,1,42.9,42.9,56.7,0.0,1,3,0,5,insufficient_data,0.433,forgetting,schedule_revision_session
+S_B_293,B,7,Maths,Statistics,Trigonometry,58.3,80,4,5.0,20.0,65.1,105.61,5,1,0,6,declining,0.349,unstable_understanding,spaced_repetition_practice
+S_B_294,B,7,Maths,Statistics,Trigonometry,53.6,59,5,27.0,135.0,71.7,44.79,8,1,0,6,improving,0.283,none,maintain_current_pace
+S_B_295,B,7,Maths,Statistics,Trigonometry,49.5,41,8,22.6,180.8,45.2,23.54,8,5,1,6,stuck,0.548,prerequisite_gap,revisit_prerequisite_topic
+S_B_296,B,7,Maths,Statistics,Trigonometry,77.5,33,3,29.0,87.0,99.9,17.5,3,1,0,5,stuck,0.001,none,maintain_current_pace
+S_B_297,B,7,Maths,Probability,Statistics,56.1,14,3,106.8,320.4,49.2,6.85,3,1,1,5,declining,0.508,cognitive_overload,break_topic_into_subtasks
+S_B_298,B,7,Maths,Probability,Statistics,82.8,7,4,41.3,165.2,77.2,50.49,0,0,0,6,improving,0.228,none,maintain_current_pace
+S_B_299,B,7,Maths,Probability,Statistics,42.2,49,2,31.2,62.4,51.8,7.02,8,5,1,4,improving,0.482,prerequisite_gap,revisit_prerequisite_topic
+S_B_300,B,7,Maths,Probability,Statistics,41.6,16,1,5.0,5.0,39.7,0.0,1,2,0,6,insufficient_data,0.603,prerequisite_gap,revisit_prerequisite_topic
+S_B_301,B,7,Maths,Probability,Statistics,78.4,31,5,67.6,338.0,58.7,7.47,8,5,0,2,stuck,0.413,conceptual_misunderstanding,assign_worked_examples
+S_B_302,B,7,Maths,Probability,Statistics,64.1,25,6,16.7,100.2,88.3,63.73,0,3,0,4,improving,0.117,none,maintain_current_pace
+S_B_303,B,7,Maths,Probability,Statistics,63.3,36,6,33.9,203.4,78.9,89.74,6,3,0,3,declining,0.211,none,maintain_current_pace
+S_B_304,B,7,Maths,Probability,Statistics,80.9,12,2,71.0,142.0,71.3,21.26,1,5,0,1,declining,0.287,none,maintain_current_pace
+S_B_305,B,7,Science,Physics,none,100.0,0,4,36.4,145.6,79.9,63.53,4,4,0,4,improving,0.201,none,maintain_current_pace
+S_B_306,B,7,Science,Physics,none,100.0,0,1,30.7,30.7,79.6,0.0,6,3,0,5,insufficient_data,0.204,none,maintain_current_pace
+S_B_307,B,7,Science,Physics,none,100.0,0,4,5.0,20.0,77.7,25.94,7,0,0,5,stuck,0.223,none,maintain_current_pace
+S_B_308,B,7,Science,Physics,none,100.0,0,4,24.8,99.2,61.4,42.94,7,4,0,1,improving,0.386,conceptual_misunderstanding,assign_worked_examples
+S_B_309,B,7,Science,Physics,none,100.0,0,6,55.8,334.8,100.0,13.57,3,1,0,1,stuck,0.0,none,maintain_current_pace
+S_B_310,B,7,Science,Physics,none,100.0,0,2,31.7,63.4,100.0,0.0,8,4,0,5,stuck,0.0,none,maintain_current_pace
+S_B_311,B,7,Science,Physics,none,100.0,0,3,11.5,34.5,70.7,14.78,5,1,0,1,stuck,0.293,none,maintain_current_pace
+S_B_312,B,7,Science,Physics,none,100.0,0,8,15.8,126.4,93.7,25.11,2,0,0,1,stuck,0.063,none,maintain_current_pace
+S_B_313,B,7,Science,Chemistry,Physics,30.9,83,3,23.4,70.2,38.1,131.87,6,2,0,2,declining,0.619,prerequisite_gap,revisit_prerequisite_topic
+S_B_314,B,7,Science,Chemistry,Physics,45.6,66,2,17.8,35.6,24.1,17.84,4,5,1,3,improving,0.759,prerequisite_gap,revisit_prerequisite_topic
+S_B_315,B,7,Science,Chemistry,Physics,35.0,17,2,45.3,90.6,31.9,32.41,0,2,1,5,improving,0.681,prerequisite_gap,revisit_prerequisite_topic
+S_B_316,B,7,Science,Chemistry,Physics,86.4,19,3,69.4,208.2,80.6,52.19,0,5,0,1,stuck,0.194,none,maintain_current_pace
+S_B_317,B,7,Science,Chemistry,Physics,78.8,44,7,44.8,313.6,67.6,41.52,8,4,0,3,stuck,0.324,unstable_understanding,spaced_repetition_practice
+S_B_318,B,7,Science,Chemistry,Physics,90.5,36,1,5.0,5.0,90.9,0.0,8,1,0,2,insufficient_data,0.091,none,maintain_current_pace
+S_B_319,B,7,Science,Chemistry,Physics,51.3,31,2,5.0,10.0,63.5,106.46,5,0,0,4,declining,0.365,prerequisite_gap,revisit_prerequisite_topic
+S_B_320,B,7,Science,Chemistry,Physics,88.9,9,1,48.5,48.5,38.9,0.0,0,0,0,3,insufficient_data,0.611,low_engagement,increase_interactive_activities
+S_B_321,B,7,Science,Biology,Chemistry,38.6,1,3,64.0,192.0,20.3,8.62,1,5,1,6,declining,0.797,prerequisite_gap,revisit_prerequisite_topic
+S_B_322,B,7,Science,Biology,Chemistry,68.0,47,4,82.0,328.0,52.6,54.88,7,0,1,5,improving,0.474,conceptual_misunderstanding,assign_worked_examples
+S_B_323,B,7,Science,Biology,Chemistry,60.8,62,5,39.0,195.0,81.9,11.82,5,5,0,3,stuck,0.181,none,maintain_current_pace
+S_B_324,B,7,Science,Biology,Chemistry,65.7,73,8,70.6,564.8,44.8,42.79,1,4,1,5,stuck,0.552,unstable_understanding,spaced_repetition_practice
+S_B_325,B,7,Science,Biology,Chemistry,84.7,19,8,41.4,331.2,83.9,56.57,6,1,0,6,stuck,0.161,none,maintain_current_pace
+S_B_326,B,7,Science,Biology,Chemistry,70.2,38,4,60.7,242.8,89.4,35.77,3,2,0,2,declining,0.106,none,maintain_current_pace
+S_B_327,B,7,Science,Biology,Chemistry,56.4,54,1,18.4,18.4,62.7,0.0,6,3,0,2,insufficient_data,0.373,forgetting,schedule_revision_session
+S_B_328,B,7,Science,Biology,Chemistry,60.6,76,4,118.8,475.2,55.1,107.22,2,2,0,2,declining,0.449,cognitive_overload,break_topic_into_subtasks
+S_B_329,B,7,Science,Environmental Science,Biology,24.4,81,5,82.5,412.5,31.6,25.1,4,5,0,3,stuck,0.684,prerequisite_gap,revisit_prerequisite_topic
+S_B_330,B,7,Science,Environmental Science,Biology,46.6,11,6,42.1,252.6,59.2,71.05,5,0,0,1,improving,0.408,prerequisite_gap,revisit_prerequisite_topic
+S_B_331,B,7,Science,Environmental Science,Biology,47.0,64,5,30.5,152.5,28.8,81.59,6,0,1,6,improving,0.712,prerequisite_gap,revisit_prerequisite_topic
+S_B_332,B,7,Science,Environmental Science,Biology,80.4,3,3,25.1,75.3,80.3,55.67,2,5,0,1,stuck,0.197,none,maintain_current_pace
+S_B_333,B,7,Science,Environmental Science,Biology,71.3,52,6,54.0,324.0,57.9,59.94,2,1,0,4,stuck,0.421,unstable_understanding,spaced_repetition_practice
+S_B_334,B,7,Science,Environmental Science,Biology,87.7,73,6,9.5,57.0,76.9,67.48,3,5,0,2,stuck,0.231,none,maintain_current_pace
+S_B_335,B,7,Science,Environmental Science,Biology,66.2,45,5,5.0,25.0,73.0,38.38,3,1,0,4,stuck,0.27,none,maintain_current_pace
+S_B_336,B,7,Science,Environmental Science,Biology,73.4,77,1,70.6,70.6,55.4,0.0,0,1,0,6,insufficient_data,0.446,forgetting,schedule_revision_session
+S_B_337,B,7,Science,Space Science,Environmental Science,52.8,9,1,59.9,59.9,55.0,0.0,4,5,0,1,insufficient_data,0.45,prerequisite_gap,revisit_prerequisite_topic
+S_B_338,B,7,Science,Space Science,Environmental Science,55.4,27,2,58.1,116.2,55.7,114.94,6,0,0,5,declining,0.443,conceptual_misunderstanding,assign_worked_examples
+S_B_339,B,7,Science,Space Science,Environmental Science,25.2,37,2,5.0,10.0,50.3,7.95,3,5,0,5,declining,0.497,prerequisite_gap,revisit_prerequisite_topic
+S_B_340,B,7,Science,Space Science,Environmental Science,56.8,79,3,57.8,173.4,52.7,11.14,2,0,0,1,declining,0.473,forgetting,schedule_revision_session
+S_B_341,B,7,Science,Space Science,Environmental Science,78.6,5,1,10.9,10.9,77.7,0.0,0,3,0,5,insufficient_data,0.223,none,maintain_current_pace
+S_B_342,B,7,Science,Space Science,Environmental Science,60.9,55,1,57.1,57.1,65.1,0.0,3,3,0,5,insufficient_data,0.349,forgetting,schedule_revision_session
+S_B_343,B,7,Science,Space Science,Environmental Science,67.2,35,3,22.0,66.0,25.2,6.62,5,1,0,4,stuck,0.748,conceptual_misunderstanding,assign_worked_examples
+S_B_344,B,7,Science,Space Science,Environmental Science,85.0,63,8,5.0,40.0,92.1,11.22,4,1,0,4,stuck,0.079,none,maintain_current_pace
+S_B_345,B,7,Social Science,History,none,100.0,0,3,28.8,86.4,96.2,24.71,2,1,0,2,declining,0.038,none,maintain_current_pace
+S_B_346,B,7,Social Science,History,none,100.0,0,5,8.5,42.5,76.7,67.58,6,5,0,1,stuck,0.233,none,maintain_current_pace
+S_B_347,B,7,Social Science,History,none,100.0,0,6,36.3,217.8,100.0,4.0,1,0,0,4,stuck,0.0,none,maintain_current_pace
+S_B_348,B,7,Social Science,History,none,100.0,0,7,5.0,35.0,89.2,35.01,8,4,0,4,stuck,0.108,none,maintain_current_pace
+S_B_349,B,7,Social Science,History,none,100.0,0,6,79.2,475.2,98.6,27.19,3,3,0,6,stuck,0.014,none,maintain_current_pace
+S_B_350,B,7,Social Science,History,none,100.0,0,3,41.7,125.1,89.1,101.12,8,1,0,1,improving,0.109,none,maintain_current_pace
+S_B_351,B,7,Social Science,History,none,100.0,0,5,7.9,39.5,84.0,16.26,2,1,0,6,stuck,0.16,none,maintain_current_pace
+S_B_352,B,7,Social Science,History,none,100.0,0,1,47.4,47.4,86.7,0.0,2,0,0,6,insufficient_data,0.133,none,maintain_current_pace
+S_B_353,B,7,Social Science,Geography,History,70.1,22,2,5.0,10.0,43.8,35.32,7,5,0,3,declining,0.562,guessing,enforce_reflection_before_submit
+S_B_354,B,7,Social Science,Geography,History,40.7,73,2,5.0,10.0,57.8,7.3,5,2,0,5,improving,0.422,prerequisite_gap,revisit_prerequisite_topic
+S_B_355,B,7,Social Science,Geography,History,34.3,41,8,22.3,178.4,37.7,88.02,8,5,1,2,stuck,0.623,prerequisite_gap,revisit_prerequisite_topic
+S_B_356,B,7,Social Science,Geography,History,73.2,9,7,23.8,166.6,59.8,54.74,8,1,0,2,stuck,0.402,conceptual_misunderstanding,assign_worked_examples
+S_B_357,B,7,Social Science,Geography,History,42.4,62,3,50.6,151.8,48.4,21.06,3,1,1,2,improving,0.516,prerequisite_gap,revisit_prerequisite_topic
+S_B_358,B,7,Social Science,Geography,History,91.5,8,5,52.2,261.0,81.7,107.73,1,3,0,3,stuck,0.183,none,maintain_current_pace
+S_B_359,B,7,Social Science,Geography,History,39.0,74,4,23.7,94.8,25.1,74.42,0,2,1,6,improving,0.749,prerequisite_gap,revisit_prerequisite_topic
+S_B_360,B,7,Social Science,Geography,History,82.8,17,8,74.4,595.2,41.3,29.54,5,0,1,4,stuck,0.587,conceptual_misunderstanding,assign_worked_examples
+S_B_361,B,7,Social Science,Civics,Geography,67.8,26,1,15.7,15.7,36.8,0.0,3,3,1,3,insufficient_data,0.632,low_engagement,increase_interactive_activities
+S_B_362,B,7,Social Science,Civics,Geography,88.5,51,2,21.4,42.8,66.8,45.06,2,4,0,1,declining,0.332,forgetting,schedule_revision_session
+S_B_363,B,7,Social Science,Civics,Geography,29.8,88,2,61.2,122.4,27.0,47.83,2,4,1,5,declining,0.73,prerequisite_gap,revisit_prerequisite_topic
+S_B_364,B,7,Social Science,Civics,Geography,39.6,28,2,40.7,81.4,45.5,104.83,8,2,0,4,improving,0.545,prerequisite_gap,revisit_prerequisite_topic
+S_B_365,B,7,Social Science,Civics,Geography,54.0,11,4,44.0,176.0,69.2,39.7,6,3,0,4,declining,0.308,prerequisite_gap,revisit_prerequisite_topic
+S_B_366,B,7,Social Science,Civics,Geography,82.9,6,7,37.5,262.5,85.5,26.59,4,5,0,1,stuck,0.145,none,maintain_current_pace
+S_B_367,B,7,Social Science,Civics,Geography,31.0,57,7,22.2,155.4,48.3,50.15,3,1,1,4,stuck,0.517,prerequisite_gap,revisit_prerequisite_topic
+S_B_368,B,7,Social Science,Civics,Geography,55.4,18,7,44.2,309.4,50.4,35.34,5,2,1,1,stuck,0.496,conceptual_misunderstanding,assign_worked_examples
+S_B_369,B,7,Social Science,Economics,Civics,83.8,87,1,6.5,6.5,67.4,0.0,1,5,0,5,insufficient_data,0.326,forgetting,schedule_revision_session
+S_B_370,B,7,Social Science,Economics,Civics,58.2,53,3,9.3,27.9,38.5,63.29,6,2,0,5,declining,0.615,guessing,enforce_reflection_before_submit
+S_B_371,B,7,Social Science,Economics,Civics,42.4,44,4,65.3,261.2,32.8,105.98,5,5,0,5,stuck,0.672,prerequisite_gap,revisit_prerequisite_topic
+S_B_372,B,7,Social Science,Economics,Civics,63.2,26,1,53.7,53.7,63.8,0.0,1,5,0,3,insufficient_data,0.362,conceptual_misunderstanding,assign_worked_examples
+S_B_373,B,7,Social Science,Economics,Civics,74.8,52,1,10.0,10.0,49.4,0.0,5,3,1,4,insufficient_data,0.506,guessing,enforce_reflection_before_submit
+S_B_374,B,7,Social Science,Economics,Civics,82.0,35,8,18.8,150.4,62.1,70.95,5,1,0,4,stuck,0.379,unstable_understanding,spaced_repetition_practice
+S_B_375,B,7,Social Science,Economics,Civics,29.1,48,8,54.8,438.4,40.3,37.63,2,2,0,1,stuck,0.597,prerequisite_gap,revisit_prerequisite_topic
+S_B_376,B,7,Social Science,Economics,Civics,23.6,74,6,22.9,137.4,69.4,28.23,5,2,0,5,stuck,0.306,prerequisite_gap,revisit_prerequisite_topic
+S_B_377,B,7,Social Science,Political Science,Economics,37.8,49,7,26.3,184.1,61.2,39.25,1,2,0,2,stuck,0.388,prerequisite_gap,revisit_prerequisite_topic
+S_B_378,B,7,Social Science,Political Science,Economics,38.4,50,2,53.7,107.4,41.1,101.14,8,4,0,2,declining,0.589,prerequisite_gap,revisit_prerequisite_topic
+S_B_379,B,7,Social Science,Political Science,Economics,92.9,39,6,18.3,109.8,83.9,32.93,0,0,0,5,stuck,0.161,none,maintain_current_pace
+S_B_380,B,7,Social Science,Political Science,Economics,64.2,83,2,5.0,10.0,60.8,11.53,1,0,0,3,improving,0.392,forgetting,schedule_revision_session
+S_B_381,B,7,Social Science,Political Science,Economics,59.5,72,5,8.0,40.0,53.4,35.77,8,3,0,6,stuck,0.466,guessing,enforce_reflection_before_submit
+S_B_382,B,7,Social Science,Political Science,Economics,46.1,7,2,5.0,10.0,28.8,8.33,0,5,1,3,improving,0.712,prerequisite_gap,revisit_prerequisite_topic
+S_B_383,B,7,Social Science,Political Science,Economics,84.3,19,4,58.0,232.0,62.0,34.61,3,3,0,1,declining,0.38,conceptual_misunderstanding,assign_worked_examples
+S_B_384,B,7,Social Science,Political Science,Economics,92.3,83,1,70.4,70.4,94.6,0.0,5,1,0,4,insufficient_data,0.054,none,maintain_current_pace
+S_B_385,B,8,Maths,Arithmetic,none,100.0,0,2,92.9,185.8,85.4,42.47,0,0,0,1,improving,0.146,none,maintain_current_pace
+S_B_386,B,8,Maths,Arithmetic,none,100.0,0,3,5.0,15.0,82.3,6.92,3,0,0,4,stuck,0.177,none,maintain_current_pace
+S_B_387,B,8,Maths,Arithmetic,none,100.0,0,1,60.7,60.7,71.5,0.0,1,1,0,4,insufficient_data,0.285,none,maintain_current_pace
+S_B_388,B,8,Maths,Arithmetic,none,100.0,0,2,20.0,40.0,80.3,2.38,6,4,0,3,declining,0.197,none,maintain_current_pace
+S_B_389,B,8,Maths,Arithmetic,none,100.0,0,6,27.3,163.8,62.5,93.38,7,1,0,3,stuck,0.375,unstable_understanding,spaced_repetition_practice
+S_B_390,B,8,Maths,Arithmetic,none,100.0,0,3,22.5,67.5,41.7,98.42,3,1,0,6,improving,0.583,unstable_understanding,spaced_repetition_practice
+S_B_391,B,8,Maths,Arithmetic,none,100.0,0,8,20.4,163.2,83.0,49.04,3,2,0,2,stuck,0.17,none,maintain_current_pace
+S_B_392,B,8,Maths,Arithmetic,none,100.0,0,3,5.0,15.0,82.3,154.01,7,3,0,1,declining,0.177,none,maintain_current_pace
+S_B_393,B,8,Maths,Algebra,Arithmetic,81.0,59,1,17.6,17.6,54.7,0.0,7,0,1,2,insufficient_data,0.453,conceptual_misunderstanding,assign_worked_examples
+S_B_394,B,8,Maths,Algebra,Arithmetic,67.8,5,2,20.4,40.8,70.0,9.98,8,1,0,5,declining,0.3,none,maintain_current_pace
+S_B_395,B,8,Maths,Algebra,Arithmetic,72.2,87,3,17.5,52.5,27.5,43.59,4,4,1,4,stuck,0.725,unstable_understanding,spaced_repetition_practice
+S_B_396,B,8,Maths,Algebra,Arithmetic,32.2,62,4,16.2,64.8,65.1,6.05,2,1,0,2,stuck,0.349,prerequisite_gap,revisit_prerequisite_topic
+S_B_397,B,8,Maths,Algebra,Arithmetic,80.8,82,2,20.6,41.2,69.8,49.13,2,5,0,6,improving,0.302,unstable_understanding,spaced_repetition_practice
+S_B_398,B,8,Maths,Algebra,Arithmetic,61.7,88,3,62.3,186.9,93.0,27.02,5,1,0,3,improving,0.07,none,maintain_current_pace
+S_B_399,B,8,Maths,Algebra,Arithmetic,39.5,84,1,50.1,50.1,40.2,0.0,7,1,0,6,insufficient_data,0.598,prerequisite_gap,revisit_prerequisite_topic
+S_B_400,B,8,Maths,Algebra,Arithmetic,42.8,15,1,29.9,29.9,71.1,0.0,3,0,0,4,insufficient_data,0.289,none,maintain_current_pace
+S_B_401,B,8,Maths,Geometry,Algebra,62.4,86,6,39.2,235.2,78.3,7.53,6,1,0,4,stuck,0.217,none,maintain_current_pace
+S_B_402,B,8,Maths,Geometry,Algebra,50.6,37,7,9.7,67.9,56.5,53.18,5,2,0,5,stuck,0.435,prerequisite_gap,revisit_prerequisite_topic
+S_B_403,B,8,Maths,Geometry,Algebra,72.0,81,2,41.8,83.6,53.9,11.56,5,2,1,1,declining,0.461,conceptual_misunderstanding,assign_worked_examples
+S_B_404,B,8,Maths,Geometry,Algebra,55.2,73,2,13.5,27.0,48.6,34.05,7,4,1,2,declining,0.514,conceptual_misunderstanding,assign_worked_examples
+S_B_405,B,8,Maths,Geometry,Algebra,92.2,18,1,51.7,51.7,75.3,0.0,2,5,0,1,insufficient_data,0.247,none,maintain_current_pace
+S_B_406,B,8,Maths,Geometry,Algebra,94.6,64,2,56.7,113.4,91.5,11.09,3,4,0,2,declining,0.085,none,maintain_current_pace
+S_B_407,B,8,Maths,Geometry,Algebra,67.7,56,7,5.0,35.0,66.7,16.91,2,1,0,4,stuck,0.333,forgetting,schedule_revision_session
+S_B_408,B,8,Maths,Geometry,Algebra,53.9,84,7,32.3,226.1,51.4,62.17,3,5,1,6,declining,0.486,prerequisite_gap,revisit_prerequisite_topic
+S_B_409,B,8,Maths,Trigonometry,Geometry,89.6,89,5,44.9,224.5,93.8,25.25,5,1,0,2,stuck,0.062,none,maintain_current_pace
+S_B_410,B,8,Maths,Trigonometry,Geometry,59.7,16,3,47.2,141.6,60.0,26.44,6,2,0,3,declining,0.4,unstable_understanding,spaced_repetition_practice
+S_B_411,B,8,Maths,Trigonometry,Geometry,41.5,73,8,41.3,330.4,36.2,83.17,7,3,0,4,stuck,0.638,prerequisite_gap,revisit_prerequisite_topic
+S_B_412,B,8,Maths,Trigonometry,Geometry,28.0,12,7,5.0,35.0,46.4,62.17,5,2,1,4,stuck,0.536,prerequisite_gap,revisit_prerequisite_topic
+S_B_413,B,8,Maths,Trigonometry,Geometry,69.5,50,5,66.6,333.0,44.2,31.63,5,1,1,4,stuck,0.558,conceptual_misunderstanding,assign_worked_examples
+S_B_414,B,8,Maths,Trigonometry,Geometry,64.1,89,6,51.7,310.2,40.4,24.26,4,1,1,3,stuck,0.596,unstable_understanding,spaced_repetition_practice
+S_B_415,B,8,Maths,Trigonometry,Geometry,68.3,79,5,65.1,325.5,52.1,44.64,6,1,0,3,improving,0.479,conceptual_misunderstanding,assign_worked_examples
+S_B_416,B,8,Maths,Trigonometry,Geometry,53.3,34,5,34.4,172.0,41.5,64.87,3,4,0,6,declining,0.585,prerequisite_gap,revisit_prerequisite_topic
+S_B_417,B,8,Maths,Statistics,Trigonometry,87.2,34,5,16.9,84.5,67.2,6.0,8,1,0,2,stuck,0.328,conceptual_misunderstanding,assign_worked_examples
+S_B_418,B,8,Maths,Statistics,Trigonometry,27.8,29,1,10.5,10.5,30.5,0.0,3,4,1,5,insufficient_data,0.695,prerequisite_gap,revisit_prerequisite_topic
+S_B_419,B,8,Maths,Statistics,Trigonometry,82.8,83,5,46.9,234.5,75.7,134.75,7,0,0,4,declining,0.243,none,maintain_current_pace
+S_B_420,B,8,Maths,Statistics,Trigonometry,66.2,42,5,59.4,297.0,50.7,59.09,2,0,0,1,declining,0.493,conceptual_misunderstanding,assign_worked_examples
+S_B_421,B,8,Maths,Statistics,Trigonometry,66.1,39,5,5.0,25.0,49.5,7.82,5,0,0,1,stuck,0.505,guessing,enforce_reflection_before_submit
+S_B_422,B,8,Maths,Statistics,Trigonometry,63.4,27,8,22.5,180.0,72.9,43.88,6,0,0,5,stuck,0.271,none,maintain_current_pace
+S_B_423,B,8,Maths,Statistics,Trigonometry,28.6,34,6,5.0,30.0,31.5,27.17,0,1,0,2,stuck,0.685,prerequisite_gap,revisit_prerequisite_topic
+S_B_424,B,8,Maths,Statistics,Trigonometry,52.9,25,7,55.4,387.8,72.8,17.8,3,5,0,4,stuck,0.272,none,maintain_current_pace
+S_B_425,B,8,Maths,Probability,Statistics,59.1,75,7,5.0,35.0,56.9,84.22,2,4,0,3,stuck,0.431,unstable_understanding,spaced_repetition_practice
+S_B_426,B,8,Maths,Probability,Statistics,60.1,49,1,60.9,60.9,80.3,0.0,7,3,0,3,insufficient_data,0.197,none,maintain_current_pace
+S_B_427,B,8,Maths,Probability,Statistics,76.2,9,8,28.3,226.4,100.0,23.06,8,4,0,3,stuck,0.0,none,maintain_current_pace
+S_B_428,B,8,Maths,Probability,Statistics,47.6,58,6,45.7,274.2,48.0,141.06,2,0,0,4,stuck,0.52,prerequisite_gap,revisit_prerequisite_topic
+S_B_429,B,8,Maths,Probability,Statistics,52.8,74,2,46.0,92.0,84.1,5.93,4,3,0,4,improving,0.159,none,maintain_current_pace
+S_B_430,B,8,Maths,Probability,Statistics,34.7,16,7,49.7,347.9,47.1,37.0,5,1,1,1,stuck,0.529,prerequisite_gap,revisit_prerequisite_topic
+S_B_431,B,8,Maths,Probability,Statistics,73.9,27,1,66.8,66.8,94.2,0.0,3,5,0,5,insufficient_data,0.058,none,maintain_current_pace
+S_B_432,B,8,Maths,Probability,Statistics,48.9,63,3,28.3,84.9,52.9,103.96,2,0,0,3,declining,0.471,prerequisite_gap,revisit_prerequisite_topic
+S_B_433,B,8,Science,Physics,none,100.0,0,8,95.9,767.2,96.7,27.32,2,2,0,1,stuck,0.033,none,maintain_current_pace
+S_B_434,B,8,Science,Physics,none,100.0,0,6,77.8,466.8,89.9,88.91,1,3,0,6,stuck,0.101,none,maintain_current_pace
+S_B_435,B,8,Science,Physics,none,100.0,0,8,26.6,212.8,90.5,65.68,8,3,0,2,stuck,0.095,none,maintain_current_pace
+S_B_436,B,8,Science,Physics,none,100.0,0,8,19.3,154.4,70.1,37.47,8,2,0,6,stuck,0.299,none,maintain_current_pace
+S_B_437,B,8,Science,Physics,none,100.0,0,5,69.5,347.5,67.7,70.06,2,0,0,2,declining,0.323,conceptual_misunderstanding,assign_worked_examples
+S_B_438,B,8,Science,Physics,none,100.0,0,2,8.6,17.2,84.0,117.64,0,1,0,6,declining,0.16,none,maintain_current_pace
+S_B_439,B,8,Science,Physics,none,100.0,0,6,22.4,134.4,98.9,24.1,0,3,0,3,stuck,0.011,none,maintain_current_pace
+S_B_440,B,8,Science,Physics,none,100.0,0,1,33.5,33.5,90.3,0.0,2,2,0,1,insufficient_data,0.097,none,maintain_current_pace
+S_B_441,B,8,Science,Chemistry,Physics,40.7,33,6,16.8,100.8,53.1,45.08,6,5,0,2,stuck,0.469,prerequisite_gap,revisit_prerequisite_topic
+S_B_442,B,8,Science,Chemistry,Physics,78.3,72,8,37.2,297.6,70.9,57.53,6,1,0,2,stuck,0.291,none,maintain_current_pace
+S_B_443,B,8,Science,Chemistry,Physics,61.9,70,4,33.6,134.4,62.7,55.04,8,3,0,5,stuck,0.373,unstable_understanding,spaced_repetition_practice
+S_B_444,B,8,Science,Chemistry,Physics,48.7,77,6,62.9,377.4,53.0,45.67,1,4,1,3,stuck,0.47,prerequisite_gap,revisit_prerequisite_topic
+S_B_445,B,8,Science,Chemistry,Physics,72.1,64,5,70.1,350.5,41.5,127.36,5,3,0,2,improving,0.585,conceptual_misunderstanding,assign_worked_examples
+S_B_446,B,8,Science,Chemistry,Physics,41.8,41,3,43.7,131.1,55.6,0.81,6,2,0,5,stuck,0.444,prerequisite_gap,revisit_prerequisite_topic
+S_B_447,B,8,Science,Chemistry,Physics,90.3,18,1,57.9,57.9,63.6,0.0,2,1,0,5,insufficient_data,0.364,conceptual_misunderstanding,assign_worked_examples
+S_B_448,B,8,Science,Chemistry,Physics,60.5,53,4,44.4,177.6,77.6,42.46,3,3,0,6,stuck,0.224,none,maintain_current_pace
+S_B_449,B,8,Science,Biology,Chemistry,55.6,20,7,51.4,359.8,74.1,31.92,8,2,0,1,stuck,0.259,none,maintain_current_pace
+S_B_450,B,8,Science,Biology,Chemistry,59.0,25,4,32.1,128.4,46.9,86.04,3,5,1,1,improving,0.531,conceptual_misunderstanding,assign_worked_examples
+S_B_451,B,8,Science,Biology,Chemistry,65.2,20,2,25.5,51.0,69.6,44.47,8,5,0,1,improving,0.304,conceptual_misunderstanding,assign_worked_examples
+S_B_452,B,8,Science,Biology,Chemistry,75.8,48,3,56.4,169.2,53.0,103.96,1,4,0,5,improving,0.47,unstable_understanding,spaced_repetition_practice
+S_B_453,B,8,Science,Biology,Chemistry,64.2,69,1,5.0,5.0,89.1,0.0,0,0,0,4,insufficient_data,0.109,none,maintain_current_pace
+S_B_454,B,8,Science,Biology,Chemistry,27.7,23,8,6.5,52.0,46.7,39.43,4,5,0,4,stuck,0.533,prerequisite_gap,revisit_prerequisite_topic
+S_B_455,B,8,Science,Biology,Chemistry,60.0,85,3,17.7,53.1,64.3,62.51,2,0,0,2,declining,0.357,forgetting,schedule_revision_session
+S_B_456,B,8,Science,Biology,Chemistry,68.3,9,1,54.5,54.5,58.1,0.0,8,1,0,1,insufficient_data,0.419,conceptual_misunderstanding,assign_worked_examples
+S_B_457,B,8,Science,Environmental Science,Biology,57.9,66,2,63.3,126.6,82.1,128.33,6,4,0,5,declining,0.179,none,maintain_current_pace
+S_B_458,B,8,Science,Environmental Science,Biology,73.1,77,5,7.8,39.0,56.8,55.72,6,3,0,4,stuck,0.432,conceptual_misunderstanding,assign_worked_examples
+S_B_459,B,8,Science,Environmental Science,Biology,63.6,3,3,32.6,97.8,54.8,11.35,8,3,0,1,improving,0.452,conceptual_misunderstanding,assign_worked_examples
+S_B_460,B,8,Science,Environmental Science,Biology,75.8,1,6,20.0,120.0,56.9,57.07,8,5,0,2,declining,0.431,conceptual_misunderstanding,assign_worked_examples
+S_B_461,B,8,Science,Environmental Science,Biology,92.8,79,3,13.2,39.6,65.7,10.09,6,4,0,6,improving,0.343,forgetting,schedule_revision_session
+S_B_462,B,8,Science,Environmental Science,Biology,31.5,56,4,54.2,216.8,48.2,65.09,6,5,1,2,improving,0.518,prerequisite_gap,revisit_prerequisite_topic
+S_B_463,B,8,Science,Environmental Science,Biology,47.7,28,8,5.0,40.0,64.9,92.76,7,0,0,2,stuck,0.351,prerequisite_gap,revisit_prerequisite_topic
+S_B_464,B,8,Science,Environmental Science,Biology,48.0,14,1,43.6,43.6,61.0,0.0,8,1,0,2,insufficient_data,0.39,prerequisite_gap,revisit_prerequisite_topic
+S_B_465,B,8,Science,Space Science,Environmental Science,85.1,20,2,11.7,23.4,58.2,42.9,2,3,0,6,improving,0.418,unstable_understanding,spaced_repetition_practice
+S_B_466,B,8,Science,Space Science,Environmental Science,49.3,77,2,13.2,26.4,49.8,72.66,0,3,1,4,declining,0.502,prerequisite_gap,revisit_prerequisite_topic
+S_B_467,B,8,Science,Space Science,Environmental Science,54.0,6,7,35.5,248.5,55.5,40.81,4,1,0,1,stuck,0.445,prerequisite_gap,revisit_prerequisite_topic
+S_B_468,B,8,Science,Space Science,Environmental Science,47.4,57,7,15.6,109.2,76.0,41.9,4,2,0,6,stuck,0.24,none,maintain_current_pace
+S_B_469,B,8,Science,Space Science,Environmental Science,32.7,3,3,35.6,106.8,38.6,14.63,8,3,1,5,declining,0.614,prerequisite_gap,revisit_prerequisite_topic
+S_B_470,B,8,Science,Space Science,Environmental Science,78.1,13,3,11.2,33.6,63.4,34.35,2,2,0,3,declining,0.366,unstable_understanding,spaced_repetition_practice
+S_B_471,B,8,Science,Space Science,Environmental Science,64.4,56,1,54.7,54.7,62.6,0.0,2,4,0,5,insufficient_data,0.374,forgetting,schedule_revision_session
+S_B_472,B,8,Science,Space Science,Environmental Science,76.1,61,3,37.8,113.4,68.3,36.71,1,3,0,5,declining,0.317,unstable_understanding,spaced_repetition_practice
+S_B_473,B,8,Social Science,History,none,100.0,0,7,5.0,35.0,81.9,52.7,6,2,0,1,stuck,0.181,none,maintain_current_pace
+S_B_474,B,8,Social Science,History,none,100.0,0,4,13.1,52.4,88.8,32.89,7,4,0,6,stuck,0.112,none,maintain_current_pace
+S_B_475,B,8,Social Science,History,none,100.0,0,6,39.9,239.4,86.6,49.34,4,2,0,1,stuck,0.134,none,maintain_current_pace
+S_B_476,B,8,Social Science,History,none,100.0,0,3,32.0,96.0,70.6,15.06,2,0,0,1,improving,0.294,none,maintain_current_pace
+S_B_477,B,8,Social Science,History,none,100.0,0,3,5.0,15.0,100.0,58.97,0,4,0,2,declining,0.0,none,maintain_current_pace
+S_B_478,B,8,Social Science,History,none,100.0,0,5,17.4,87.0,68.8,91.69,8,1,0,6,stuck,0.312,unstable_understanding,spaced_repetition_practice
+S_B_479,B,8,Social Science,History,none,100.0,0,1,24.7,24.7,91.2,0.0,7,2,0,6,insufficient_data,0.088,none,maintain_current_pace
+S_B_480,B,8,Social Science,History,none,100.0,0,2,5.9,11.8,65.3,3.31,7,2,0,1,improving,0.347,conceptual_misunderstanding,assign_worked_examples
+S_B_481,B,8,Social Science,Geography,History,59.7,7,1,43.7,43.7,79.9,0.0,6,0,0,5,insufficient_data,0.201,none,maintain_current_pace
+S_B_482,B,8,Social Science,Geography,History,32.1,77,6,32.1,192.6,40.4,29.43,7,4,1,3,stuck,0.596,prerequisite_gap,revisit_prerequisite_topic
+S_B_483,B,8,Social Science,Geography,History,40.7,65,8,48.5,388.0,75.8,57.89,5,5,0,1,stuck,0.242,none,maintain_current_pace
+S_B_484,B,8,Social Science,Geography,History,53.1,7,4,32.2,128.8,66.6,66.71,6,3,0,3,declining,0.334,prerequisite_gap,revisit_prerequisite_topic
+S_B_485,B,8,Social Science,Geography,History,39.3,72,7,5.0,35.0,52.7,48.81,6,3,0,4,improving,0.473,prerequisite_gap,revisit_prerequisite_topic
+S_B_486,B,8,Social Science,Geography,History,63.3,24,2,19.1,38.2,49.4,12.22,4,3,1,3,improving,0.506,low_engagement,increase_interactive_activities
+S_B_487,B,8,Social Science,Geography,History,87.0,64,5,10.4,52.0,74.7,49.24,1,1,0,5,stuck,0.253,none,maintain_current_pace
+S_B_488,B,8,Social Science,Geography,History,52.5,29,6,82.1,492.6,55.0,39.64,0,0,0,6,stuck,0.45,prerequisite_gap,revisit_prerequisite_topic
+S_B_489,B,8,Social Science,Civics,Geography,62.1,24,2,48.1,96.2,64.3,0.09,2,5,0,4,stuck,0.357,conceptual_misunderstanding,assign_worked_examples
+S_B_490,B,8,Social Science,Civics,Geography,42.1,64,3,17.3,51.9,53.5,1.23,5,4,0,2,stuck,0.465,prerequisite_gap,revisit_prerequisite_topic
+S_B_491,B,8,Social Science,Civics,Geography,46.6,75,5,58.0,290.0,75.9,56.72,1,3,0,1,declining,0.241,none,maintain_current_pace
+S_B_492,B,8,Social Science,Civics,Geography,61.7,8,6,61.5,369.0,49.7,7.19,3,2,1,3,stuck,0.503,conceptual_misunderstanding,assign_worked_examples
+S_B_493,B,8,Social Science,Civics,Geography,64.1,68,5,14.2,71.0,80.4,63.27,7,1,0,3,stuck,0.196,none,maintain_current_pace
+S_B_494,B,8,Social Science,Civics,Geography,52.5,27,1,87.2,87.2,45.2,0.0,8,0,0,1,insufficient_data,0.548,prerequisite_gap,revisit_prerequisite_topic
+S_B_495,B,8,Social Science,Civics,Geography,43.5,9,4,30.1,120.4,50.3,139.39,7,4,1,2,declining,0.497,prerequisite_gap,revisit_prerequisite_topic
+S_B_496,B,8,Social Science,Civics,Geography,64.2,72,2,25.7,51.4,67.7,3.37,4,4,0,4,improving,0.323,forgetting,schedule_revision_session
+S_B_497,B,8,Social Science,Economics,Civics,73.0,41,3,69.7,209.1,81.7,98.43,3,2,0,6,stuck,0.183,none,maintain_current_pace
+S_B_498,B,8,Social Science,Economics,Civics,66.9,66,1,80.2,80.2,77.3,0.0,1,2,0,4,insufficient_data,0.227,none,maintain_current_pace
+S_B_499,B,8,Social Science,Economics,Civics,57.4,36,7,20.2,141.4,32.1,37.44,4,1,0,4,stuck,0.679,unstable_understanding,spaced_repetition_practice
+S_B_500,B,8,Social Science,Economics,Civics,78.0,33,7,60.8,425.6,56.9,38.56,1,0,0,5,stuck,0.431,unstable_understanding,spaced_repetition_practice
+S_B_501,B,8,Social Science,Economics,Civics,48.5,30,1,22.1,22.1,40.9,0.0,5,1,0,1,insufficient_data,0.591,prerequisite_gap,revisit_prerequisite_topic
+S_B_502,B,8,Social Science,Economics,Civics,44.1,67,5,28.6,143.0,56.8,44.81,4,4,0,6,stuck,0.432,prerequisite_gap,revisit_prerequisite_topic
+S_B_503,B,8,Social Science,Economics,Civics,47.1,48,8,16.7,133.6,66.7,97.52,1,4,0,1,stuck,0.333,prerequisite_gap,revisit_prerequisite_topic
+S_B_504,B,8,Social Science,Economics,Civics,77.5,23,3,72.2,216.6,78.4,25.47,1,1,0,3,stuck,0.216,none,maintain_current_pace
+S_B_505,B,8,Social Science,Political Science,Economics,39.6,68,4,5.0,20.0,21.7,13.52,8,2,1,3,stuck,0.783,prerequisite_gap,revisit_prerequisite_topic
+S_B_506,B,8,Social Science,Political Science,Economics,91.3,35,4,14.4,57.6,52.6,51.08,2,5,0,1,stuck,0.474,conceptual_misunderstanding,assign_worked_examples
+S_B_507,B,8,Social Science,Political Science,Economics,61.0,27,6,35.6,213.6,29.4,99.21,4,2,1,1,stuck,0.706,conceptual_misunderstanding,assign_worked_examples
+S_B_508,B,8,Social Science,Political Science,Economics,60.1,74,3,5.0,15.0,66.2,2.93,2,4,0,4,stuck,0.338,forgetting,schedule_revision_session
+S_B_509,B,8,Social Science,Political Science,Economics,83.2,29,6,19.9,119.4,94.6,59.77,5,1,0,2,declining,0.054,none,maintain_current_pace
+S_B_510,B,8,Social Science,Political Science,Economics,68.6,87,7,76.0,532.0,65.8,31.17,4,1,0,6,stuck,0.342,unstable_understanding,spaced_repetition_practice
+S_B_511,B,8,Social Science,Political Science,Economics,20.4,41,6,64.0,384.0,52.8,63.16,1,0,0,1,declining,0.472,prerequisite_gap,revisit_prerequisite_topic
+S_B_512,B,8,Social Science,Political Science,Economics,73.0,60,4,20.5,82.0,38.7,74.73,6,1,1,1,declining,0.613,conceptual_misunderstanding,assign_worked_examples
+S_B_513,B,9,Maths,Arithmetic,none,100.0,0,4,31.7,126.8,73.4,17.37,0,5,0,1,improving,0.266,none,maintain_current_pace
+S_B_514,B,9,Maths,Arithmetic,none,100.0,0,6,53.0,318.0,40.8,63.11,3,0,1,4,stuck,0.592,unstable_understanding,spaced_repetition_practice
+S_B_515,B,9,Maths,Arithmetic,none,100.0,0,7,27.5,192.5,81.2,18.55,0,5,0,2,stuck,0.188,none,maintain_current_pace
+S_B_516,B,9,Maths,Arithmetic,none,100.0,0,4,19.4,77.6,81.7,124.38,6,3,0,1,declining,0.183,none,maintain_current_pace
+S_B_517,B,9,Maths,Arithmetic,none,100.0,0,6,52.9,317.4,73.6,15.81,0,0,0,5,stuck,0.264,none,maintain_current_pace
+S_B_518,B,9,Maths,Arithmetic,none,100.0,0,8,56.4,451.2,76.6,52.06,1,0,0,2,stuck,0.234,none,maintain_current_pace
+S_B_519,B,9,Maths,Arithmetic,none,100.0,0,1,81.2,81.2,100.0,0.0,6,1,0,4,insufficient_data,0.0,none,maintain_current_pace
+S_B_520,B,9,Maths,Arithmetic,none,100.0,0,3,35.7,107.1,96.4,12.39,4,3,0,1,improving,0.036,none,maintain_current_pace
+S_B_521,B,9,Maths,Algebra,Arithmetic,38.7,76,6,29.1,174.6,55.7,72.31,0,4,0,2,improving,0.443,prerequisite_gap,revisit_prerequisite_topic
+S_B_522,B,9,Maths,Algebra,Arithmetic,92.2,23,5,62.6,313.0,69.0,52.94,5,4,0,6,stuck,0.31,unstable_understanding,spaced_repetition_practice
+S_B_523,B,9,Maths,Algebra,Arithmetic,51.6,59,3,42.3,126.9,47.0,18.63,8,4,1,1,stuck,0.53,prerequisite_gap,revisit_prerequisite_topic
+S_B_524,B,9,Maths,Algebra,Arithmetic,47.3,50,5,41.8,209.0,25.8,17.58,7,1,1,4,stuck,0.742,prerequisite_gap,revisit_prerequisite_topic
+S_B_525,B,9,Maths,Algebra,Arithmetic,61.1,84,6,52.2,313.2,56.1,25.9,0,4,0,1,stuck,0.439,forgetting,schedule_revision_session
+S_B_526,B,9,Maths,Algebra,Arithmetic,55.7,45,4,26.5,106.0,34.4,10.44,5,2,1,1,stuck,0.656,conceptual_misunderstanding,assign_worked_examples
+S_B_527,B,9,Maths,Algebra,Arithmetic,57.0,34,2,26.4,52.8,48.8,143.75,0,5,1,4,declining,0.512,unstable_understanding,spaced_repetition_practice
+S_B_528,B,9,Maths,Algebra,Arithmetic,59.9,36,2,35.7,71.4,81.3,37.5,4,0,0,5,declining,0.187,none,maintain_current_pace
+S_B_529,B,9,Maths,Geometry,Algebra,62.8,28,3,23.6,70.8,100.0,0.0,4,0,0,6,stuck,0.0,none,maintain_current_pace
+S_B_530,B,9,Maths,Geometry,Algebra,73.4,19,3,35.1,105.3,46.6,29.1,6,2,1,5,improving,0.534,conceptual_misunderstanding,assign_worked_examples
+S_B_531,B,9,Maths,Geometry,Algebra,41.7,53,4,44.8,179.2,61.2,58.03,0,2,0,6,declining,0.388,prerequisite_gap,revisit_prerequisite_topic
+S_B_532,B,9,Maths,Geometry,Algebra,54.4,54,2,21.2,42.4,76.9,4.98,6,4,0,4,declining,0.231,none,maintain_current_pace
+S_B_533,B,9,Maths,Geometry,Algebra,65.8,13,7,41.2,288.4,77.8,24.92,3,3,0,4,stuck,0.222,none,maintain_current_pace
+S_B_534,B,9,Maths,Geometry,Algebra,67.3,18,2,20.1,40.2,57.7,42.0,0,2,0,4,declining,0.423,unstable_understanding,spaced_repetition_practice
+S_B_535,B,9,Maths,Geometry,Algebra,46.6,8,2,38.3,76.6,42.5,23.78,0,0,1,2,improving,0.575,prerequisite_gap,revisit_prerequisite_topic
+S_B_536,B,9,Maths,Geometry,Algebra,55.6,79,8,70.4,563.2,68.9,25.52,1,5,0,4,stuck,0.311,unstable_understanding,spaced_repetition_practice
+S_B_537,B,9,Maths,Trigonometry,Geometry,50.5,4,5,35.4,177.0,39.1,252.32,1,4,0,1,declining,0.609,prerequisite_gap,revisit_prerequisite_topic
+S_B_538,B,9,Maths,Trigonometry,Geometry,60.0,33,5,35.5,177.5,58.2,51.55,2,1,0,3,stuck,0.418,unstable_understanding,spaced_repetition_practice
+S_B_539,B,9,Maths,Trigonometry,Geometry,78.0,2,3,63.4,190.2,62.2,46.08,2,5,0,6,declining,0.378,unstable_understanding,spaced_repetition_practice
+S_B_540,B,9,Maths,Trigonometry,Geometry,59.1,40,8,5.0,40.0,62.5,58.73,7,3,0,1,improving,0.375,conceptual_misunderstanding,assign_worked_examples
+S_B_541,B,9,Maths,Trigonometry,Geometry,84.8,84,8,18.1,144.8,64.0,58.6,6,0,0,2,stuck,0.36,forgetting,schedule_revision_session
+S_B_542,B,9,Maths,Trigonometry,Geometry,80.5,15,6,55.2,331.2,87.2,31.08,4,5,0,5,stuck,0.128,none,maintain_current_pace
+S_B_543,B,9,Maths,Trigonometry,Geometry,79.1,69,7,33.9,237.3,87.6,60.06,8,2,0,3,stuck,0.124,none,maintain_current_pace
+S_B_544,B,9,Maths,Trigonometry,Geometry,62.9,59,5,76.1,380.5,63.3,116.75,4,4,0,5,improving,0.367,unstable_understanding,spaced_repetition_practice
+S_B_545,B,9,Maths,Statistics,Trigonometry,64.9,17,2,28.1,56.2,62.4,82.73,8,1,0,4,improving,0.376,unstable_understanding,spaced_repetition_practice
+S_B_546,B,9,Maths,Statistics,Trigonometry,39.3,17,4,9.6,38.4,55.9,106.58,0,4,0,2,improving,0.441,prerequisite_gap,revisit_prerequisite_topic
+S_B_547,B,9,Maths,Statistics,Trigonometry,69.6,16,4,7.6,30.4,55.0,37.11,2,0,0,2,improving,0.45,conceptual_misunderstanding,assign_worked_examples
+S_B_548,B,9,Maths,Statistics,Trigonometry,71.1,88,3,73.3,219.9,73.5,100.41,3,0,0,1,improving,0.265,none,maintain_current_pace
+S_B_549,B,9,Maths,Statistics,Trigonometry,84.5,49,4,39.1,156.4,78.1,69.47,0,4,0,5,stuck,0.219,none,maintain_current_pace
+S_B_550,B,9,Maths,Statistics,Trigonometry,48.2,74,2,44.1,88.2,56.7,1.18,1,3,0,5,stuck,0.433,prerequisite_gap,revisit_prerequisite_topic
+S_B_551,B,9,Maths,Statistics,Trigonometry,62.5,31,3,5.0,15.0,55.4,57.69,8,4,0,6,improving,0.446,conceptual_misunderstanding,assign_worked_examples
+S_B_552,B,9,Maths,Statistics,Trigonometry,34.3,6,7,44.9,314.3,70.5,59.97,6,3,0,3,stuck,0.295,none,maintain_current_pace
+S_B_553,B,9,Maths,Probability,Statistics,58.0,3,5,39.6,198.0,52.3,84.89,1,0,1,1,stuck,0.477,conceptual_misunderstanding,assign_worked_examples
+S_B_554,B,9,Maths,Probability,Statistics,51.0,72,6,68.5,411.0,48.4,42.87,0,0,0,3,improving,0.516,prerequisite_gap,revisit_prerequisite_topic
+S_B_555,B,9,Maths,Probability,Statistics,64.9,31,5,29.7,148.5,62.6,100.13,6,3,0,4,stuck,0.374,unstable_understanding,spaced_repetition_practice
+S_B_556,B,9,Maths,Probability,Statistics,48.2,19,1,61.1,61.1,62.2,0.0,0,1,0,6,insufficient_data,0.378,prerequisite_gap,revisit_prerequisite_topic
+S_B_557,B,9,Maths,Probability,Statistics,87.7,70,2,29.6,59.2,65.2,0.1,7,4,0,3,stuck,0.348,forgetting,schedule_revision_session
+S_B_558,B,9,Maths,Probability,Statistics,72.0,51,3,32.2,96.6,78.1,29.38,5,1,0,4,declining,0.219,none,maintain_current_pace
+S_B_559,B,9,Maths,Probability,Statistics,67.6,82,4,89.7,358.8,54.7,13.72,1,1,1,5,stuck,0.453,forgetting,schedule_revision_session
+S_B_560,B,9,Maths,Probability,Statistics,62.7,18,6,44.7,268.2,64.1,31.28,4,5,0,4,stuck,0.359,unstable_understanding,spaced_repetition_practice
+S_B_561,B,9,Science,Physics,none,100.0,0,2,41.6,83.2,76.4,0.34,4,3,0,4,stuck,0.236,none,maintain_current_pace
+S_B_562,B,9,Science,Physics,none,100.0,0,1,47.3,47.3,82.6,0.0,1,0,0,1,insufficient_data,0.174,none,maintain_current_pace
+S_B_563,B,9,Science,Physics,none,100.0,0,3,48.9,146.7,89.9,177.04,6,0,0,3,declining,0.101,none,maintain_current_pace
+S_B_564,B,9,Science,Physics,none,100.0,0,2,60.8,121.6,95.5,7.28,5,0,0,4,improving,0.045,none,maintain_current_pace
+S_B_565,B,9,Science,Physics,none,100.0,0,7,14.6,102.2,85.3,131.96,2,1,0,4,stuck,0.147,none,maintain_current_pace
+S_B_566,B,9,Science,Physics,none,100.0,0,7,49.5,346.5,100.0,2.46,7,5,0,6,stuck,0.0,none,maintain_current_pace
+S_B_567,B,9,Science,Physics,none,100.0,0,4,56.0,224.0,77.1,112.97,1,3,0,4,improving,0.229,none,maintain_current_pace
+S_B_568,B,9,Science,Physics,none,100.0,0,3,46.3,138.9,91.2,1.85,2,3,0,4,stuck,0.088,none,maintain_current_pace
+S_B_569,B,9,Science,Chemistry,Physics,38.3,1,7,57.4,401.8,26.9,72.03,7,3,1,4,improving,0.731,prerequisite_gap,revisit_prerequisite_topic
+S_B_570,B,9,Science,Chemistry,Physics,57.4,66,5,40.2,201.0,44.5,3.64,6,0,1,3,stuck,0.555,conceptual_misunderstanding,assign_worked_examples
+S_B_571,B,9,Science,Chemistry,Physics,65.0,65,8,102.3,818.4,59.1,37.58,8,1,0,1,stuck,0.409,conceptual_misunderstanding,assign_worked_examples
+S_B_572,B,9,Science,Chemistry,Physics,71.5,82,7,53.4,373.8,75.6,51.04,4,2,0,6,stuck,0.244,none,maintain_current_pace
+S_B_573,B,9,Science,Chemistry,Physics,74.8,13,8,5.0,40.0,69.0,55.59,4,4,0,5,stuck,0.31,unstable_understanding,spaced_repetition_practice
+S_B_574,B,9,Science,Chemistry,Physics,82.4,23,2,15.2,30.4,68.2,39.45,6,3,0,3,declining,0.318,unstable_understanding,spaced_repetition_practice
+S_B_575,B,9,Science,Chemistry,Physics,64.3,13,2,31.4,62.8,69.9,19.95,4,1,0,6,improving,0.301,conceptual_misunderstanding,assign_worked_examples
+S_B_576,B,9,Science,Chemistry,Physics,93.3,36,2,40.2,80.4,67.2,8.03,6,0,0,3,declining,0.328,conceptual_misunderstanding,assign_worked_examples
+S_B_577,B,9,Science,Biology,Chemistry,28.2,55,1,5.0,5.0,45.5,0.0,2,0,1,6,insufficient_data,0.545,prerequisite_gap,revisit_prerequisite_topic
+S_B_578,B,9,Science,Biology,Chemistry,74.3,8,4,17.3,69.2,96.2,35.66,0,0,0,1,declining,0.038,none,maintain_current_pace
+S_B_579,B,9,Science,Biology,Chemistry,54.4,36,1,50.9,50.9,51.0,0.0,1,1,0,6,insufficient_data,0.49,prerequisite_gap,revisit_prerequisite_topic
+S_B_580,B,9,Science,Biology,Chemistry,52.0,64,2,11.3,22.6,44.6,0.99,1,5,1,2,stuck,0.554,prerequisite_gap,revisit_prerequisite_topic
+S_B_581,B,9,Science,Biology,Chemistry,64.8,88,1,5.0,5.0,58.6,0.0,4,5,0,4,insufficient_data,0.414,forgetting,schedule_revision_session
+S_B_582,B,9,Science,Biology,Chemistry,69.0,47,1,14.9,14.9,58.8,0.0,7,2,0,2,insufficient_data,0.412,conceptual_misunderstanding,assign_worked_examples
+S_B_583,B,9,Science,Biology,Chemistry,56.3,16,1,47.8,47.8,47.0,0.0,8,5,1,4,insufficient_data,0.53,conceptual_misunderstanding,assign_worked_examples
+S_B_584,B,9,Science,Biology,Chemistry,60.5,18,8,34.7,277.6,54.1,21.15,2,1,1,6,stuck,0.459,conceptual_misunderstanding,assign_worked_examples
+S_B_585,B,9,Science,Environmental Science,Biology,42.1,77,7,34.8,243.6,65.6,31.79,0,1,0,3,stuck,0.344,prerequisite_gap,revisit_prerequisite_topic
+S_B_586,B,9,Science,Environmental Science,Biology,32.8,71,1,16.7,16.7,21.9,0.0,8,0,0,6,insufficient_data,0.781,prerequisite_gap,revisit_prerequisite_topic
+S_B_587,B,9,Science,Environmental Science,Biology,74.5,33,5,49.7,248.5,90.1,7.55,6,4,0,6,stuck,0.099,none,maintain_current_pace
+S_B_588,B,9,Science,Environmental Science,Biology,78.5,49,6,46.1,276.6,58.6,35.14,1,1,0,5,stuck,0.414,unstable_understanding,spaced_repetition_practice
+S_B_589,B,9,Science,Environmental Science,Biology,85.4,47,3,5.0,15.0,76.2,4.26,4,1,0,4,stuck,0.238,none,maintain_current_pace
+S_B_590,B,9,Science,Environmental Science,Biology,80.5,2,4,47.6,190.4,70.8,63.13,2,2,0,2,stuck,0.292,none,maintain_current_pace
+S_B_591,B,9,Science,Environmental Science,Biology,60.0,90,2,5.0,10.0,37.4,1.85,4,4,0,1,stuck,0.626,guessing,enforce_reflection_before_submit
+S_B_592,B,9,Science,Environmental Science,Biology,100.0,55,2,38.5,77.0,85.1,12.34,5,0,0,4,improving,0.149,none,maintain_current_pace
+S_B_593,B,9,Science,Space Science,Environmental Science,72.1,61,6,38.4,230.4,41.0,84.07,5,1,0,1,stuck,0.59,conceptual_misunderstanding,assign_worked_examples
+S_B_594,B,9,Science,Space Science,Environmental Science,75.3,16,5,47.3,236.5,79.8,28.38,6,0,0,3,stuck,0.202,none,maintain_current_pace
+S_B_595,B,9,Science,Space Science,Environmental Science,39.5,42,2,40.5,81.0,63.5,4.19,5,0,0,2,improving,0.365,prerequisite_gap,revisit_prerequisite_topic
+S_B_596,B,9,Science,Space Science,Environmental Science,40.1,30,6,37.8,226.8,29.5,76.41,7,1,0,4,declining,0.705,prerequisite_gap,revisit_prerequisite_topic
+S_B_597,B,9,Science,Space Science,Environmental Science,77.0,38,7,37.5,262.5,68.9,45.03,1,0,0,4,stuck,0.311,unstable_understanding,spaced_repetition_practice
+S_B_598,B,9,Science,Space Science,Environmental Science,71.7,60,2,79.8,159.6,46.9,29.09,3,3,1,1,declining,0.531,forgetting,schedule_revision_session
+S_B_599,B,9,Science,Space Science,Environmental Science,41.4,28,2,13.7,27.4,48.8,0.38,2,3,0,1,stuck,0.512,prerequisite_gap,revisit_prerequisite_topic
+S_B_600,B,9,Science,Space Science,Environmental Science,73.5,42,8,10.1,80.8,58.5,42.29,8,4,0,3,stuck,0.415,conceptual_misunderstanding,assign_worked_examples
+S_B_601,B,9,Social Science,History,none,100.0,0,1,56.9,56.9,64.9,0.0,2,0,0,4,insufficient_data,0.351,conceptual_misunderstanding,assign_worked_examples
+S_B_602,B,9,Social Science,History,none,100.0,0,7,29.3,205.1,72.4,111.16,2,2,0,5,stuck,0.276,none,maintain_current_pace
+S_B_603,B,9,Social Science,History,none,100.0,0,3,21.4,64.2,83.7,100.8,0,3,0,6,declining,0.163,none,maintain_current_pace
+S_B_604,B,9,Social Science,History,none,100.0,0,1,43.8,43.8,62.7,0.0,3,1,0,1,insufficient_data,0.373,conceptual_misunderstanding,assign_worked_examples
+S_B_605,B,9,Social Science,History,none,100.0,0,6,5.0,30.0,84.9,60.29,7,1,0,5,improving,0.151,none,maintain_current_pace
+S_B_606,B,9,Social Science,History,none,100.0,0,7,5.0,35.0,78.2,99.46,5,3,0,4,improving,0.218,none,maintain_current_pace
+S_B_607,B,9,Social Science,History,none,100.0,0,1,32.6,32.6,62.4,0.0,5,2,0,3,insufficient_data,0.376,conceptual_misunderstanding,assign_worked_examples
+S_B_608,B,9,Social Science,History,none,100.0,0,3,15.1,45.3,74.5,1.58,8,2,0,2,stuck,0.255,none,maintain_current_pace
+S_B_609,B,9,Social Science,Geography,History,73.5,52,3,11.5,34.5,55.6,1.98,2,3,0,1,stuck,0.444,forgetting,schedule_revision_session
+S_B_610,B,9,Social Science,Geography,History,67.6,60,6,41.1,246.6,52.1,63.13,8,2,0,3,stuck,0.479,conceptual_misunderstanding,assign_worked_examples
+S_B_611,B,9,Social Science,Geography,History,51.6,71,7,18.9,132.3,48.3,124.07,2,5,1,5,stuck,0.517,prerequisite_gap,revisit_prerequisite_topic
+S_B_612,B,9,Social Science,Geography,History,51.1,71,1,92.4,92.4,76.7,0.0,4,3,0,1,insufficient_data,0.233,none,maintain_current_pace
+S_B_613,B,9,Social Science,Geography,History,89.0,8,7,5.0,35.0,65.3,86.12,0,2,0,6,improving,0.347,unstable_understanding,spaced_repetition_practice
+S_B_614,B,9,Social Science,Geography,History,53.0,2,1,30.7,30.7,63.8,0.0,2,2,0,3,insufficient_data,0.362,prerequisite_gap,revisit_prerequisite_topic
+S_B_615,B,9,Social Science,Geography,History,93.3,49,4,65.0,260.0,52.4,34.99,3,4,0,2,stuck,0.476,forgetting,schedule_revision_session
+S_B_616,B,9,Social Science,Geography,History,66.5,51,6,33.3,199.8,61.0,57.02,3,1,0,4,stuck,0.39,unstable_understanding,spaced_repetition_practice
+S_B_617,B,9,Social Science,Civics,Geography,77.5,90,3,64.1,192.3,66.7,7.11,6,1,0,3,improving,0.333,forgetting,schedule_revision_session
+S_B_618,B,9,Social Science,Civics,Geography,56.5,84,1,22.1,22.1,80.7,0.0,6,5,0,4,insufficient_data,0.193,none,maintain_current_pace
+S_B_619,B,9,Social Science,Civics,Geography,56.2,58,7,6.6,46.2,33.7,30.67,5,0,1,1,stuck,0.663,guessing,enforce_reflection_before_submit
+S_B_620,B,9,Social Science,Civics,Geography,44.3,65,7,34.4,240.8,50.4,137.35,1,4,1,2,stuck,0.496,prerequisite_gap,revisit_prerequisite_topic
+S_B_621,B,9,Social Science,Civics,Geography,63.8,77,1,56.7,56.7,82.4,0.0,4,1,0,5,insufficient_data,0.176,none,maintain_current_pace
+S_B_622,B,9,Social Science,Civics,Geography,44.3,5,5,33.1,165.5,68.9,14.0,0,1,0,2,stuck,0.311,prerequisite_gap,revisit_prerequisite_topic
+S_B_623,B,9,Social Science,Civics,Geography,73.4,46,2,79.0,158.0,72.3,100.85,5,0,0,1,declining,0.277,none,maintain_current_pace
+S_B_624,B,9,Social Science,Civics,Geography,40.6,44,5,7.7,38.5,36.0,45.77,8,4,0,2,stuck,0.64,prerequisite_gap,revisit_prerequisite_topic
+S_B_625,B,9,Social Science,Economics,Civics,40.5,32,4,5.6,22.4,56.1,82.9,8,0,0,3,stuck,0.439,prerequisite_gap,revisit_prerequisite_topic
+S_B_626,B,9,Social Science,Economics,Civics,56.8,73,4,68.9,275.6,75.9,101.95,0,3,0,3,stuck,0.241,none,maintain_current_pace
+S_B_627,B,9,Social Science,Economics,Civics,62.2,79,3,10.0,30.0,66.4,21.57,3,0,0,4,improving,0.336,forgetting,schedule_revision_session
+S_B_628,B,9,Social Science,Economics,Civics,38.8,36,3,43.3,129.9,48.7,24.28,4,5,0,2,improving,0.513,prerequisite_gap,revisit_prerequisite_topic
+S_B_629,B,9,Social Science,Economics,Civics,75.4,13,3,21.8,65.4,73.3,24.02,5,1,0,6,declining,0.267,none,maintain_current_pace
+S_B_630,B,9,Social Science,Economics,Civics,26.9,36,8,70.1,560.8,30.5,80.42,7,1,0,5,stuck,0.695,prerequisite_gap,revisit_prerequisite_topic
+S_B_631,B,9,Social Science,Economics,Civics,49.9,76,3,7.4,22.2,26.4,15.92,2,5,0,3,stuck,0.736,prerequisite_gap,revisit_prerequisite_topic
+S_B_632,B,9,Social Science,Economics,Civics,66.9,89,4,49.9,199.6,51.0,14.68,1,2,0,1,stuck,0.49,forgetting,schedule_revision_session
+S_B_633,B,9,Social Science,Political Science,Economics,42.7,76,8,32.1,256.8,40.9,69.91,4,5,1,3,stuck,0.591,prerequisite_gap,revisit_prerequisite_topic
+S_B_634,B,9,Social Science,Political Science,Economics,61.9,90,2,5.0,10.0,45.8,15.89,8,3,1,4,declining,0.542,guessing,enforce_reflection_before_submit
+S_B_635,B,9,Social Science,Political Science,Economics,44.4,74,4,36.1,144.4,79.5,48.19,1,2,0,5,improving,0.205,none,maintain_current_pace
+S_B_636,B,9,Social Science,Political Science,Economics,60.3,8,3,13.7,41.1,78.2,37.11,5,5,0,5,improving,0.218,none,maintain_current_pace
+S_B_637,B,9,Social Science,Political Science,Economics,98.9,46,4,50.0,200.0,63.0,62.65,2,3,0,2,stuck,0.37,forgetting,schedule_revision_session
+S_B_638,B,9,Social Science,Political Science,Economics,83.3,51,8,38.4,307.2,84.8,40.93,2,4,0,2,stuck,0.152,none,maintain_current_pace
+S_B_639,B,9,Social Science,Political Science,Economics,73.5,23,3,37.2,111.6,64.0,5.91,6,1,0,3,stuck,0.36,conceptual_misunderstanding,assign_worked_examples
+S_B_640,B,9,Social Science,Political Science,Economics,35.7,58,3,19.7,59.1,41.5,58.23,2,1,0,3,stuck,0.585,prerequisite_gap,revisit_prerequisite_topic
+S_B_641,B,10,Maths,Arithmetic,none,100.0,0,2,26.3,52.6,75.4,119.44,6,3,0,2,declining,0.246,none,maintain_current_pace
+S_B_642,B,10,Maths,Arithmetic,none,100.0,0,8,10.5,84.0,94.9,24.84,7,2,0,6,stuck,0.051,none,maintain_current_pace
+S_B_643,B,10,Maths,Arithmetic,none,100.0,0,1,41.8,41.8,90.8,0.0,1,0,0,6,insufficient_data,0.092,none,maintain_current_pace
+S_B_644,B,10,Maths,Arithmetic,none,100.0,0,2,18.3,36.6,74.9,28.79,2,1,0,2,declining,0.251,none,maintain_current_pace
+S_B_645,B,10,Maths,Arithmetic,none,100.0,0,5,40.7,203.5,74.3,37.23,8,1,0,4,stuck,0.257,none,maintain_current_pace
+S_B_646,B,10,Maths,Arithmetic,none,100.0,0,8,37.5,300.0,72.9,20.55,4,1,0,6,stuck,0.271,none,maintain_current_pace
+S_B_647,B,10,Maths,Arithmetic,none,100.0,0,6,40.2,241.2,99.5,0.13,3,5,0,1,stuck,0.005,none,maintain_current_pace
+S_B_648,B,10,Maths,Arithmetic,none,100.0,0,4,5.0,20.0,100.0,10.96,4,2,0,6,stuck,0.0,none,maintain_current_pace
+S_B_649,B,10,Maths,Algebra,Arithmetic,37.0,12,7,16.9,118.3,79.1,72.68,6,4,0,3,stuck,0.209,none,maintain_current_pace
+S_B_650,B,10,Maths,Algebra,Arithmetic,67.0,62,7,67.9,475.3,46.4,101.88,1,3,0,3,stuck,0.536,unstable_understanding,spaced_repetition_practice
+S_B_651,B,10,Maths,Algebra,Arithmetic,28.3,13,8,45.6,364.8,41.4,32.27,7,2,0,3,stuck,0.586,prerequisite_gap,revisit_prerequisite_topic
+S_B_652,B,10,Maths,Algebra,Arithmetic,80.6,29,5,48.7,243.5,54.6,51.08,0,1,0,3,stuck,0.454,unstable_understanding,spaced_repetition_practice
+S_B_653,B,10,Maths,Algebra,Arithmetic,64.5,29,7,11.2,78.4,64.9,15.11,4,0,0,6,stuck,0.351,conceptual_misunderstanding,assign_worked_examples
+S_B_654,B,10,Maths,Algebra,Arithmetic,100.0,77,6,39.8,238.8,84.4,71.93,3,2,0,5,stuck,0.156,none,maintain_current_pace
+S_B_655,B,10,Maths,Algebra,Arithmetic,77.7,78,1,38.3,38.3,64.4,0.0,1,2,0,6,insufficient_data,0.356,forgetting,schedule_revision_session
+S_B_656,B,10,Maths,Algebra,Arithmetic,41.9,55,1,18.7,18.7,75.4,0.0,4,1,0,4,insufficient_data,0.246,none,maintain_current_pace
+S_B_657,B,10,Maths,Geometry,Algebra,39.9,65,5,30.5,152.5,63.3,25.82,6,2,0,4,stuck,0.367,prerequisite_gap,revisit_prerequisite_topic
+S_B_658,B,10,Maths,Geometry,Algebra,33.1,60,3,24.4,73.2,29.8,14.57,1,2,1,6,improving,0.702,prerequisite_gap,revisit_prerequisite_topic
+S_B_659,B,10,Maths,Geometry,Algebra,18.6,12,6,51.8,310.8,12.5,56.61,1,0,1,3,stuck,0.875,prerequisite_gap,revisit_prerequisite_topic
+S_B_660,B,10,Maths,Geometry,Algebra,47.9,84,7,68.3,478.1,92.0,37.16,7,2,0,4,stuck,0.08,none,maintain_current_pace
+S_B_661,B,10,Maths,Geometry,Algebra,50.7,4,7,24.7,172.9,36.8,72.32,2,1,1,4,stuck,0.632,prerequisite_gap,revisit_prerequisite_topic
+S_B_662,B,10,Maths,Geometry,Algebra,32.0,74,5,61.4,307.0,46.0,16.77,3,4,1,6,stuck,0.54,prerequisite_gap,revisit_prerequisite_topic
+S_B_663,B,10,Maths,Geometry,Algebra,34.5,50,8,8.0,64.0,44.2,73.44,0,5,1,6,stuck,0.558,prerequisite_gap,revisit_prerequisite_topic
+S_B_664,B,10,Maths,Geometry,Algebra,8.8,42,1,54.8,54.8,12.1,0.0,1,5,1,3,insufficient_data,0.879,prerequisite_gap,revisit_prerequisite_topic
+S_B_665,B,10,Maths,Trigonometry,Geometry,57.8,83,7,39.0,273.0,31.4,12.73,2,4,1,6,stuck,0.686,forgetting,schedule_revision_session
+S_B_666,B,10,Maths,Trigonometry,Geometry,64.6,2,8,51.3,410.4,86.0,15.86,1,4,0,2,stuck,0.14,none,maintain_current_pace
+S_B_667,B,10,Maths,Trigonometry,Geometry,48.1,27,4,45.8,183.2,35.3,38.07,4,1,1,3,declining,0.647,prerequisite_gap,revisit_prerequisite_topic
+S_B_668,B,10,Maths,Trigonometry,Geometry,77.8,21,1,45.5,45.5,90.1,0.0,3,0,0,6,insufficient_data,0.099,none,maintain_current_pace
+S_B_669,B,10,Maths,Trigonometry,Geometry,52.1,31,6,10.5,63.0,96.5,10.46,0,3,0,5,stuck,0.035,none,maintain_current_pace
+S_B_670,B,10,Maths,Trigonometry,Geometry,72.7,69,8,66.3,530.4,70.3,33.69,3,0,0,6,stuck,0.297,none,maintain_current_pace
+S_B_671,B,10,Maths,Trigonometry,Geometry,36.0,19,2,5.0,10.0,48.8,41.95,0,3,1,6,improving,0.512,prerequisite_gap,revisit_prerequisite_topic
+S_B_672,B,10,Maths,Trigonometry,Geometry,60.3,15,6,52.5,315.0,71.8,39.19,2,5,0,5,stuck,0.282,none,maintain_current_pace
+S_B_673,B,10,Maths,Statistics,Trigonometry,50.9,12,6,94.2,565.2,53.3,24.28,0,3,1,2,stuck,0.467,prerequisite_gap,revisit_prerequisite_topic
+S_B_674,B,10,Maths,Statistics,Trigonometry,86.9,5,2,41.8,83.6,58.2,42.01,6,4,0,2,declining,0.418,conceptual_misunderstanding,assign_worked_examples
+S_B_675,B,10,Maths,Statistics,Trigonometry,57.6,84,5,58.9,294.5,31.7,76.45,5,4,0,6,improving,0.683,conceptual_misunderstanding,assign_worked_examples
+S_B_676,B,10,Maths,Statistics,Trigonometry,79.1,60,5,57.1,285.5,76.8,107.58,1,1,0,4,declining,0.232,none,maintain_current_pace
+S_B_677,B,10,Maths,Statistics,Trigonometry,50.2,52,7,56.5,395.5,66.8,68.56,3,5,0,3,improving,0.332,prerequisite_gap,revisit_prerequisite_topic
+S_B_678,B,10,Maths,Statistics,Trigonometry,98.3,36,5,43.9,219.5,100.0,23.65,7,0,0,1,stuck,0.0,none,maintain_current_pace
+S_B_679,B,10,Maths,Statistics,Trigonometry,57.4,23,1,33.1,33.1,44.1,0.0,4,1,1,3,insufficient_data,0.559,low_engagement,increase_interactive_activities
+S_B_680,B,10,Maths,Statistics,Trigonometry,39.6,28,7,7.8,54.6,35.4,17.02,0,1,1,6,stuck,0.646,prerequisite_gap,revisit_prerequisite_topic
+S_B_681,B,10,Maths,Probability,Statistics,81.6,58,1,63.3,63.3,88.4,0.0,4,0,0,3,insufficient_data,0.116,none,maintain_current_pace
+S_B_682,B,10,Maths,Probability,Statistics,77.7,46,4,26.6,106.4,52.8,9.84,5,2,1,2,stuck,0.472,conceptual_misunderstanding,assign_worked_examples
+S_B_683,B,10,Maths,Probability,Statistics,85.6,35,3,5.0,15.0,94.5,162.12,3,4,0,3,declining,0.055,none,maintain_current_pace
+S_B_684,B,10,Maths,Probability,Statistics,57.3,53,3,73.9,221.7,94.7,1.05,6,3,0,5,stuck,0.053,none,maintain_current_pace
+S_B_685,B,10,Maths,Probability,Statistics,69.6,53,5,5.0,25.0,56.5,43.24,2,1,0,6,stuck,0.435,unstable_understanding,spaced_repetition_practice
+S_B_686,B,10,Maths,Probability,Statistics,75.2,78,7,41.0,287.0,81.7,95.65,6,1,0,2,declining,0.183,none,maintain_current_pace
+S_B_687,B,10,Maths,Probability,Statistics,75.7,76,3,19.8,59.4,45.8,43.32,3,1,0,5,stuck,0.542,unstable_understanding,spaced_repetition_practice
+S_B_688,B,10,Maths,Probability,Statistics,58.6,52,8,5.0,40.0,53.2,84.44,4,4,1,1,improving,0.468,guessing,enforce_reflection_before_submit
+S_B_689,B,10,Science,Physics,none,100.0,0,6,53.3,319.8,85.7,30.13,1,2,0,3,stuck,0.143,none,maintain_current_pace
+S_B_690,B,10,Science,Physics,none,100.0,0,1,38.5,38.5,67.3,0.0,7,3,0,2,insufficient_data,0.327,conceptual_misunderstanding,assign_worked_examples
+S_B_691,B,10,Science,Physics,none,100.0,0,2,55.5,111.0,76.6,0.47,0,2,0,6,stuck,0.234,none,maintain_current_pace
+S_B_692,B,10,Science,Physics,none,100.0,0,2,37.5,75.0,87.4,17.83,7,2,0,2,improving,0.126,none,maintain_current_pace
+S_B_693,B,10,Science,Physics,none,100.0,0,8,57.5,460.0,94.8,33.11,0,2,0,5,stuck,0.052,none,maintain_current_pace
+S_B_694,B,10,Science,Physics,none,100.0,0,3,49.9,149.7,83.3,29.87,6,3,0,5,stuck,0.167,none,maintain_current_pace
+S_B_695,B,10,Science,Physics,none,100.0,0,2,22.7,45.4,71.6,30.49,8,0,0,6,improving,0.284,none,maintain_current_pace
+S_B_696,B,10,Science,Physics,none,100.0,0,6,20.9,125.4,73.5,40.36,6,0,0,5,stuck,0.265,none,maintain_current_pace
+S_B_697,B,10,Science,Chemistry,Physics,62.4,56,6,49.3,295.8,58.1,49.04,3,2,0,4,stuck,0.419,unstable_understanding,spaced_repetition_practice
+S_B_698,B,10,Science,Chemistry,Physics,60.6,41,4,74.3,297.2,79.7,27.09,0,3,0,4,stuck,0.203,none,maintain_current_pace
+S_B_699,B,10,Science,Chemistry,Physics,55.4,64,4,28.9,115.6,50.9,9.3,2,0,0,3,stuck,0.491,forgetting,schedule_revision_session
+S_B_700,B,10,Science,Chemistry,Physics,76.9,75,2,5.0,10.0,52.1,17.19,3,2,1,3,improving,0.479,guessing,enforce_reflection_before_submit
+S_B_701,B,10,Science,Chemistry,Physics,80.7,40,5,46.7,233.5,59.3,21.18,2,1,0,3,stuck,0.407,conceptual_misunderstanding,assign_worked_examples
+S_B_702,B,10,Science,Chemistry,Physics,39.7,9,1,24.9,24.9,31.0,0.0,1,3,1,6,insufficient_data,0.69,prerequisite_gap,revisit_prerequisite_topic
+S_B_703,B,10,Science,Chemistry,Physics,90.1,72,6,67.6,405.6,86.9,23.24,4,0,0,5,stuck,0.131,none,maintain_current_pace
+S_B_704,B,10,Science,Chemistry,Physics,71.0,46,1,5.6,5.6,53.5,0.0,1,5,1,1,insufficient_data,0.465,guessing,enforce_reflection_before_submit
+S_B_705,B,10,Science,Biology,Chemistry,47.3,34,5,77.8,389.0,46.9,19.54,0,5,1,4,stuck,0.531,prerequisite_gap,revisit_prerequisite_topic
+S_B_706,B,10,Science,Biology,Chemistry,76.7,76,4,35.3,141.2,88.2,8.33,0,1,0,5,stuck,0.118,none,maintain_current_pace
+S_B_707,B,10,Science,Biology,Chemistry,82.8,70,3,54.7,164.1,94.9,41.17,0,1,0,5,declining,0.051,none,maintain_current_pace
+S_B_708,B,10,Science,Biology,Chemistry,82.7,48,7,26.9,188.3,59.4,51.41,1,3,0,3,stuck,0.406,unstable_understanding,spaced_repetition_practice
+S_B_709,B,10,Science,Biology,Chemistry,85.3,89,7,30.7,214.9,62.0,12.8,0,4,0,5,stuck,0.38,forgetting,schedule_revision_session
+S_B_710,B,10,Science,Biology,Chemistry,60.6,7,7,5.4,37.8,59.7,57.75,1,4,0,6,stuck,0.403,unstable_understanding,spaced_repetition_practice
+S_B_711,B,10,Science,Biology,Chemistry,38.2,89,5,41.7,208.5,41.5,14.74,4,4,0,1,stuck,0.585,prerequisite_gap,revisit_prerequisite_topic
+S_B_712,B,10,Science,Biology,Chemistry,71.6,44,3,40.8,122.4,53.8,0.75,7,5,1,2,stuck,0.462,conceptual_misunderstanding,assign_worked_examples
+S_B_713,B,10,Science,Environmental Science,Biology,58.2,19,1,21.8,21.8,75.7,0.0,7,2,0,3,insufficient_data,0.243,none,maintain_current_pace
+S_B_714,B,10,Science,Environmental Science,Biology,62.4,36,5,5.0,25.0,62.2,74.85,3,0,0,4,stuck,0.378,unstable_understanding,spaced_repetition_practice
+S_B_715,B,10,Science,Environmental Science,Biology,81.6,9,5,27.5,137.5,73.6,27.06,6,3,0,2,stuck,0.264,none,maintain_current_pace
+S_B_716,B,10,Science,Environmental Science,Biology,47.4,53,3,35.4,106.2,74.4,10.92,2,5,0,4,stuck,0.256,none,maintain_current_pace
+S_B_717,B,10,Science,Environmental Science,Biology,99.3,10,5,59.1,295.5,81.1,121.35,0,3,0,2,stuck,0.189,none,maintain_current_pace
+S_B_718,B,10,Science,Environmental Science,Biology,61.4,6,7,13.8,96.6,68.5,59.05,8,4,0,1,stuck,0.315,conceptual_misunderstanding,assign_worked_examples
+S_B_719,B,10,Science,Environmental Science,Biology,64.3,2,4,6.3,25.2,50.0,28.92,2,2,0,5,declining,0.5,guessing,enforce_reflection_before_submit
+S_B_720,B,10,Science,Environmental Science,Biology,61.2,26,8,49.6,396.8,59.5,98.22,8,3,0,1,improving,0.405,conceptual_misunderstanding,assign_worked_examples
+S_B_721,B,10,Science,Space Science,Environmental Science,68.5,18,8,8.3,66.4,85.1,46.67,8,4,0,3,stuck,0.149,none,maintain_current_pace
+S_B_722,B,10,Science,Space Science,Environmental Science,47.7,29,2,5.0,10.0,53.2,41.16,6,2,1,5,declining,0.468,prerequisite_gap,revisit_prerequisite_topic
+S_B_723,B,10,Science,Space Science,Environmental Science,51.3,28,5,71.5,357.5,34.2,65.49,2,0,1,4,stuck,0.658,prerequisite_gap,revisit_prerequisite_topic
+S_B_724,B,10,Science,Space Science,Environmental Science,46.3,7,6,27.4,164.4,36.5,15.54,0,3,0,4,stuck,0.635,prerequisite_gap,revisit_prerequisite_topic
+S_B_725,B,10,Science,Space Science,Environmental Science,68.8,54,7,24.1,168.7,72.7,5.58,0,0,0,4,stuck,0.273,none,maintain_current_pace
+S_B_726,B,10,Science,Space Science,Environmental Science,65.6,12,7,74.9,524.3,54.4,14.02,1,1,0,3,stuck,0.456,conceptual_misunderstanding,assign_worked_examples
+S_B_727,B,10,Science,Space Science,Environmental Science,53.8,8,7,65.3,457.1,78.5,35.98,0,2,0,6,stuck,0.215,none,maintain_current_pace
+S_B_728,B,10,Science,Space Science,Environmental Science,39.3,11,7,43.1,301.7,23.9,39.77,3,1,1,6,stuck,0.761,prerequisite_gap,revisit_prerequisite_topic
+S_B_729,B,10,Social Science,History,none,100.0,0,8,31.8,254.4,100.0,10.4,7,3,0,6,stuck,0.0,none,maintain_current_pace
+S_B_730,B,10,Social Science,History,none,100.0,0,2,16.9,33.8,77.1,30.44,2,1,0,1,declining,0.229,none,maintain_current_pace
+S_B_731,B,10,Social Science,History,none,100.0,0,6,18.0,108.0,84.6,87.55,2,1,0,5,stuck,0.154,none,maintain_current_pace
+S_B_732,B,10,Social Science,History,none,100.0,0,7,33.3,233.1,84.2,129.75,2,2,0,2,stuck,0.158,none,maintain_current_pace
+S_B_733,B,10,Social Science,History,none,100.0,0,8,18.1,144.8,69.1,30.69,1,2,0,6,stuck,0.309,unstable_understanding,spaced_repetition_practice
+S_B_734,B,10,Social Science,History,none,100.0,0,1,50.8,50.8,99.1,0.0,3,1,0,5,insufficient_data,0.009,none,maintain_current_pace
+S_B_735,B,10,Social Science,History,none,100.0,0,5,30.4,152.0,90.0,39.96,7,2,0,3,stuck,0.1,none,maintain_current_pace
+S_B_736,B,10,Social Science,History,none,100.0,0,2,32.8,65.6,74.4,55.52,0,3,0,3,declining,0.256,none,maintain_current_pace
+S_B_737,B,10,Social Science,Geography,History,94.1,56,2,53.9,107.8,100.0,0.0,6,2,0,2,stuck,0.0,none,maintain_current_pace
+S_B_738,B,10,Social Science,Geography,History,64.4,56,3,49.1,147.3,75.4,8.89,1,3,0,6,stuck,0.246,none,maintain_current_pace
+S_B_739,B,10,Social Science,Geography,History,16.3,51,7,32.5,227.5,55.8,37.62,0,2,0,5,stuck,0.442,prerequisite_gap,revisit_prerequisite_topic
+S_B_740,B,10,Social Science,Geography,History,52.3,39,3,67.2,201.6,49.4,39.32,4,5,0,4,declining,0.506,prerequisite_gap,revisit_prerequisite_topic
+S_B_741,B,10,Social Science,Geography,History,58.6,56,8,72.2,577.6,60.0,48.93,0,1,0,6,stuck,0.4,unstable_understanding,spaced_repetition_practice
+S_B_742,B,10,Social Science,Geography,History,59.4,52,4,47.4,189.6,36.9,76.32,4,3,1,3,stuck,0.631,unstable_understanding,spaced_repetition_practice
+S_B_743,B,10,Social Science,Geography,History,49.3,77,8,26.2,209.6,45.9,31.62,1,2,1,6,stuck,0.541,prerequisite_gap,revisit_prerequisite_topic
+S_B_744,B,10,Social Science,Geography,History,38.0,65,7,75.1,525.7,51.2,60.45,6,2,0,2,stuck,0.488,prerequisite_gap,revisit_prerequisite_topic
+S_B_745,B,10,Social Science,Civics,Geography,76.6,29,5,44.1,220.5,62.8,113.34,1,2,0,5,declining,0.372,unstable_understanding,spaced_repetition_practice
+S_B_746,B,10,Social Science,Civics,Geography,56.5,37,6,35.6,213.6,58.8,77.62,2,1,0,5,stuck,0.412,unstable_understanding,spaced_repetition_practice
+S_B_747,B,10,Social Science,Civics,Geography,89.6,39,8,28.2,225.6,65.6,54.06,8,1,0,2,stuck,0.344,conceptual_misunderstanding,assign_worked_examples
+S_B_748,B,10,Social Science,Civics,Geography,36.6,27,8,5.0,40.0,42.1,46.94,3,5,1,5,stuck,0.579,prerequisite_gap,revisit_prerequisite_topic
+S_B_749,B,10,Social Science,Civics,Geography,50.6,60,5,15.3,76.5,33.4,33.76,6,1,1,5,stuck,0.666,prerequisite_gap,revisit_prerequisite_topic
+S_B_750,B,10,Social Science,Civics,Geography,62.1,80,8,37.2,297.6,67.7,39.47,5,2,0,3,stuck,0.323,unstable_understanding,spaced_repetition_practice
+S_B_751,B,10,Social Science,Civics,Geography,68.1,58,7,56.3,394.1,58.4,49.89,2,2,0,4,stuck,0.416,unstable_understanding,spaced_repetition_practice
+S_B_752,B,10,Social Science,Civics,Geography,100.0,56,5,43.2,216.0,80.2,13.93,0,2,0,1,stuck,0.198,none,maintain_current_pace
+S_B_753,B,10,Social Science,Economics,Civics,60.1,54,7,21.6,151.2,68.7,67.68,2,1,0,2,stuck,0.313,forgetting,schedule_revision_session
+S_B_754,B,10,Social Science,Economics,Civics,64.6,68,7,110.4,772.8,32.7,133.78,6,1,0,5,declining,0.673,conceptual_misunderstanding,assign_worked_examples
+S_B_755,B,10,Social Science,Economics,Civics,75.3,39,5,44.8,224.0,74.9,28.07,8,1,0,1,stuck,0.251,none,maintain_current_pace
+S_B_756,B,10,Social Science,Economics,Civics,39.7,78,5,34.6,173.0,36.5,27.36,7,4,1,2,stuck,0.635,prerequisite_gap,revisit_prerequisite_topic
+S_B_757,B,10,Social Science,Economics,Civics,43.7,35,6,66.8,400.8,47.8,76.0,7,1,0,4,stuck,0.522,prerequisite_gap,revisit_prerequisite_topic
+S_B_758,B,10,Social Science,Economics,Civics,62.2,66,1,5.9,5.9,43.4,0.0,3,4,0,1,insufficient_data,0.566,guessing,enforce_reflection_before_submit
+S_B_759,B,10,Social Science,Economics,Civics,80.2,81,1,13.6,13.6,96.3,0.0,0,1,0,6,insufficient_data,0.037,none,maintain_current_pace
+S_B_760,B,10,Social Science,Economics,Civics,51.4,84,1,21.7,21.7,65.9,0.0,5,4,0,5,insufficient_data,0.341,prerequisite_gap,revisit_prerequisite_topic
+S_B_761,B,10,Social Science,Political Science,Economics,71.8,67,5,32.8,164.0,41.2,67.32,7,5,1,3,improving,0.588,conceptual_misunderstanding,assign_worked_examples
+S_B_762,B,10,Social Science,Political Science,Economics,42.4,79,6,29.4,176.4,55.4,30.69,2,1,0,1,stuck,0.446,prerequisite_gap,revisit_prerequisite_topic
+S_B_763,B,10,Social Science,Political Science,Economics,50.2,65,3,46.7,140.1,41.4,10.78,4,0,1,2,stuck,0.586,prerequisite_gap,revisit_prerequisite_topic
+S_B_764,B,10,Social Science,Political Science,Economics,31.2,32,4,60.9,243.6,69.7,46.81,4,1,0,4,declining,0.303,prerequisite_gap,revisit_prerequisite_topic
+S_B_765,B,10,Social Science,Political Science,Economics,43.9,67,4,48.8,195.2,83.8,83.32,3,5,0,6,declining,0.162,none,maintain_current_pace
+S_B_766,B,10,Social Science,Political Science,Economics,81.9,88,2,5.0,10.0,100.0,45.6,1,3,0,5,improving,0.0,none,maintain_current_pace
+S_B_767,B,10,Social Science,Political Science,Economics,47.0,19,7,34.9,244.3,63.2,92.76,3,1,0,4,stuck,0.368,prerequisite_gap,revisit_prerequisite_topic
+S_B_768,B,10,Social Science,Political Science,Economics,60.0,61,2,17.6,35.2,41.1,128.27,2,1,1,5,declining,0.589,unstable_understanding,spaced_repetition_practice
