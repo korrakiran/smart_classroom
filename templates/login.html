@@ -20,6 +20,17 @@
       --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
       --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
       --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      --transition: all 0.2s ease;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0B0F1A;
+      --surface: #151C2C;
+      --border: #2D3748;
+      --text: #F9FAFB;
+      --dim: #94A3B8;
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.6);
     }
     
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -33,6 +44,7 @@
       align-items: center;
       justify-content: center;
       padding: 1.5rem;
+      transition: var(--transition);
     }
 
     .container {
@@ -138,10 +150,11 @@
     }
 
     input:disabled, input[readonly] {
-      background: #f3f4f6;
+      background: var(--bg);
       color: var(--dim);
       cursor: not-allowed;
       border-color: var(--border);
+      opacity: 0.7;
     }
 
     .btn {
@@ -264,6 +277,11 @@
   </style>
 </head>
 <body>
+
+  <button id="theme-toggle" onclick="toggleTheme()" style="position:fixed; top:1.5rem; right:1.5rem; background:var(--surface); border:1px solid var(--border); border-radius:50%; width:42px; height:42px; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:var(--shadow-sm); color:var(--text); transition:var(--transition); z-index:100;">
+    <svg id="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+    <svg id="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+  </button>
 
   <div class="container">
     <div class="logo-area">
@@ -544,6 +562,35 @@
         showError('login-error', "Server error. Please try again.");
       }
     }
+    // ── Theme Management ──────────────────────────────────────────────────────────
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute("data-theme");
+      const next = current === "dark" ? "light" : "dark";
+      html.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+      updateThemeIcons(next);
+    }
+
+    function updateThemeIcons(theme) {
+      const sun = document.getElementById("sun-icon");
+      const moon = document.getElementById("moon-icon");
+      if (theme === "dark") {
+        sun.style.display = "block";
+        moon.style.display = "none";
+      } else {
+        sun.style.display = "none";
+        moon.style.display = "block";
+      }
+    }
+
+    function applyInitialTheme() {
+      const saved = localStorage.getItem("theme") || "light";
+      document.documentElement.setAttribute("data-theme", saved);
+      updateThemeIcons(saved);
+    }
+
+    applyInitialTheme();
   </script>
 </body>
 </html>
