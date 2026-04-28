@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Smart Classroom | Intelligence Dashboard</title>
   <link rel="manifest" href="/static/manifest.json">
-  <link rel="icon" type="image/png" href="/static/logo.png">
-  <link rel="apple-touch-icon" href="/static/logo.png">
+  <link rel="icon" type="image/png" href="/Users/kiran/smart_classroom/static/logo.png">
+  <link rel="apple-touch-icon" href="/Users/kiran/smart_classroom/static/logo.png">
   <meta name="theme-color" content="#4F46E5">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
   <style>
     :root {
-      --primary: #4F46E5; /* Indigo */
+      --primary: #4F46E5;
+      /* Indigo */
       --primary-glow: rgba(79, 70, 229, 0.15);
-      --bg: #F9FAFB; /* Gray 50 */
-      --surface: #FFFFFF; /* White */
-      --border: #E5E7EB; /* Gray 200 */
-      --text: #111827; /* Gray 900 */
-      --dim: #6B7280; /* Gray 500 */
-      --red: #EF4444; 
-      --amber: #F59E0B; 
-      --emerald: #10B981; 
-      --blue: #3B82F6; 
+      --bg: #F9FAFB;
+      /* Gray 50 */
+      --surface: #FFFFFF;
+      /* White */
+      --border: #E5E7EB;
+      /* Gray 200 */
+      --text: #111827;
+      /* Gray 900 */
+      --dim: #6B7280;
+      /* Gray 500 */
+      --red: #EF4444;
+      --amber: #F59E0B;
+      --emerald: #10B981;
+      --blue: #3B82F6;
       --indigo: #6366F1;
       --sidebar: 272px;
       --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -40,394 +48,911 @@
       --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
       --chart-grid: rgba(255, 255, 255, 0.08);
     }
-    *{box-sizing:border-box;margin:0;padding:0;}
-    body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);
-      display:flex;min-height:100vh;overflow:hidden;transition:var(--transition);}
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      min-height: 100vh;
+      overflow: hidden;
+      transition: var(--transition);
+    }
 
     /* ── Sidebar ── */
-    #sidebar{width:var(--sidebar);background:var(--surface);
-      border-right:1px solid var(--border);padding:1.75rem 1.5rem;display:flex;
-      flex-direction:column;height:100vh;position:fixed;z-index:100;overflow-y:auto;}
-    .logo-area{display:flex;align-items:center;gap:.75rem;margin-bottom:2rem;}
-    .logo-icon{width:34px;height:34px;background:linear-gradient(135deg,var(--primary),#818cf8);
-      border-radius:10px;display:flex;align-items:center;justify-content:center;
-      box-shadow:var(--shadow-sm);flex-shrink:0;}
-    .logo-text{font-size:1.1rem;font-weight:700;color:var(--text);letter-spacing:-.2px;}
-    .nav-label{font-size:.7rem;font-weight:600;color:var(--dim);text-transform:uppercase;
-      letter-spacing:0.5px;margin-bottom:.75rem;margin-top:1.25rem;}
-    .filter-box{margin-bottom:1rem;}
-    .filter-box label{display:block;font-size:.8rem;font-weight:500;color:var(--dim);margin-bottom:.4rem;}
-    select{width:100%;padding:.6rem .75rem;background:var(--bg);border:1px solid var(--border);
-      border-radius:8px;color:var(--text);font-family:inherit;cursor:pointer;font-size:.85rem;
-      box-shadow:var(--shadow-sm); transition: border-color 0.15s, box-shadow 0.15s;}
-    select:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px var(--primary-glow);}
+    #sidebar {
+      width: var(--sidebar);
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+      padding: 1.75rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      position: fixed;
+      z-index: 100;
+      overflow-y: auto;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      margin-bottom: 2rem;
+    }
+
+    .logo-icon {
+      width: 34px;
+      height: 34px;
+      background: linear-gradient(135deg, var(--primary), #818cf8);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-sm);
+      flex-shrink: 0;
+    }
+
+    .logo-text {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -.2px;
+    }
+
+    .nav-label {
+      font-size: .7rem;
+      font-weight: 600;
+      color: var(--dim);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: .75rem;
+      margin-top: 1.25rem;
+    }
+
+    .filter-box {
+      margin-bottom: 1rem;
+    }
+
+    .filter-box label {
+      display: block;
+      font-size: .8rem;
+      font-weight: 500;
+      color: var(--dim);
+      margin-bottom: .4rem;
+    }
+
+    select {
+      width: 100%;
+      padding: .6rem .75rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-family: inherit;
+      cursor: pointer;
+      font-size: .85rem;
+      box-shadow: var(--shadow-sm);
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+
+    select:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px var(--primary-glow);
+    }
 
     /* ── Struggle Legend ── */
-    .legend-block{margin-top:.5rem;}
-    .legend-item{display:flex;align-items:center;gap:.6rem;font-size:.8rem;font-weight:500;color:var(--dim);
-      padding:.3rem 0;}
-    .legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+    .legend-block {
+      margin-top: .5rem;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      font-size: .8rem;
+      font-weight: 500;
+      color: var(--dim);
+      padding: .3rem 0;
+    }
+
+    .legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
 
     /* ── Main ── */
-    #main{margin-left:var(--sidebar);flex:1;padding:2rem 2.5rem;height:100vh;
-      overflow-y:auto;scroll-behavior:smooth;}
-    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem;}
-    header h2{font-size:1.5rem;font-weight:700;color:var(--text);letter-spacing:-.5px;}
-    .clock{color:var(--dim);font-size:.85rem;font-weight:500;background:var(--surface);
-      padding:0.4rem 0.8rem;border-radius:20px;border:1px solid var(--border);box-shadow:var(--shadow-sm);}
+    #main {
+      margin-left: var(--sidebar);
+      flex: 1;
+      padding: 2rem 2.5rem;
+      height: 100vh;
+      overflow-y: auto;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    header h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -.5px;
+    }
+
+    .clock {
+      color: var(--dim);
+      font-size: .85rem;
+      font-weight: 500;
+      background: var(--surface);
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
 
     /* ── Metric Cards ── */
-    .metrics{display:grid;grid-template-columns:repeat(5,1fr);gap:1.25rem;margin-bottom:2rem;}
-    .mc{background:var(--surface);padding:1.4rem;border-radius:14px;
-      border:1px solid var(--border);box-shadow:var(--shadow-sm);position:relative;}
-    .mc .val{font-size:1.8rem;font-weight:700;color:var(--text);display:block;margin-bottom:.2rem;
-      letter-spacing:-.8px;}
-    .mc .lbl{font-size:.8rem;color:var(--dim);font-weight:500;}
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .mc {
+      background: var(--surface);
+      padding: 1.4rem;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      position: relative;
+    }
+
+    .mc .val {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--text);
+      display: block;
+      margin-bottom: .2rem;
+      letter-spacing: -.8px;
+    }
+
+    .mc .lbl {
+      font-size: .8rem;
+      color: var(--dim);
+      font-weight: 500;
+    }
 
     /* ── Section title ── */
-    .sec-title{font-size:.9rem;font-weight:600;color:var(--text);
-      letter-spacing:0;margin-bottom:1rem;}
+    .sec-title {
+      font-size: .9rem;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: 0;
+      margin-bottom: 1rem;
+    }
 
     /* ── Chart grid ── */
-    .charts-top{display:grid;grid-template-columns:2fr 1fr;gap:1.5rem;margin-bottom:1.5rem;}
-    .chart-box{background:var(--surface);border-radius:14px;padding:1.5rem;
-      border:1px solid var(--border);box-shadow:var(--shadow-sm);}
-    .chart-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.2rem;}
-    .chart-label{font-size:1rem;font-weight:600;color:var(--text);}
-    .canv-wrap{position:relative;height:300px;}
+    .charts-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .chart-box {
+      background: var(--surface);
+      border-radius: 14px;
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .chart-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.2rem;
+    }
+
+    .chart-label {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .canv-wrap {
+      position: relative;
+      height: 300px;
+    }
 
     /* ── WHY + WHAT cards row ── */
-    .insight-row{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2rem;}
-    .insight-box{background:var(--surface);border-radius:14px;padding:1.5rem;
-      border:1px solid var(--border);box-shadow:var(--shadow-sm);}
+    .insight-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .insight-box {
+      background: var(--surface);
+      border-radius: 14px;
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
 
     /* Reason bars */
-    .reason-bar-wrap{display:flex;flex-direction:column;gap:1rem;}
-    .reason-item{display:flex;flex-direction:column;gap:.4rem;}
-    .reason-label{display:flex;justify-content:space-between;font-size:.85rem;}
-    .reason-track{height:8px;border-radius:4px;background:var(--bg);overflow:hidden;}
-    .reason-fill{height:100%;border-radius:4px;transition:width .5s;}
+    .reason-bar-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .reason-item {
+      display: flex;
+      flex-direction: column;
+      gap: .4rem;
+    }
+
+    .reason-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: .85rem;
+    }
+
+    .reason-track {
+      height: 8px;
+      border-radius: 4px;
+      background: var(--bg);
+      overflow: hidden;
+    }
+
+    .reason-fill {
+      height: 100%;
+      border-radius: 4px;
+      transition: width .5s;
+    }
 
     /* Action cards */
-    .action-cards{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
-    .action-card{background:var(--bg);border:1px solid var(--border);
-      border-radius:10px;padding:1rem;}
-    .action-topic{font-size:.8rem;font-weight:500;color:var(--dim);margin-bottom:.4rem;}
-    .action-text{font-size:.9rem;font-weight:600;color:var(--text);line-height:1.4;}
-    .action-badge{display:inline-block;margin-top:.6rem;padding:.3rem .6rem;
-      border-radius:6px;font-size:.7rem;font-weight:600;}
+    .action-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .action-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem;
+    }
+
+    .action-topic {
+      font-size: .8rem;
+      font-weight: 500;
+      color: var(--dim);
+      margin-bottom: .4rem;
+    }
+
+    .action-text {
+      font-size: .9rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.4;
+    }
+
+    .action-badge {
+      display: inline-block;
+      margin-top: .6rem;
+      padding: .3rem .6rem;
+      border-radius: 6px;
+      font-size: .7rem;
+      font-weight: 600;
+    }
 
     /* ── Table ── */
-    .table-card{background:var(--surface);border-radius:14px;border:1px solid var(--border);
-      overflow:hidden;margin-bottom:2rem;box-shadow:var(--shadow-sm);}
-    .table-wrap{max-height:400px;overflow-y:auto;}
-    table{width:100%;border-collapse:collapse;}
-    th{background:var(--bg);text-align:left;padding:1rem 1.25rem;font-size:.75rem;
-      font-weight:600;color:var(--dim);text-transform:uppercase;letter-spacing:.5px;
-      position:sticky;top:0;z-index:5;border-bottom:1px solid var(--border);}
-    td{padding:1rem 1.25rem;border-bottom:1px solid var(--border);font-size:.85rem;color:var(--text);font-weight:500;}
-    tr:hover td{background:var(--bg);opacity:0.8;}
-    .badge{padding:.3rem .7rem;border-radius:6px;font-size:.7rem;font-weight:600;white-space:nowrap;}
-    .br{background:#fef2f2;color:var(--red);}
-    .ba{background:#fffbeb;color:var(--amber);}
-    .be{background:#ecfdf5;color:var(--emerald);}
-    .bi{background:#e0e7ff;color:var(--indigo);}
+    .table-card {
+      background: var(--surface);
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow-sm);
+    }
 
-    ::-webkit-scrollbar{width:6px;}
-    ::-webkit-scrollbar-thumb{background:#d1d5db;border-radius:10px;}
-    ::-webkit-scrollbar-thumb:hover{background:#9ca3af;}
+    .table-wrap {
+      max-height: 400px;
+      overflow-y: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th {
+      background: var(--bg);
+      text-align: left;
+      padding: 1rem 1.25rem;
+      font-size: .75rem;
+      font-weight: 600;
+      color: var(--dim);
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      border-bottom: 1px solid var(--border);
+    }
+
+    td {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+      font-size: .85rem;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    tr:hover td {
+      background: var(--bg);
+      opacity: 0.8;
+    }
+
+    .badge {
+      padding: .3rem .7rem;
+      border-radius: 6px;
+      font-size: .7rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .br {
+      background: #fef2f2;
+      color: var(--red);
+    }
+
+    .ba {
+      background: #fffbeb;
+      color: var(--amber);
+    }
+
+    .be {
+      background: #ecfdf5;
+      color: var(--emerald);
+    }
+
+    .bi {
+      background: #e0e7ff;
+      color: var(--indigo);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #d1d5db;
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #9ca3af;
+    }
 
     /* ── AI Chat ── */
-    #ai-bubble{position:fixed;bottom:2rem;left:2rem;width:56px;height:56px;
-      right:auto;background:var(--primary);border-radius:50%;
-      display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:1000;
-      box-shadow:0 10px 25px var(--primary-glow);transition:.2s ease;}
-    #ai-bubble:hover{transform:scale(1.05);}
-    #chat-window{position:fixed;bottom:6rem;left:2rem;width:380px;height:550px;
-      right:auto;background:var(--surface);border:1px solid var(--border);
-      border-radius:16px;display:none;flex-direction:column;z-index:1000;
-      box-shadow:0 20px 40px rgba(0,0,0,0.1);overflow:hidden;
-      animation:slideUp .3s ease-out;}
-    @keyframes slideUp{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}
-    .chat-hdr{padding:1.2rem 1.25rem;background:var(--bg);
-      border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.7rem;}
-    .chat-body{flex:1;padding:1.25rem;overflow-y:auto;display:flex;flex-direction:column;gap:12px;background:var(--surface);}
-    .chat-foot{padding:1rem;border-top:1px solid var(--border);display:flex;gap:8px;background:var(--bg);}
-    .msg{padding:.75rem 1rem;border-radius:12px;font-size:.85rem;line-height:1.5;max-width:85%;font-weight:500;}
-    .mu{background:var(--primary);color:#fff;align-self:flex-end;border-bottom-right-radius:4px;}
-    .ma{background:var(--bg);color:var(--text);align-self:flex-start;border-bottom-left-radius:4px;}
-    .chat-input{flex:1;background:var(--bg);border:1px solid var(--border);
-      border-radius:20px;padding:.6rem 1rem;color:var(--text);font-family:inherit;font-size:.85rem;}
-    .chat-input:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px var(--primary-glow);}
-    .chat-send{background:var(--primary);border:none;border-radius:50%;width:35px;height:35px;
-      color:white;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+    #ai-bubble {
+      position: fixed;
+      bottom: 2rem;
+      left: 2rem;
+      width: 56px;
+      height: 56px;
+      right: auto;
+      background: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 1000;
+      box-shadow: 0 10px 25px var(--primary-glow);
+      transition: .2s ease;
+    }
+
+    #ai-bubble:hover {
+      transform: scale(1.05);
+    }
+
+    #chat-window {
+      position: fixed;
+      bottom: 6rem;
+      left: 2rem;
+      width: 380px;
+      height: 550px;
+      right: auto;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      display: none;
+      flex-direction: column;
+      z-index: 1000;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      animation: slideUp .3s ease-out;
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(20px);
+        opacity: 0
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1
+      }
+    }
+
+    .chat-hdr {
+      padding: 1.2rem 1.25rem;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: .7rem;
+    }
+
+    .chat-body {
+      flex: 1;
+      padding: 1.25rem;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background: var(--surface);
+    }
+
+    .chat-foot {
+      padding: 1rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      gap: 8px;
+      background: var(--bg);
+    }
+
+    .msg {
+      padding: .75rem 1rem;
+      border-radius: 12px;
+      font-size: .85rem;
+      line-height: 1.5;
+      max-width: 85%;
+      font-weight: 500;
+    }
+
+    .mu {
+      background: var(--primary);
+      color: #fff;
+      align-self: flex-end;
+      border-bottom-right-radius: 4px;
+    }
+
+    .ma {
+      background: var(--bg);
+      color: var(--text);
+      align-self: flex-start;
+      border-bottom-left-radius: 4px;
+    }
+
+    .chat-input {
+      flex: 1;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: .6rem 1rem;
+      color: var(--text);
+      font-family: inherit;
+      font-size: .85rem;
+    }
+
+    .chat-input:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px var(--primary-glow);
+    }
+
+    .chat-send {
+      background: var(--primary);
+      border: none;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      color: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
 
     @media(max-width:1300px) {
-      .metrics { grid-template-columns: repeat(3, 1fr); }
-      .charts-top, .insight-row { grid-template-columns: 1fr; }
+      .metrics {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .charts-top,
+      .insight-row {
+        grid-template-columns: 1fr;
+      }
     }
+
     @media(max-width: 768px) {
-      body { display: block; overflow: auto; }
-      #sidebar { position: static; width: 100%; height: auto; border-right: none; border-bottom: 1px solid var(--border); padding: 1.5rem; display: block; }
-      .logo-area { margin-bottom: 1rem; }
-      #main { margin-left: 0; padding: 1.5rem 1rem; height: auto; overflow: visible; }
-      header { flex-direction: column; align-items: flex-start; gap: 1rem; }
-      header > div { width: 100%; justify-content: space-between; flex-wrap: wrap; }
-      .metrics { grid-template-columns: 1fr 1fr; gap: 1rem; }
-      .action-cards { grid-template-columns: 1fr; }
-      .table-wrap { overflow-x: auto; }
-      th, td { padding: 0.75rem; font-size: 0.8rem; white-space: nowrap; }
-      #ai-bubble { bottom: 1.5rem; left: auto; right: 1.5rem; }
-      #chat-window { left: 1rem; right: 1rem; width: calc(100% - 2rem); bottom: 5rem; height: 450px; }
+      body {
+        display: block;
+        overflow: auto;
+      }
+
+      #sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        padding: 1.5rem;
+        display: block;
+      }
+
+      .logo-area {
+        margin-bottom: 1rem;
+      }
+
+      #main {
+        margin-left: 0;
+        padding: 1.5rem 1rem;
+        height: auto;
+        overflow: visible;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      header>div {
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .metrics {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+
+      .action-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .table-wrap {
+        overflow-x: auto;
+      }
+
+      th,
+      td {
+        padding: 0.75rem;
+        font-size: 0.8rem;
+        white-space: nowrap;
+      }
+
+      #ai-bubble {
+        bottom: 1.5rem;
+        left: auto;
+        right: 1.5rem;
+      }
+
+      #chat-window {
+        left: 1rem;
+        right: 1rem;
+        width: calc(100% - 2rem);
+        bottom: 5rem;
+        height: 450px;
+      }
     }
+
     @media(max-width: 480px) {
-      .metrics { grid-template-columns: 1fr; }
-      .canv-wrap { height: 250px; }
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+
+      .canv-wrap {
+        height: 250px;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<!-- ── Sidebar ── -->
-<aside id="sidebar">
-  <div class="logo-area">
-    <div class="logo-icon">
-      <img src="/static/logo.png" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;" alt="Logo">
+  <!-- ── Sidebar ── -->
+  <aside id="sidebar">
+    <div class="logo-area">
+      <div class="logo-icon">
+        <img src="/static/logo.png" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;"
+          alt="Logo">
+      </div>
+      <div class="logo-text">Smart Classroom</div>
     </div>
-    <div class="logo-text">Smart Classroom</div>
-  </div>
 
-  <div class="nav-label">Filters</div>
-  <div class="filter-box">
-    <label>Grade Level</label>
-    <select id="class-filter"><option value="all">All Grades</option></select>
-  </div>
-  <div class="filter-box">
-    <label>Subject</label>
-    <select id="subject-filter"><option value="all">All Subjects</option></select>
-  </div>
-  <div class="filter-box">
-    <label>Topic</label>
-    <select id="topic-filter"><option value="all">All Topics</option></select>
-  </div>
-
-  <div class="nav-label">Struggle Reasons</div>
-  <div class="legend-block" id="legend-block"></div>
-</aside>
-
-<!-- ── Main ── -->
-<main id="main">
-  <header>
-    <h2>Federated Intelligence Dashboard</h2>
-    <div style="display:flex; align-items:center; gap: 1rem;">
-      <div id="clock" class="clock"></div>
-      <button id="theme-toggle" onclick="toggleTheme()" style="background:var(--surface); border:1px solid var(--border); border-radius:20px; width:36px; height:36px; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:var(--shadow-sm); color:var(--text); transition:var(--transition);">
-        <svg id="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-        <svg id="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      </button>
-      <button onclick="window.location.href='/auth/logout'" style="background:var(--surface); border:1px solid var(--border); border-radius:20px; padding:0.4rem 0.8rem; font-family:inherit; font-weight:500; font-size:.85rem; color:var(--text); cursor:pointer; box-shadow:var(--shadow-sm); display:flex; align-items:center; gap:0.4rem; transition: background 0.2s;">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>
-        Logout
-      </button>
+    <div class="nav-label">Filters</div>
+    <div class="filter-box">
+      <label>Grade Level</label>
+      <select id="class-filter">
+        <option value="all">All Grades</option>
+      </select>
     </div>
-  </header>
-
-  <!-- Metrics -->
-  <div class="metrics">
-    <div class="mc"><span id="m-avg"  class="val">--%</span><span class="lbl">Avg Difficulty</span></div>
-    <div class="mc"><span id="m-crit" class="val">--</span><span class="lbl">Critical Topics</span></div>
-    <div class="mc"><span id="m-str"  class="val">--%</span><span class="lbl">Students Struggling</span></div>
-    <div class="mc"><span id="m-prereq" class="val">--%</span><span class="lbl">Avg Prereq Score</span></div>
-    <div class="mc"><span id="m-ok"   class="val">--</span><span class="lbl">Healthy Topics</span></div>
-  </div>
-
-  <!-- Charts top row -->
-  <div class="charts-top">
-    <div class="chart-box">
-      <div class="chart-header"><span class="chart-label" id="radar-label">Subject Mastery Radar</span></div>
-      <div class="canv-wrap"><canvas id="radarChart"></canvas></div>
+    <div class="filter-box">
+      <label>Subject</label>
+      <select id="subject-filter">
+        <option value="all">All Subjects</option>
+      </select>
     </div>
-    <div class="chart-box">
-      <div class="chart-header"><span class="chart-label">Difficulty Distribution</span></div>
-      <div class="canv-wrap"><canvas id="pieChart"></canvas></div>
+    <div class="filter-box">
+      <label>Topic</label>
+      <select id="topic-filter">
+        <option value="all">All Topics</option>
+      </select>
+    </div>
+
+    <div class="nav-label">Struggle Reasons</div>
+    <div class="legend-block" id="legend-block"></div>
+  </aside>
+
+  <!-- ── Main ── -->
+  <main id="main">
+    <header>
+      <h2>Federated Intelligence Dashboard</h2>
+      <div style="display:flex; align-items:center; gap: 1rem;">
+        <div id="clock" class="clock"></div>
+        <button id="theme-toggle" onclick="toggleTheme()"
+          style="background:var(--surface); border:1px solid var(--border); border-radius:20px; width:36px; height:36px; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:var(--shadow-sm); color:var(--text); transition:var(--transition);">
+          <svg id="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" style="display:none;">
+            <circle cx="12" cy="12" r="5" />
+            <path
+              d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+          </svg>
+          <svg id="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+        <button onclick="window.location.href='/auth/logout'"
+          style="background:var(--surface); border:1px solid var(--border); border-radius:20px; padding:0.4rem 0.8rem; font-family:inherit; font-weight:500; font-size:.85rem; color:var(--text); cursor:pointer; box-shadow:var(--shadow-sm); display:flex; align-items:center; gap:0.4rem; transition: background 0.2s;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9" />
+          </svg>
+          Logout
+        </button>
+      </div>
+    </header>
+
+    <!-- Metrics -->
+    <div class="metrics">
+      <div class="mc"><span id="m-avg" class="val">--%</span><span class="lbl">Avg Difficulty</span></div>
+      <div class="mc"><span id="m-crit" class="val">--</span><span class="lbl">Critical Topics</span></div>
+      <div class="mc"><span id="m-str" class="val">--%</span><span class="lbl">Students Struggling</span></div>
+      <div class="mc"><span id="m-prereq" class="val">--%</span><span class="lbl">Avg Prereq Score</span></div>
+      <div class="mc"><span id="m-ok" class="val">--</span><span class="lbl">Healthy Topics</span></div>
+    </div>
+
+    <!-- Charts top row -->
+    <div class="charts-top">
+      <div class="chart-box">
+        <div class="chart-header"><span class="chart-label" id="radar-label">Subject Mastery Radar</span></div>
+        <div class="canv-wrap"><canvas id="radarChart"></canvas></div>
+      </div>
+      <div class="chart-box">
+        <div class="chart-header"><span class="chart-label">Difficulty Distribution</span></div>
+        <div class="canv-wrap"><canvas id="pieChart"></canvas></div>
+      </div>
+    </div>
+
+    <!-- Bar chart -->
+    <div class="chart-box" style="margin-bottom:1.5rem;">
+      <div class="chart-header"><span class="chart-label">Top Difficult Topics</span></div>
+      <div class="canv-wrap" style="height:320px;"><canvas id="barChart"></canvas></div>
+    </div>
+
+    <!-- WHY + WHAT insight row -->
+    <div class="insight-row">
+      <!-- WHY panel -->
+      <div class="insight-box">
+        <div class="sec-title">Why Students Struggle</div>
+        <div class="reason-bar-wrap" id="reason-bars"></div>
+      </div>
+      <!-- WHAT panel -->
+      <div class="insight-box">
+        <div class="sec-title">Recommended Actions (Top Topics)</div>
+        <div class="action-cards" id="action-cards"></div>
+      </div>
+    </div>
+
+    <!-- Table -->
+    <div class="sec-title">Topic Intelligence Table</div>
+    <div class="table-card">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Grade</th>
+              <th>Subject</th>
+              <th>Topic</th>
+              <th>Difficulty</th>
+              <th>% Struggling</th>
+              <th>Why</th>
+              <th>Action</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="tbl"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <!-- AI Chat -->
+  <div id="ai-bubble" onclick="toggleChat()">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+      <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+    </svg>
+  </div>
+  <div id="chat-window">
+    <div class="chat-hdr">
+      <div class="logo-icon" style="width:24px;height:24px;">
+        <img src="/static/logo.png" style="width: 100%; height: 100%; object-fit: cover; border-radius: 6px;"
+          alt="Logo">
+      </div>
+      <span style="font-weight:700;font-size:.88rem;">Classroom AI</span>
+    </div>
+    <div class="chat-body" id="chat-history">
+      <div class="msg ma">Hi! I can explain WHY students struggle and WHAT teachers should do. Ask me anything about
+        topic difficulty, struggle reasons, or interventions!</div>
+    </div>
+    <div class="chat-foot">
+      <input type="text" id="chat-input" class="chat-input" placeholder="e.g. Why do students struggle in Algebra?"
+        onkeypress="if(event.key==='Enter')sendChat()">
+      <button class="chat-send" onclick="sendChat()">&#10148;</button>
     </div>
   </div>
 
-  <!-- Bar chart -->
-  <div class="chart-box" style="margin-bottom:1.5rem;">
-    <div class="chart-header"><span class="chart-label">Top Difficult Topics</span></div>
-    <div class="canv-wrap" style="height:320px;"><canvas id="barChart"></canvas></div>
-  </div>
+  <script>
+    const RAW = {{ data | tojson | safe }};
 
-  <!-- WHY + WHAT insight row -->
-  <div class="insight-row">
-    <!-- WHY panel -->
-    <div class="insight-box">
-      <div class="sec-title">Why Students Struggle</div>
-      <div class="reason-bar-wrap" id="reason-bars"></div>
-    </div>
-    <!-- WHAT panel -->
-    <div class="insight-box">
-      <div class="sec-title">Recommended Actions (Top Topics)</div>
-      <div class="action-cards" id="action-cards"></div>
-    </div>
-  </div>
+    // ── Reason config ─────────────────────────────────────────────────────────────
+    const REASON_CONFIG = {
+      prerequisite_gap: { label: "Missing Basics", color: "#ef4444" },
+      guessing: { label: "Guessing", color: "#f59e0b" },
+      conceptual_misunderstanding: { label: "Confused", color: "#8b5cf6" },
+      unstable_understanding: { label: "Inconsistent", color: "#3b82f6" },
+      cognitive_overload: { label: "Overwhelmed", color: "#ec4899" },
+      forgetting: { label: "Forgot", color: "#14b8a6" },
+      low_engagement: { label: "Disengaged", color: "#f97316" },
+      none: { label: "Doing Great", color: "#10b981" },
+    };
 
-  <!-- Table -->
-  <div class="sec-title">Topic Intelligence Table</div>
-  <div class="table-card">
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>Grade</th><th>Subject</th><th>Topic</th>
-            <th>Difficulty</th><th>% Struggling</th>
-            <th>Why</th><th>Action</th><th>Status</th>
-          </tr>
-        </thead>
-        <tbody id="tbl"></tbody>
-      </table>
-    </div>
-  </div>
-</main>
+    const ACTION_LABELS = {
+      revisit_prerequisite_topic: "Review Basics",
+      enforce_reflection_before_submit: "Think First",
+      assign_worked_examples: "Show Examples",
+      spaced_repetition_practice: "Practice More",
+      break_topic_into_subtasks: "Break It Down",
+      schedule_revision_session: "Schedule Review",
+      increase_interactive_activities: "Make Interactive",
+      maintain_current_pace: "Keep Going",
+    };
 
-<!-- AI Chat -->
-<div id="ai-bubble" onclick="toggleChat()">
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
-    <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
-  </svg>
-</div>
-<div id="chat-window">
-  <div class="chat-hdr">
-    <div class="logo-icon" style="width:24px;height:24px;">
-      <img src="/static/logo.png" style="width: 100%; height: 100%; object-fit: cover; border-radius: 6px;" alt="Logo">
-    </div>
-    <span style="font-weight:700;font-size:.88rem;">Classroom AI</span>
-  </div>
-  <div class="chat-body" id="chat-history">
-    <div class="msg ma">Hi! I can explain WHY students struggle and WHAT teachers should do. Ask me anything about topic difficulty, struggle reasons, or interventions!</div>
-  </div>
-  <div class="chat-foot">
-    <input type="text" id="chat-input" class="chat-input" placeholder="e.g. Why do students struggle in Algebra?" onkeypress="if(event.key==='Enter')sendChat()">
-    <button class="chat-send" onclick="sendChat()">&#10148;</button>
-  </div>
-</div>
+    const ACTION_COLORS = {
+      revisit_prerequisite_topic: "#ef4444",
+      enforce_reflection_before_submit: "#f59e0b",
+      assign_worked_examples: "#8b5cf6",
+      spaced_repetition_practice: "#3b82f6",
+      break_topic_into_subtasks: "#ec4899",
+      schedule_revision_session: "#14b8a6",
+      increase_interactive_activities: "#f97316",
+      maintain_current_pace: "#10b981",
+    };
 
-<script>
-const RAW = {{ data | tojson | safe }};
+    let charts = {};
 
-// ── Reason config ─────────────────────────────────────────────────────────────
-const REASON_CONFIG = {
-  prerequisite_gap:            { label:"Missing Basics",          color:"#ef4444" },
-  guessing:                    { label:"Guessing",                color:"#f59e0b" },
-  conceptual_misunderstanding: { label:"Confused",                color:"#8b5cf6" },
-  unstable_understanding:      { label:"Inconsistent",            color:"#3b82f6" },
-  cognitive_overload:          { label:"Overwhelmed",             color:"#ec4899" },
-  forgetting:                  { label:"Forgot",                  color:"#14b8a6" },
-  low_engagement:              { label:"Disengaged",              color:"#f97316" },
-  none:                        { label:"Doing Great",             color:"#10b981" },
-};
+    // ── Init ──────────────────────────────────────────────────────────────────────
+    function init() {
+      applyInitialTheme();
+      if (!RAW.length) return;
+      const classes = [...new Set(RAW.map(d => d.class))].sort((a, b) => a - b);
+      const subjects = [...new Set(RAW.map(d => d.subject))].sort();
+      const cf = document.getElementById("class-filter");
+      const sf = document.getElementById("subject-filter");
+      classes.forEach(c => cf.add(new Option(`Grade ${c}`, c)));
+      subjects.forEach(s => sf.add(new Option(s, s)));
+      buildLegend();
+      setupClock();
+      updateAll();
+      cf.onchange = () => { populateTopics(); updateAll(); };
+      sf.onchange = () => { populateTopics(); updateAll(); };
+      document.getElementById("topic-filter").onchange = updateAll;
+    }
 
-const ACTION_LABELS = {
-  revisit_prerequisite_topic:        "Review Basics",
-  enforce_reflection_before_submit:  "Think First",
-  assign_worked_examples:            "Show Examples",
-  spaced_repetition_practice:        "Practice More",
-  break_topic_into_subtasks:         "Break It Down",
-  schedule_revision_session:         "Schedule Review",
-  increase_interactive_activities:   "Make Interactive",
-  maintain_current_pace:             "Keep Going",
-};
+    function populateTopics() {
+      const cv = document.getElementById("class-filter").value;
+      const sv = document.getElementById("subject-filter").value;
+      const filtered = RAW.filter(d => (cv === "all" || d.class == cv) && (sv === "all" || d.subject === sv));
+      const topics = [...new Set(filtered.map(d => d.topic))].sort();
+      const tf = document.getElementById("topic-filter");
+      tf.innerHTML = '<option value="all">All Topics</option>';
+      topics.forEach(t => tf.add(new Option(t, t)));
+    }
 
-const ACTION_COLORS = {
-  revisit_prerequisite_topic:       "#ef4444",
-  enforce_reflection_before_submit: "#f59e0b",
-  assign_worked_examples:           "#8b5cf6",
-  spaced_repetition_practice:       "#3b82f6",
-  break_topic_into_subtasks:        "#ec4899",
-  schedule_revision_session:        "#14b8a6",
-  increase_interactive_activities:  "#f97316",
-  maintain_current_pace:            "#10b981",
-};
+    function getFiltered() {
+      const cv = document.getElementById("class-filter").value;
+      const sv = document.getElementById("subject-filter").value;
+      const tv = document.getElementById("topic-filter").value;
+      return RAW.filter(d =>
+        (cv === "all" || d.class == cv) &&
+        (sv === "all" || d.subject === sv) &&
+        (tv === "all" || d.topic === tv)
+      );
+    }
 
-let charts = {};
+    function updateAll() {
+      const data = getFiltered();
+      renderMetrics(data);
+      renderReasonBars(data);
+      renderActionCards(data);
+      renderTable(data);
+      renderCharts(data);
+    }
 
-// ── Init ──────────────────────────────────────────────────────────────────────
-function init() {
-  applyInitialTheme();
-  if (!RAW.length) return;
-  const classes  = [...new Set(RAW.map(d=>d.class))].sort((a,b)=>a-b);
-  const subjects = [...new Set(RAW.map(d=>d.subject))].sort();
-  const cf = document.getElementById("class-filter");
-  const sf = document.getElementById("subject-filter");
-  classes.forEach(c  => cf.add(new Option(`Grade ${c}`, c)));
-  subjects.forEach(s => sf.add(new Option(s, s)));
-  buildLegend();
-  setupClock();
-  updateAll();
-  cf.onchange = () => { populateTopics(); updateAll(); };
-  sf.onchange = () => { populateTopics(); updateAll(); };
-  document.getElementById("topic-filter").onchange = updateAll;
-}
+    // ── Metrics ───────────────────────────────────────────────────────────────────
+    function renderMetrics(data) {
+      if (!data.length) return;
+      const avg = data.reduce((a, b) => a + b.weight, 0) / data.length;
+      const crit = data.filter(d => d.weight > 0.65).length;
+      const avgStr = data.reduce((a, b) => a + (parseFloat(b.pct_struggling) || 0), 0) / data.length;
+      const prereq = data.reduce((a, b) => a + (parseFloat(b.avg_prereq_score) || 0), 0) / data.length;
+      const ok = data.filter(d => d.weight < 0.35).length;
+      document.getElementById("m-avg").textContent = Math.round(avg * 100) + "%";
+      document.getElementById("m-crit").textContent = crit;
+      document.getElementById("m-str").textContent = Math.round(avgStr) + "%";
+      document.getElementById("m-prereq").textContent = Math.round(prereq) + "%";
+      document.getElementById("m-ok").textContent = ok;
+    }
 
-function populateTopics() {
-  const cv = document.getElementById("class-filter").value;
-  const sv = document.getElementById("subject-filter").value;
-  const filtered = RAW.filter(d=>(cv==="all"||d.class==cv)&&(sv==="all"||d.subject===sv));
-  const topics = [...new Set(filtered.map(d=>d.topic))].sort();
-  const tf = document.getElementById("topic-filter");
-  tf.innerHTML = '<option value="all">All Topics</option>';
-  topics.forEach(t => tf.add(new Option(t, t)));
-}
-
-function getFiltered() {
-  const cv = document.getElementById("class-filter").value;
-  const sv = document.getElementById("subject-filter").value;
-  const tv = document.getElementById("topic-filter").value;
-  return RAW.filter(d =>
-    (cv==="all"||d.class==cv) &&
-    (sv==="all"||d.subject===sv) &&
-    (tv==="all"||d.topic===tv)
-  );
-}
-
-function updateAll() {
-  const data = getFiltered();
-  renderMetrics(data);
-  renderReasonBars(data);
-  renderActionCards(data);
-  renderTable(data);
-  renderCharts(data);
-}
-
-// ── Metrics ───────────────────────────────────────────────────────────────────
-function renderMetrics(data) {
-  if (!data.length) return;
-  const avg   = data.reduce((a,b)=>a+b.weight,0)/data.length;
-  const crit  = data.filter(d=>d.weight>0.65).length;
-  const avgStr= data.reduce((a,b)=>a+(parseFloat(b.pct_struggling)||0),0)/data.length;
-  const prereq= data.reduce((a,b)=>a+(parseFloat(b.avg_prereq_score)||0),0)/data.length;
-  const ok    = data.filter(d=>d.weight<0.35).length;
-  document.getElementById("m-avg").textContent   = Math.round(avg*100)+"%";
-  document.getElementById("m-crit").textContent  = crit;
-  document.getElementById("m-str").textContent   = Math.round(avgStr)+"%";
-  document.getElementById("m-prereq").textContent= Math.round(prereq)+"%";
-  document.getElementById("m-ok").textContent    = ok;
-}
-
-// ── Reason bars ───────────────────────────────────────────────────────────────
-function renderReasonBars(data) {
-  const counts = {};
-  data.forEach(d => {
-    const r = d.top_struggle_reason || "none";
-    counts[r] = (counts[r]||0) + 1;
-  });
-  const total = data.length || 1;
-  const sorted = Object.entries(counts).sort((a,b)=>b[1]-a[1]);
-  document.getElementById("reason-bars").innerHTML = sorted.map(([r, n]) => {
-    const cfg = REASON_CONFIG[r] || {label:r, color:"#9ca3af"};
-    const pct = Math.round(n/total*100);
-    return `<div class="reason-item">
+    // ── Reason bars ───────────────────────────────────────────────────────────────
+    function renderReasonBars(data) {
+      const counts = {};
+      data.forEach(d => {
+        const r = d.top_struggle_reason || "none";
+        counts[r] = (counts[r] || 0) + 1;
+      });
+      const total = data.length || 1;
+      const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+      document.getElementById("reason-bars").innerHTML = sorted.map(([r, n]) => {
+        const cfg = REASON_CONFIG[r] || { label: r, color: "#9ca3af" };
+        const pct = Math.round(n / total * 100);
+        return `<div class="reason-item">
       <div class="reason-label">
         <span style="color:${cfg.color};font-weight:600;">${cfg.label}</span>
         <span style="color:var(--dim);">${pct}% (${n} topics)</span>
@@ -436,39 +961,39 @@ function renderReasonBars(data) {
         <div class="reason-fill" style="width:${pct}%;background:${cfg.color};"></div>
       </div>
     </div>`;
-  }).join("");
-}
+      }).join("");
+    }
 
-// ── Action cards ──────────────────────────────────────────────────────────────
-function renderActionCards(data) {
-  const top = [...data].filter(d=>d.weight>0.5)
-    .sort((a,b)=>b.weight-a.weight).slice(0,8);
-  document.getElementById("action-cards").innerHTML = top.map(d => {
-    const action = d.top_recommended_action || "maintain_current_pace";
-    const label  = ACTION_LABELS[action] || action.replace(/_/g," ");
-    const color  = ACTION_COLORS[action] || "#9ca3af";
-    const reason = d.top_struggle_reason || "none";
-    const rc     = REASON_CONFIG[reason] || {label:reason, color:"#9ca3af"};
-    return `<div class="action-card">
+    // ── Action cards ──────────────────────────────────────────────────────────────
+    function renderActionCards(data) {
+      const top = [...data].filter(d => d.weight > 0.5)
+        .sort((a, b) => b.weight - a.weight).slice(0, 8);
+      document.getElementById("action-cards").innerHTML = top.map(d => {
+        const action = d.top_recommended_action || "maintain_current_pace";
+        const label = ACTION_LABELS[action] || action.replace(/_/g, " ");
+        const color = ACTION_COLORS[action] || "#9ca3af";
+        const reason = d.top_struggle_reason || "none";
+        const rc = REASON_CONFIG[reason] || { label: reason, color: "#9ca3af" };
+        return `<div class="action-card">
       <div class="action-topic">${d.subject} · ${d.topic}</div>
       <div class="action-text">${label}</div>
       <span class="action-badge" style="background:${color}22;color:${color};">${rc.label}</span>
     </div>`;
-  }).join("") || "<p style='color:var(--dim);font-size:.82rem;'>No critical topics in current filter.</p>";
-}
+      }).join("") || "<p style='color:var(--dim);font-size:.82rem;'>No critical topics in current filter.</p>";
+    }
 
-// ── Table ─────────────────────────────────────────────────────────────────────
-function renderTable(data) {
-  document.getElementById("tbl").innerHTML = data.map(d => {
-    const pct  = Math.round(d.weight*100);
-    const str  = Math.round(parseFloat(d.pct_struggling)||0);
-    const stat = pct>65 ? ["Critical","br"] : pct>40 ? ["Moderate","ba"] : ["Healthy","be"];
-    const reason = d.top_struggle_reason || "none";
-    const rc   = REASON_CONFIG[reason] || {label:reason,color:"#9ca3af"};
-    const action = d.top_recommended_action || "";
-    const al   = ACTION_LABELS[action] || action.replace(/_/g," ");
-    const ac   = ACTION_COLORS[action] || "#9ca3af";
-    return `<tr>
+    // ── Table ─────────────────────────────────────────────────────────────────────
+    function renderTable(data) {
+      document.getElementById("tbl").innerHTML = data.map(d => {
+        const pct = Math.round(d.weight * 100);
+        const str = Math.round(parseFloat(d.pct_struggling) || 0);
+        const stat = pct > 65 ? ["Critical", "br"] : pct > 40 ? ["Moderate", "ba"] : ["Healthy", "be"];
+        const reason = d.top_struggle_reason || "none";
+        const rc = REASON_CONFIG[reason] || { label: reason, color: "#9ca3af" };
+        const action = d.top_recommended_action || "";
+        const al = ACTION_LABELS[action] || action.replace(/_/g, " ");
+        const ac = ACTION_COLORS[action] || "#9ca3af";
+        return `<tr>
       <td>Grade ${d.class}</td>
       <td style="font-weight:600;">${d.subject}</td>
       <td>${d.topic}</td>
@@ -478,168 +1003,187 @@ function renderTable(data) {
       <td><span class="badge" style="background:${ac}22;color:${ac};font-size:.68rem;">${al}</span></td>
       <td><span class="badge ${stat[1]}">${stat[0]}</span></td>
     </tr>`;
-  }).join("");
-}
-
-// ── Charts ────────────────────────────────────────────────────────────────────
-  function renderCharts(data) {
-    const isDark = document.documentElement.getAttribute("data-theme") === "dark";
-    Chart.defaults.color = isDark ? "#94a3b8" : "#6b7280";
-    Chart.defaults.font.family="'Plus Jakarta Sans'";
-    const gridColor = isDark ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.06)";
-
-    // Radar
-    const subLabels = [...new Set(RAW.map(d=>d.subject))];
-    const radarVals = subLabels.map(s=>{
-      const m = data.filter(d=>d.subject===s);
-      return m.length ? Math.round(m.reduce((a,b)=>a+b.weight,0)/m.length*100) : 0;
-    });
-    if(charts.radar) charts.radar.destroy();
-    charts.radar = new Chart(document.getElementById("radarChart"),{
-      type:"radar",
-      data:{labels:subLabels,datasets:[{
-        label:"Difficulty %",data:radarVals,
-        borderColor:"#4f46e5",backgroundColor:"rgba(79,70,229,.15)"
-      }]},
-      options:{responsive:true,maintainAspectRatio:false,
-        scales:{r:{beginAtZero:true,max:100,ticks:{display:false},
-          grid:{color:gridColor},angleLines:{color:gridColor}}},
-        plugins:{legend:{position:"bottom"}}}
-    });
-
-  // Pie
-  const counts=[
-    data.filter(d=>d.weight>0.65).length,
-    data.filter(d=>d.weight>=0.35&&d.weight<=0.65).length,
-    data.filter(d=>d.weight<0.35).length
-  ];
-  if(charts.pie) charts.pie.destroy();
-  charts.pie = new Chart(document.getElementById("pieChart"),{
-    type:"doughnut",
-    data:{labels:["Critical","Moderate","Healthy"],
-      datasets:[{data:counts,backgroundColor:["#ef4444","#f59e0b","#10b981"],
-        borderWidth:0,cutout:"72%"}]},
-    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:"bottom"}}}
-  });
-
-  // Bar — top 10 by difficulty, colored by reason
-  const top10 = [...data].sort((a,b)=>b.weight-a.weight).slice(0,10);
-  if(charts.bar) charts.bar.destroy();
-  charts.bar = new Chart(document.getElementById("barChart"),{
-    type:"bar",
-    data:{
-      labels:top10.map(d=>d.topic),
-      datasets:[{
-        label:"Difficulty %",
-        data:top10.map(d=>Math.round(d.weight*100)),
-        backgroundColor:top10.map(d=>{
-          const r=d.top_struggle_reason||"none";
-          return (REASON_CONFIG[r]||{color:"#9ca3af"}).color;
-        }),
-        borderRadius:8
-      }]
-    },
-    options:{
-      indexAxis:"y",responsive:true,maintainAspectRatio:false,
-      scales:{x:{max:100,grid:{display:false},ticks:{color:isDark?"#94a3b8":"#6b7280"}},y:{grid:{display:false},ticks:{color:isDark?"#94a3b8":"#6b7280"}}},
-      plugins:{legend:{display:false},tooltip:{callbacks:{
-        afterLabel: ctx => {
-          const d=top10[ctx.dataIndex];
-          const r=d.top_struggle_reason||"none";
-          const a=d.top_recommended_action||"";
-          return `Why: ${(REASON_CONFIG[r]||{label:r}).label}\nAction: ${ACTION_LABELS[a]||a}`;
-        }
-      }}}
+      }).join("");
     }
-  });
-}
 
-// ── Legend ────────────────────────────────────────────────────────────────────
-function buildLegend() {
-  document.getElementById("legend-block").innerHTML =
-    Object.entries(REASON_CONFIG).map(([k,v])=>
-      `<div class="legend-item">
+    // ── Charts ────────────────────────────────────────────────────────────────────
+    function renderCharts(data) {
+      const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+      Chart.defaults.color = isDark ? "#94a3b8" : "#6b7280";
+      Chart.defaults.font.family = "'Plus Jakarta Sans'";
+      const gridColor = isDark ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.06)";
+
+      // Radar
+      const subLabels = [...new Set(RAW.map(d => d.subject))];
+      const radarVals = subLabels.map(s => {
+        const m = data.filter(d => d.subject === s);
+        return m.length ? Math.round(m.reduce((a, b) => a + b.weight, 0) / m.length * 100) : 0;
+      });
+      if (charts.radar) charts.radar.destroy();
+      charts.radar = new Chart(document.getElementById("radarChart"), {
+        type: "radar",
+        data: {
+          labels: subLabels, datasets: [{
+            label: "Difficulty %", data: radarVals,
+            borderColor: "#4f46e5", backgroundColor: "rgba(79,70,229,.15)"
+          }]
+        },
+        options: {
+          responsive: true, maintainAspectRatio: false,
+          scales: {
+            r: {
+              beginAtZero: true, max: 100, ticks: { display: false },
+              grid: { color: gridColor }, angleLines: { color: gridColor }
+            }
+          },
+          plugins: { legend: { position: "bottom" } }
+        }
+      });
+
+      // Pie
+      const counts = [
+        data.filter(d => d.weight > 0.65).length,
+        data.filter(d => d.weight >= 0.35 && d.weight <= 0.65).length,
+        data.filter(d => d.weight < 0.35).length
+      ];
+      if (charts.pie) charts.pie.destroy();
+      charts.pie = new Chart(document.getElementById("pieChart"), {
+        type: "doughnut",
+        data: {
+          labels: ["Critical", "Moderate", "Healthy"],
+          datasets: [{
+            data: counts, backgroundColor: ["#ef4444", "#f59e0b", "#10b981"],
+            borderWidth: 0, cutout: "72%"
+          }]
+        },
+        options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: "bottom" } } }
+      });
+
+      // Bar — top 10 by difficulty, colored by reason
+      const top10 = [...data].sort((a, b) => b.weight - a.weight).slice(0, 10);
+      if (charts.bar) charts.bar.destroy();
+      charts.bar = new Chart(document.getElementById("barChart"), {
+        type: "bar",
+        data: {
+          labels: top10.map(d => d.topic),
+          datasets: [{
+            label: "Difficulty %",
+            data: top10.map(d => Math.round(d.weight * 100)),
+            backgroundColor: top10.map(d => {
+              const r = d.top_struggle_reason || "none";
+              return (REASON_CONFIG[r] || { color: "#9ca3af" }).color;
+            }),
+            borderRadius: 8
+          }]
+        },
+        options: {
+          indexAxis: "y", responsive: true, maintainAspectRatio: false,
+          scales: { x: { max: 100, grid: { display: false }, ticks: { color: isDark ? "#94a3b8" : "#6b7280" } }, y: { grid: { display: false }, ticks: { color: isDark ? "#94a3b8" : "#6b7280" } } },
+          plugins: {
+            legend: { display: false }, tooltip: {
+              callbacks: {
+                afterLabel: ctx => {
+                  const d = top10[ctx.dataIndex];
+                  const r = d.top_struggle_reason || "none";
+                  const a = d.top_recommended_action || "";
+                  return `Why: ${(REASON_CONFIG[r] || { label: r }).label}\nAction: ${ACTION_LABELS[a] || a}`;
+                }
+              }
+            }
+          }
+        }
+      });
+    }
+
+    // ── Legend ────────────────────────────────────────────────────────────────────
+    function buildLegend() {
+      document.getElementById("legend-block").innerHTML =
+        Object.entries(REASON_CONFIG).map(([k, v]) =>
+          `<div class="legend-item">
         <div class="legend-dot" style="background:${v.color};"></div>
         <span>${v.label}</span>
        </div>`
-    ).join("");
-}
+        ).join("");
+    }
 
-// ── Clock ─────────────────────────────────────────────────────────────────────
-function setupClock() {
-  const fmt = new Intl.DateTimeFormat("en-IN",{
-    timeZone:"Asia/Kolkata",hour:"2-digit",minute:"2-digit",second:"2-digit",
-    day:"numeric",month:"short",year:"numeric",hour12:true
-  });
-  const tick=()=>document.getElementById("clock").textContent=fmt.format(new Date())+" IST";
-  tick(); setInterval(tick,1000);
-}
+    // ── Clock ─────────────────────────────────────────────────────────────────────
+    function setupClock() {
+      const fmt = new Intl.DateTimeFormat("en-IN", {
+        timeZone: "Asia/Kolkata", hour: "2-digit", minute: "2-digit", second: "2-digit",
+        day: "numeric", month: "short", year: "numeric", hour12: true
+      });
+      const tick = () => document.getElementById("clock").textContent = fmt.format(new Date()) + " IST";
+      tick(); setInterval(tick, 1000);
+    }
 
-// ── Chat ──────────────────────────────────────────────────────────────────────
-function toggleChat(){
-  const w=document.getElementById("chat-window");
-  w.style.display=w.style.display==="flex"?"none":"flex";
-}
-async function sendChat(){
-  const inp=document.getElementById("chat-input");
-  const q=inp.value.trim(); if(!q) return;
-  addMsg(q,"mu"); inp.value="";
-  const tid=addMsg("Thinking...","ma");
-  const data=getFiltered();
-  const summary=data.slice(0,60).map(d=>
-    `${d.subject}/${d.topic}(G${d.class}): diff=${Math.round(d.weight*100)}%, struggling=${Math.round(d.pct_struggling||0)}%, why=${d.top_struggle_reason}, action=${d.top_recommended_action}`
-  ).join(" | ");
-  try{
-    const r=await fetch("/api/chat",{method:"POST",
-      headers:{"Content-Type":"application/json"},
-      body:JSON.stringify({query:q,context_data:summary})});
-    const res=await r.json();
-    document.getElementById(tid).remove();
-    addMsg(res.error?"⚠️ "+res.error:res.choices[0].message.content,"ma");
-  } catch(e){
-    document.getElementById(tid).remove();
-    addMsg("Server error. Please try again.","ma");
-  }
-}
-function addMsg(txt,cls){
-  const id="m"+Date.now()+Math.random();
-  const d=document.createElement("div");
-  d.id=id; d.className="msg "+cls; d.textContent=txt;
-  const h=document.getElementById("chat-history");
-  h.appendChild(d); h.scrollTop=h.scrollHeight;
-  return id;
-}
+    // ── Chat ──────────────────────────────────────────────────────────────────────
+    function toggleChat() {
+      const w = document.getElementById("chat-window");
+      w.style.display = w.style.display === "flex" ? "none" : "flex";
+    }
+    async function sendChat() {
+      const inp = document.getElementById("chat-input");
+      const q = inp.value.trim(); if (!q) return;
+      addMsg(q, "mu"); inp.value = "";
+      const tid = addMsg("Thinking...", "ma");
+      const data = getFiltered();
+      const summary = data.slice(0, 60).map(d =>
+        `${d.subject}/${d.topic}(G${d.class}): diff=${Math.round(d.weight * 100)}%, struggling=${Math.round(d.pct_struggling || 0)}%, why=${d.top_struggle_reason}, action=${d.top_recommended_action}`
+      ).join(" | ");
+      try {
+        const r = await fetch("/api/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ query: q, context_data: summary })
+        });
+        const res = await r.json();
+        document.getElementById(tid).remove();
+        addMsg(res.error ? "⚠️ " + res.error : res.choices[0].message.content, "ma");
+      } catch (e) {
+        document.getElementById(tid).remove();
+        addMsg("Server error. Please try again.", "ma");
+      }
+    }
+    function addMsg(txt, cls) {
+      const id = "m" + Date.now() + Math.random();
+      const d = document.createElement("div");
+      d.id = id; d.className = "msg " + cls; d.textContent = txt;
+      const h = document.getElementById("chat-history");
+      h.appendChild(d); h.scrollTop = h.scrollHeight;
+      return id;
+    }
 
-// ── Theme Management ──────────────────────────────────────────────────────────
-function toggleTheme() {
-  const html = document.documentElement;
-  const current = html.getAttribute("data-theme");
-  const next = current === "dark" ? "light" : "dark";
-  html.setAttribute("data-theme", next);
-  localStorage.setItem("theme", next);
-  updateThemeIcons(next);
-  updateAll(); // Re-render charts with new theme colors
-}
+    // ── Theme Management ──────────────────────────────────────────────────────────
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute("data-theme");
+      const next = current === "dark" ? "light" : "dark";
+      html.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+      updateThemeIcons(next);
+      updateAll(); // Re-render charts with new theme colors
+    }
 
-function updateThemeIcons(theme) {
-  const sun = document.getElementById("sun-icon");
-  const moon = document.getElementById("moon-icon");
-  if (theme === "dark") {
-    sun.style.display = "block";
-    moon.style.display = "none";
-  } else {
-    sun.style.display = "none";
-    moon.style.display = "block";
-  }
-}
+    function updateThemeIcons(theme) {
+      const sun = document.getElementById("sun-icon");
+      const moon = document.getElementById("moon-icon");
+      if (theme === "dark") {
+        sun.style.display = "block";
+        moon.style.display = "none";
+      } else {
+        sun.style.display = "none";
+        moon.style.display = "block";
+      }
+    }
 
-function applyInitialTheme() {
-  const saved = localStorage.getItem("theme") || "light";
-  document.documentElement.setAttribute("data-theme", saved);
-  updateThemeIcons(saved);
-}
+    function applyInitialTheme() {
+      const saved = localStorage.getItem("theme") || "light";
+      document.documentElement.setAttribute("data-theme", saved);
+      updateThemeIcons(saved);
+    }
 
-init();
-</script>
+    init();
+  </script>
 </body>
+
 </html>
