@@ -1,0 +1,17 @@
+{
+  "name": "Smart Classroom",
+  "short_name": "SmartClass",
+  "description": "Federated Intelligence Dashboard",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B0F1A",
+  "theme_color": "#4F46E5",
+  "icons": [
+    {
+      "src": "/static/logo.png",
+      "sizes": "192x192 512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

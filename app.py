@@ -12,7 +12,7 @@ from dotenv import load_dotenv
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 load_dotenv(os.path.join(BASE_DIR, ".env"), override=True)
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder=os.path.join(BASE_DIR, 'static'), static_url_path='/static')
 app.config['SECRET_KEY'] = os.getenv('SESSION_SECRET', 'super-secret-key-for-sessions')
 
 # MongoDB setup
