@@ -158,8 +158,28 @@
     .chat-send{background:var(--primary);border:none;border-radius:50%;width:35px;height:35px;
       color:white;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 
-    @media(max-width:1300px){.metrics{grid-template-columns:repeat(3,1fr);}
-      .charts-top{grid-template-columns:1fr;}.insight-row{grid-template-columns:1fr;}}
+    @media(max-width:1300px) {
+      .metrics { grid-template-columns: repeat(3, 1fr); }
+      .charts-top, .insight-row { grid-template-columns: 1fr; }
+    }
+    @media(max-width: 768px) {
+      body { display: block; overflow: auto; }
+      #sidebar { position: static; width: 100%; height: auto; border-right: none; border-bottom: 1px solid var(--border); padding: 1.5rem; display: block; }
+      .logo-area { margin-bottom: 1rem; }
+      #main { margin-left: 0; padding: 1.5rem 1rem; height: auto; overflow: visible; }
+      header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+      header > div { width: 100%; justify-content: space-between; flex-wrap: wrap; }
+      .metrics { grid-template-columns: 1fr 1fr; gap: 1rem; }
+      .action-cards { grid-template-columns: 1fr; }
+      .table-wrap { overflow-x: auto; }
+      th, td { padding: 0.75rem; font-size: 0.8rem; white-space: nowrap; }
+      #ai-bubble { bottom: 1.5rem; left: auto; right: 1.5rem; }
+      #chat-window { left: 1rem; right: 1rem; width: calc(100% - 2rem); bottom: 5rem; height: 450px; }
+    }
+    @media(max-width: 480px) {
+      .metrics { grid-template-columns: 1fr; }
+      .canv-wrap { height: 250px; }
+    }
   </style>
 </head>
 <body>
