@@ -1,0 +1,7 @@
+Flask
+pandas
+pymongo
+dnspython
+bcrypt
+python-dotenv
+requests

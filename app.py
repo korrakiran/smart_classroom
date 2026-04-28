@@ -22,6 +22,70 @@ db = client["users"]
 users = db["email"]
 users.create_index("email", unique=True)
 
+# FL MongoDB Setup
+fl_clients = db["fl_clients"]
+fl_rounds = db["fl_rounds"]
+global_model_col = db["global_model"]
+fl_metadata = db["fl_metadata"]
+
+if not fl_metadata.find_one({"_id": "metadata"}):
+    fl_metadata.insert_one({"_id": "metadata", "current_round": 1, "clients_per_round": 2})
+
+def get_current_round():
+    meta = fl_metadata.find_one({"_id": "metadata"})
+    return meta["current_round"] if meta else 1
+
+def get_clients_per_round():
+    meta = fl_metadata.find_one({"_id": "metadata"})
+    return meta["clients_per_round"] if meta else 2
+
+NUMERIC_FIELDS = [
+    "weight", "avg_score", "avg_prereq_score", "avg_attempts",
+    "avg_time_per_attempt", "avg_hint_usage", "avg_score_variance",
+    "avg_sessions", "pct_struggling"
+]
+CATEGORICAL_FIELDS = ["top_struggle_reason", "top_recommended_action"]
+
+def fedavg(round_updates):
+    combined   = {}
+    cat_votes  = {}
+    total_n    = {}
+
+    for client_id, weights in round_updates.items():
+        for w in weights:
+            key = (w["class"], w["subject"], w["topic"])
+            n   = w.get("n_samples", 1)
+
+            if key not in combined:
+                combined[key]  = {f: 0.0 for f in NUMERIC_FIELDS}
+                cat_votes[key] = {f: {} for f in CATEGORICAL_FIELDS}
+                total_n[key]   = 0
+
+            total_n[key] += n
+            for f in NUMERIC_FIELDS:
+                combined[key][f] += w.get(f, 0.0) * n
+            for f in CATEGORICAL_FIELDS:
+                val = w.get(f, "unknown")
+                cat_votes[key][f][val] = cat_votes[key][f].get(val, 0) + n
+
+    result = {}
+    for key in combined:
+        n = total_n[key]
+        entry = {
+            "class":   key[0],
+            "subject": key[1],
+            "topic":   key[2],
+        }
+        for f in NUMERIC_FIELDS:
+            entry[f] = round(combined[key][f] / n, 4) if n > 0 else 0.0
+        for f in CATEGORICAL_FIELDS:
+            votes = cat_votes[key][f]
+            entry[f] = max(votes, key=votes.get) if votes else "unknown"
+        result[key] = entry
+
+    return result
+
+
 def login_required(f):
     @wraps(f)
     def decorated(*args, **kwargs):
@@ -33,9 +97,9 @@ def login_required(f):
 @app.route("/")
 @login_required
 def dashboard():
-    csv_path = os.path.join(BASE_DIR, "server", "global_model.csv")
-    if os.path.exists(csv_path):
-        df = pd.read_csv(csv_path)
+    model_docs = list(global_model_col.find({}, {"_id": 0}))
+    if model_docs:
+        df = pd.DataFrame(model_docs)
         df["class"]  = pd.to_numeric(df["class"],  errors="coerce")
         df["weight"] = pd.to_numeric(df["weight"], errors="coerce")
         df = df.dropna(subset=["class", "subject", "topic", "weight"])
@@ -213,3 +277,90 @@ CRITICAL RULES:
 
 if __name__ == "__main__":
     app.run(debug=True, port=5001)
+
+# --- Federated Learning Endpoints ---
+
+@app.route("/register", methods=["POST"])
+def register():
+    data = request.json
+    client_id = data.get("client_id")
+    name = data.get("name", client_id)
+    
+    fl_clients.update_one(
+        {"client_id": client_id},
+        {"$set": {"name": name, "round": 0}},
+        upsert=True
+    )
+    current_round = get_current_round()
+    
+    model = list(global_model_col.find({}, {"_id": 0}))
+    return jsonify({
+        "status": "registered",
+        "current_round": current_round,
+        "global_model": model
+    })
+
+@app.route("/submit_weights", methods=["POST"])
+def submit_weights():
+    data = request.json
+    client_id = data.get("client_id")
+    round_num = data.get("round")
+    weights = data.get("weights")
+    
+    fl_rounds.update_one(
+        {"round_num": round_num},
+        {"$set": {f"updates.{client_id}": weights}},
+        upsert=True
+    )
+    
+    fl_clients.update_one(
+        {"client_id": client_id},
+        {"$set": {"round": round_num}}
+    )
+    
+    round_doc = fl_rounds.find_one({"round_num": round_num})
+    updates = round_doc.get("updates", {})
+    received = len(updates)
+    clients_needed = get_clients_per_round()
+    
+    aggregated = False
+    if received >= clients_needed:
+        if not round_doc.get("aggregated"):
+            new_model_dict = fedavg(updates)
+            
+            for key, entry in new_model_dict.items():
+                global_model_col.update_one(
+                    {"class": entry["class"], "subject": entry["subject"], "topic": entry["topic"]},
+                    {"$set": entry},
+                    upsert=True
+                )
+            
+            fl_rounds.update_one({"round_num": round_num}, {"$set": {"aggregated": True}})
+            fl_metadata.update_one({"_id": "metadata"}, {"$inc": {"current_round": 1}})
+            aggregated = True
+        else:
+            aggregated = True
+            
+    return jsonify({
+        "status": "received",
+        "aggregated": aggregated,
+        "clients_submitted": received,
+        "clients_needed": clients_needed
+    })
+
+@app.route("/get_global_model", methods=["GET"])
+def get_global_model():
+    model = list(global_model_col.find({}, {"_id": 0}))
+    return jsonify({"round": get_current_round(), "global_model": model})
+
+@app.route("/status", methods=["GET"])
+def status():
+    clients = {c["client_id"]: {"name": c.get("name"), "round": c.get("round")} for c in fl_clients.find()}
+    model_size = global_model_col.count_documents({})
+    current_round = get_current_round()
+    return jsonify({
+        "current_round": current_round,
+        "registered_clients": clients,
+        "rounds_completed": current_round - 1,
+        "global_model_size": model_size
+    })

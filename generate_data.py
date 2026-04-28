@@ -132,4 +132,5 @@ def create_school_data(filepath, school_id, n_students=12):
 if __name__ == "__main__":
     create_school_data("clients/school_1/data1.csv", "A", n_students=12)
     create_school_data("clients/school_2/data2.csv", "B", n_students=8)
+    create_school_data("clients/school_3/data3.csv", "C", n_students=10)
     print("\nDatasets ready with struggle_reason + recommended_action columns.")
