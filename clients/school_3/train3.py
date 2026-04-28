@@ -1,5 +1,5 @@
 """
-Federated Learning Client – School 1 (Upgraded)
+Federated Learning Client – School 3 (Upgraded)
 Trains locally on rich dataset: computes per-topic
   difficulty_score, dominant struggle_reason,
   top recommended_action, and n_samples.
@@ -12,9 +12,9 @@ import os
 import sys
 
 SERVER_URL  = "https://smart-classroom-nine.vercel.app"
-CLIENT_ID   = "school_1"
-CLIENT_NAME = "School 1 - Delhi"
-DATA_PATH   = os.path.join(os.path.dirname(__file__), "data1.csv")
+CLIENT_ID   = "school_3"
+CLIENT_NAME = "School 3 - Bangalore"
+DATA_PATH   = os.path.join(os.path.dirname(__file__), "data3.csv")
 
 def load_and_train():
     print(f"[{CLIENT_NAME}] Loading local data...")
@@ -34,7 +34,6 @@ def load_and_train():
         avg_variance     = round(g["score_variance"].mean(), 2)
         avg_sessions     = round(g["session_count"].mean(), 2)
 
-        # Dominant struggle reason (mode, excluding "none")
         struggling = g[g["struggle_reason"] != "none"]
         if len(struggling) > 0:
             top_reason = struggling["struggle_reason"].value_counts().idxmax()

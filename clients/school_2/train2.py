@@ -11,7 +11,7 @@ import requests
 import os
 import sys
 
-SERVER_URL  = "http://localhost:6000"
+SERVER_URL  = "https://smart-classroom-nine.vercel.app"
 CLIENT_ID   = "school_2"
 CLIENT_NAME = "School 2 - Mumbai"
 DATA_PATH   = os.path.join(os.path.dirname(__file__), "data2.csv")
