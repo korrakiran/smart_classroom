@@ -33,8 +33,12 @@
       --blue: #3B82F6;
       --indigo: #6366F1;
       --sidebar: 272px;
+      --ring: rgba(79, 70, 229, 0.12);
+      --panel: rgba(255, 255, 255, 0.82);
+      --sidebar-bg: rgba(255, 255, 255, 0.9);
       --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
       --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 18px 45px rgba(15, 23, 42, 0.09);
       --chart-grid: rgba(0, 0, 0, 0.06);
       --transition: all 0.2s ease;
     }
@@ -45,7 +49,11 @@
       --border: #2D3748;
       --text: #F9FAFB;
       --dim: #94A3B8;
+      --ring: rgba(129, 140, 248, 0.16);
+      --panel: rgba(21, 28, 44, 0.86);
+      --sidebar-bg: rgba(21, 28, 44, 0.92);
       --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+      --shadow-lg: 0 18px 45px rgba(0, 0, 0, 0.35);
       --chart-grid: rgba(255, 255, 255, 0.08);
     }
 
@@ -57,7 +65,10 @@
 
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      background: var(--bg);
+      background:
+        radial-gradient(circle at top left, rgba(14, 165, 233, 0.14), transparent 33rem),
+        radial-gradient(circle at bottom right, rgba(16, 185, 129, 0.10), transparent 30rem),
+        var(--bg);
       color: var(--text);
       display: flex;
       min-height: 100vh;
@@ -68,7 +79,7 @@
     /* ── Sidebar ── */
     #sidebar {
       width: var(--sidebar);
-      background: var(--surface);
+      background: var(--sidebar-bg);
       border-right: 1px solid var(--border);
       padding: 1.75rem 1.5rem;
       display: flex;
@@ -77,6 +88,7 @@
       position: fixed;
       z-index: 100;
       overflow-y: auto;
+      backdrop-filter: blur(18px);
     }
 
     .logo-area {
@@ -90,7 +102,7 @@
       width: 34px;
       height: 34px;
       background: linear-gradient(135deg, var(--primary), #818cf8);
-      border-radius: 10px;
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -129,10 +141,10 @@
 
     select {
       width: 100%;
-      padding: .6rem .75rem;
-      background: var(--bg);
+      padding: .72rem .85rem;
+      background: color-mix(in srgb, var(--bg) 72%, var(--surface));
       border: 1px solid var(--border);
-      border-radius: 8px;
+      border-radius: 10px;
       color: var(--text);
       font-family: inherit;
       cursor: pointer;
@@ -144,7 +156,7 @@
     select:focus {
       outline: none;
       border-color: var(--primary);
-      box-shadow: 0 0 0 3px var(--primary-glow);
+      box-shadow: 0 0 0 4px var(--ring);
     }
 
     /* ── Struggle Legend ── */
@@ -173,7 +185,7 @@
     #main {
       margin-left: var(--sidebar);
       flex: 1;
-      padding: 2rem 2.5rem;
+      padding: 2rem 2.5rem 3rem;
       height: 100vh;
       overflow-y: auto;
       scroll-behavior: smooth;
@@ -183,11 +195,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 2rem;
+      margin-bottom: 1.75rem;
+      gap: 1.25rem;
     }
 
     header h2 {
-      font-size: 1.5rem;
+      font-size: 1.65rem;
       font-weight: 700;
       color: var(--text);
       letter-spacing: -.5px;
@@ -204,21 +217,79 @@
       box-shadow: var(--shadow-sm);
     }
 
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .icon-btn,
+    .logout-btn {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      color: var(--text);
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+      backdrop-filter: blur(12px);
+    }
+
+    .icon-btn {
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+    }
+
+    .logout-btn {
+      border-radius: 999px;
+      padding: 0.5rem 0.85rem;
+      font-family: inherit;
+      font-weight: 600;
+      font-size: .85rem;
+      gap: 0.45rem;
+    }
+
+    .icon-btn:hover,
+    .logout-btn:hover {
+      transform: translateY(-1px);
+      border-color: color-mix(in srgb, var(--primary) 45%, var(--border));
+    }
+
     /* ── Metric Cards ── */
     .metrics {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      gap: 1.25rem;
+      gap: 1rem;
       margin-bottom: 2rem;
     }
 
     .mc {
-      background: var(--surface);
-      padding: 1.4rem;
-      border-radius: 14px;
+      background: var(--panel);
+      padding: 1.35rem;
+      border-radius: 12px;
       border: 1px solid var(--border);
       box-shadow: var(--shadow-sm);
       position: relative;
+      overflow: hidden;
+      transition: var(--transition);
+      backdrop-filter: blur(14px);
+    }
+
+    .mc::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: linear-gradient(180deg, var(--primary), #06b6d4);
+      opacity: 0.8;
+    }
+
+    .mc:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
     }
 
     .mc .val {
@@ -254,11 +325,12 @@
     }
 
     .chart-box {
-      background: var(--surface);
-      border-radius: 14px;
+      background: var(--panel);
+      border-radius: 12px;
       padding: 1.5rem;
       border: 1px solid var(--border);
       box-shadow: var(--shadow-sm);
+      backdrop-filter: blur(14px);
     }
 
     .chart-header {
@@ -288,11 +360,12 @@
     }
 
     .insight-box {
-      background: var(--surface);
-      border-radius: 14px;
+      background: var(--panel);
+      border-radius: 12px;
       padding: 1.5rem;
       border: 1px solid var(--border);
       box-shadow: var(--shadow-sm);
+      backdrop-filter: blur(14px);
     }
 
     /* Reason bars */
@@ -317,7 +390,7 @@
     .reason-track {
       height: 8px;
       border-radius: 4px;
-      background: var(--bg);
+      background: color-mix(in srgb, var(--bg) 82%, var(--surface));
       overflow: hidden;
     }
 
@@ -335,10 +408,16 @@
     }
 
     .action-card {
-      background: var(--bg);
+      background: color-mix(in srgb, var(--bg) 78%, var(--surface));
       border: 1px solid var(--border);
       border-radius: 10px;
       padding: 1rem;
+      transition: var(--transition);
+    }
+
+    .action-card:hover {
+      transform: translateY(-2px);
+      border-color: color-mix(in srgb, var(--primary) 35%, var(--border));
     }
 
     .action-topic {
@@ -366,12 +445,13 @@
 
     /* ── Table ── */
     .table-card {
-      background: var(--surface);
-      border-radius: 14px;
+      background: var(--panel);
+      border-radius: 12px;
       border: 1px solid var(--border);
       overflow: hidden;
       margin-bottom: 2rem;
       box-shadow: var(--shadow-sm);
+      backdrop-filter: blur(14px);
     }
 
     .table-wrap {
@@ -385,7 +465,7 @@
     }
 
     th {
-      background: var(--bg);
+      background: color-mix(in srgb, var(--bg) 86%, var(--surface));
       text-align: left;
       padding: 1rem 1.25rem;
       font-size: .75rem;
@@ -408,8 +488,7 @@
     }
 
     tr:hover td {
-      background: var(--bg);
-      opacity: 0.8;
+      background: color-mix(in srgb, var(--primary) 7%, transparent);
     }
 
     .badge {
@@ -457,10 +536,9 @@
     #ai-bubble {
       position: fixed;
       bottom: 2rem;
-      left: 2rem;
+      right: 2rem;
       width: 56px;
       height: 56px;
-      right: auto;
       background: var(--primary);
       border-radius: 50%;
       display: flex;
@@ -479,17 +557,16 @@
     #chat-window {
       position: fixed;
       bottom: 6rem;
-      left: 2rem;
+      right: 2rem;
       width: 380px;
       height: 550px;
-      right: auto;
-      background: var(--surface);
+      background: var(--panel);
       border: 1px solid var(--border);
       border-radius: 16px;
       display: none;
       flex-direction: column;
       z-index: 1000;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      box-shadow: var(--shadow-lg);
       overflow: hidden;
       animation: slideUp .3s ease-out;
     }
@@ -508,7 +585,7 @@
 
     .chat-hdr {
       padding: 1.2rem 1.25rem;
-      background: var(--bg);
+      background: color-mix(in srgb, var(--bg) 82%, var(--surface));
       border-bottom: 1px solid var(--border);
       display: flex;
       align-items: center;
@@ -530,7 +607,7 @@
       border-top: 1px solid var(--border);
       display: flex;
       gap: 8px;
-      background: var(--bg);
+      background: color-mix(in srgb, var(--bg) 82%, var(--surface));
     }
 
     .msg {
@@ -550,7 +627,7 @@
     }
 
     .ma {
-      background: var(--bg);
+      background: color-mix(in srgb, var(--bg) 82%, var(--surface));
       color: var(--text);
       align-self: flex-start;
       border-bottom-left-radius: 4px;
@@ -570,7 +647,7 @@
     .chat-input:focus {
       outline: none;
       border-color: var(--primary);
-      box-shadow: 0 0 0 3px var(--primary-glow);
+      box-shadow: 0 0 0 4px var(--ring);
     }
 
     .chat-send {
@@ -631,7 +708,7 @@
         gap: 1rem;
       }
 
-      header>div {
+      .header-actions {
         width: 100%;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -659,12 +736,10 @@
 
       #ai-bubble {
         bottom: 1.5rem;
-        left: auto;
         right: 1.5rem;
       }
 
       #chat-window {
-        left: 1rem;
         right: 1rem;
         width: calc(100% - 2rem);
         bottom: 5rem;
@@ -679,6 +754,15 @@
 
       .canv-wrap {
         height: 250px;
+      }
+
+      .clock {
+        width: 100%;
+        text-align: center;
+      }
+
+      .logout-btn span {
+        display: none;
       }
     }
   </style>
@@ -724,10 +808,9 @@
   <main id="main">
     <header>
       <h2>Federated Intelligence Dashboard</h2>
-      <div style="display:flex; align-items:center; gap: 1rem;">
+      <div class="header-actions">
         <div id="clock" class="clock"></div>
-        <button id="theme-toggle" onclick="toggleTheme()"
-          style="background:var(--surface); border:1px solid var(--border); border-radius:20px; width:36px; height:36px; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:var(--shadow-sm); color:var(--text); transition:var(--transition);">
+        <button id="theme-toggle" class="icon-btn" onclick="toggleTheme()" aria-label="Toggle theme">
           <svg id="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
             stroke-width="2" style="display:none;">
             <circle cx="12" cy="12" r="5" />
@@ -739,12 +822,11 @@
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
           </svg>
         </button>
-        <button onclick="window.location.href='/auth/logout'"
-          style="background:var(--surface); border:1px solid var(--border); border-radius:20px; padding:0.4rem 0.8rem; font-family:inherit; font-weight:500; font-size:.85rem; color:var(--text); cursor:pointer; box-shadow:var(--shadow-sm); display:flex; align-items:center; gap:0.4rem; transition: background 0.2s;">
+        <button class="logout-btn" onclick="window.location.href='/auth/logout'">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9" />
           </svg>
-          Logout
+          <span>Logout</span>
         </button>
       </div>
     </header>

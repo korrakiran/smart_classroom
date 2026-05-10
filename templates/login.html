@@ -17,6 +17,9 @@
       --dim: #6B7280;
       --red: #EF4444; 
       --emerald: #10B981; 
+      --ring: rgba(79, 70, 229, 0.12);
+      --soft-blue: #E0F2FE;
+      --soft-green: #DCFCE7;
       --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
       --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
       --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
@@ -29,6 +32,9 @@
       --border: #2D3748;
       --text: #F9FAFB;
       --dim: #94A3B8;
+      --ring: rgba(129, 140, 248, 0.16);
+      --soft-blue: rgba(14, 165, 233, 0.13);
+      --soft-green: rgba(16, 185, 129, 0.12);
       --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
       --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.6);
     }
@@ -37,7 +43,10 @@
     
     body { 
       font-family: 'Plus Jakarta Sans', sans-serif; 
-      background: var(--bg); 
+      background:
+        radial-gradient(circle at top left, var(--soft-blue), transparent 34rem),
+        radial-gradient(circle at bottom right, var(--soft-green), transparent 30rem),
+        linear-gradient(135deg, var(--bg), var(--surface));
       color: var(--text);
       display: flex;
       min-height: 100vh;
@@ -45,16 +54,39 @@
       justify-content: center;
       padding: 1.5rem;
       transition: var(--transition);
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 1.5rem;
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      pointer-events: none;
+      opacity: 0.65;
     }
 
     .container {
-      background: var(--surface);
+      background: color-mix(in srgb, var(--surface) 92%, transparent);
       width: 100%;
       max-width: 420px;
-      padding: 2.5rem;
-      border-radius: 16px;
+      padding: 2.65rem;
+      border-radius: 24px;
       box-shadow: var(--shadow-lg);
       border: 1px solid var(--border);
+      backdrop-filter: blur(18px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .container::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 5px;
+      background: linear-gradient(90deg, var(--primary), #06b6d4, var(--emerald));
     }
 
     .logo-area {
@@ -69,7 +101,7 @@
       width: 40px;
       height: 40px;
       background: linear-gradient(135deg, var(--primary), #818cf8);
-      border-radius: 12px;
+      border-radius: 14px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -89,15 +121,16 @@
     }
 
     .header-text h1 {
-      font-size: 1.25rem;
-      font-weight: 600;
+      font-size: 1.55rem;
+      font-weight: 700;
       margin-bottom: 0.5rem;
       letter-spacing: -0.025em;
     }
 
     .header-text p {
       color: var(--dim);
-      font-size: 0.9rem;
+      font-size: 0.92rem;
+      line-height: 1.6;
     }
 
     .step-indicator {
@@ -132,10 +165,10 @@
     input[type="password"],
     input[type="text"] {
       width: 100%;
-      padding: 0.75rem 1rem;
-      background: var(--bg);
+      padding: 0.9rem 1rem;
+      background: color-mix(in srgb, var(--bg) 72%, var(--surface));
       border: 1px solid var(--border);
-      border-radius: 10px;
+      border-radius: 12px;
       font-family: inherit;
       font-size: 0.95rem;
       color: var(--text);
@@ -145,7 +178,7 @@
     input:focus {
       outline: none;
       border-color: var(--primary);
-      box-shadow: 0 0 0 3px var(--primary-glow);
+      box-shadow: 0 0 0 4px var(--ring);
       background: var(--surface);
     }
 
@@ -159,16 +192,16 @@
 
     .btn {
       width: 100%;
-      padding: 0.85rem 1rem;
-      background: var(--primary);
+      padding: 0.95rem 1rem;
+      background: linear-gradient(135deg, var(--primary), #2563eb);
       color: white;
       border: none;
-      border-radius: 10px;
+      border-radius: 12px;
       font-family: inherit;
       font-size: 0.95rem;
       font-weight: 600;
       cursor: pointer;
-      box-shadow: var(--shadow-sm);
+      box-shadow: 0 14px 26px var(--primary-glow);
       transition: all 0.2s ease;
       display: flex;
       justify-content: center;
@@ -177,8 +210,8 @@
     }
 
     .btn:hover {
-      background: var(--primary-hover);
-      transform: translateY(-1px);
+      background: linear-gradient(135deg, var(--primary-hover), #1d4ed8);
+      transform: translateY(-2px);
     }
 
     .btn:active {
@@ -191,11 +224,13 @@
       box-shadow: none;
       margin-top: 1rem;
       font-size: 0.85rem;
+      border: 1px solid transparent;
     }
 
     .btn-secondary:hover {
       background: var(--bg);
       color: var(--text);
+      border-color: var(--border);
     }
 
     .error-msg {
@@ -274,11 +309,65 @@
     /* View management */
     #step2-create, #step3-login { display: none; }
 
+    #theme-toggle {
+      position: fixed;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: color-mix(in srgb, var(--surface) 88%, transparent);
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      color: var(--text);
+      transition: var(--transition);
+      z-index: 100;
+      backdrop-filter: blur(12px);
+    }
+
+    #theme-toggle:hover {
+      transform: translateY(-2px);
+      border-color: color-mix(in srgb, var(--primary) 45%, var(--border));
+    }
+
+    @media (max-width: 520px) {
+      body {
+        padding: 1rem;
+      }
+
+      body::before {
+        inset: 0.75rem;
+        border-radius: 22px;
+      }
+
+      .container {
+        padding: 2.1rem 1.35rem;
+        border-radius: 20px;
+      }
+
+      .logo-area {
+        margin-bottom: 2rem;
+      }
+
+      .header-text h1 {
+        font-size: 1.35rem;
+      }
+
+      #theme-toggle {
+        top: 1rem;
+        right: 1rem;
+      }
+    }
+
   </style>
 </head>
 <body>
 
-  <button id="theme-toggle" onclick="toggleTheme()" style="position:fixed; top:1.5rem; right:1.5rem; background:var(--surface); border:1px solid var(--border); border-radius:50%; width:42px; height:42px; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:var(--shadow-sm); color:var(--text); transition:var(--transition); z-index:100;">
+  <button id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
     <svg id="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
     <svg id="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
   </button>
